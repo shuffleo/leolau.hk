@@ -1,9 +1,9 @@
-# 🦁 Leo Lau
-
+# 🦁 Leo Lau 劉昆祐
+(he/him)
 
 ### People should be defined by verbs, not a noun. And mine are learn, make, share, reflect and bingewatch.
 
-### Now designing AI-assisted papers [@Goodnotes](https://www.goodnotes.com/). Organizing community events [@Mixed Initiative](https://mixedinitiative.com/). Exploring a voice with “[AI art](https://www.instagram.com/unun.leg/)”. Drawing better images of AI [here](https://betterimagesofai.org/images?artist=LeoLau&title=WheelofProgress) and [there](https://betterimagesofai.org/images?artist=LeoLau&title=KnowledgeSweatshop). I admit myself as [an inadvertent writer](https://www.facebook.com/ouradhk), bad at small talk and yoga.
+### Now designing AI-assisted papers [@Goodnotes](https://www.goodnotes.com/). Organizing community events [@Mixed Initiative](https://mixedinitiative.com/). Exploring a voice with “[AI art](https://www.instagram.com/unun.leg/)”. Drawing better images of AI [here](https://betterimagesofai.org/images?artist=LeoLau&title=WheelofProgress) and [there](https://betterimagesofai.org/images?artist=LeoLau&title=KnowledgeSweatshop). I admit myself as [an inadvertent writer](https://www.amazon.com/-/zh_TW/%E6%9B%BE%E9%8C%A6%E7%A8%8B-ebook/dp/B07KKCKDY9), bad at small talk and yoga.
 
 
 ---

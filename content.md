@@ -1,101 +1,20 @@
-# Leo Lau
+# 🦁 Leo Lau
 
-This is a clean, Notion-style markdown reader. Simply edit this `content.md` file to update the content displayed on the page.
 
-## Features
+### People should be defined by verbs, not a noun. And mine are learn, make, share, reflect and bingewatch.
 
-- Clean, modern design inspired by Notion
-- Responsive layout that works on all devices
-- Beautiful typography optimized for reading
-- Easy to edit - just modify this markdown file!
+### Now designing AI-assisted papers [@Goodnotes](https://www.goodnotes.com/). Organizing community events [@Mixed Initiative](https://mixedinitiative.notion.site/). Exploring a voice with “[AI art](https://www.instagram.com/unun.leg/)”. I admit myself as [an inadvertent writer](https://www.facebook.com/ouradhk), bad at small talk and yoga.
 
-## Getting Started
-
-1. Edit this `content.md` file with your own content
-2. Refresh the HTML page to see your changes
-3. That's it! No need to touch the HTML or JavaScript
-
-## Styling
-
-The page uses a minimal color palette:
-- **Text**: Dark gray (#37352f)
-- **Background**: White (#ffffff)
-- **Code blocks**: Light gray background
-- **Links**: Blue (#0b7bc1)
-
-## Code Example
-
-Here's a code block example:
-
-```javascript
-function greet(name) {
-    return `Hello, ${name}!`;
-}
-
-console.log(greet('World'));
-```
-
-## Lists
-
-### Unordered List
-- First item
-- Second item
-- Third item with **bold text**
-- Fourth item with *italic text*
-
-### Ordered List
-1. Numbered item one
-2. Numbered item two
-3. Numbered item three
-
-## Blockquote
-
-> This is a blockquote. It's great for highlighting important information or quotes.
-> 
-> You can have multiple paragraphs in a blockquote.
-
-## Links and Emphasis
-
-You can add [links](https://example.com), **bold text**, *italic text*, and ***bold italic text***.
-
-## Tables
-
-| Feature | Status | Notes |
-|---------|--------|-------|
-| Markdown Support | ✅ | Full GFM support |
-| Responsive Design | ✅ | Works on mobile |
-| Easy Editing | ✅ | Just edit the .md file |
-
-## Horizontal Rule
+### Find me on [LI](https://www.linkedin.com/in/shuffleo/) / [IG](https://www.instagram.com/shuffleo/) / [GH](https://github.com/shuffleo) / [EM](mailto:shuffleo@gmail.com)
 
 ---
 
-## Images
+Before you leave, here are some stuff I've hoarded:
+| The Stuff | Notes |
+|---------|--------
+| [Masters/PhD Programs on AI+Creativity](https://www.notion.so/Masters-PhD-Programs-on-AI-Creativity-81958664c9164fe6a3eb062893d5eb09?pvs=21) | Looking for reading lists and research ideas when designing my 2025-2027 learning plans. |
+| [Full-online Courses for AI Designers](https://www.notion.so/Full-online-Courses-for-AI-Designers-49fa1766499949e597e329992192eae7?pvs=21) | Learning is life long. And the Internet is the best college alternative.|
+| [Design Toolbox](https://www.notion.so/Design-Toolbox-02b64d114ce842178fece9b35acc14a8?pvs=21) | Design tools and guides that made me a superstar IC designer (or helped me faked it til I made it)|
 
-Images are automatically centered and styled with a subtle shadow:
-
-![Sample Image](https://via.placeholder.com/800x400?text=Sample+Image)
-
-You can use local images or URLs. Images are responsive and will scale to fit the container.
-
-## YouTube Embeds
-
-Simply paste a YouTube link and it will automatically be converted to an embedded player:
-
-https://www.youtube.com/watch?v=dQw4w9WgXcQ
-
-You can also use shortened YouTube URLs:
-
-https://youtu.be/dQw4w9WgXcQ
-
-The player is responsive and maintains a 16:9 aspect ratio on all devices.
-
-## Tips
-
-- Save your markdown file and refresh the browser to see changes
-- You can use any markdown file by adding `?file=yourfile.md` to the URL
-- The default file is `content.md` if no file is specified
-- **YouTube embeds**: Just paste any YouTube URL as a link and it will auto-embed
-- **Images**: Use standard markdown image syntax `![alt text](image-url)`
-
-Enjoy your markdown reading experience!
+---
+© 2026   🇭🇰

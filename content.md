@@ -3,10 +3,8 @@
 
 ### People should be defined by verbs, not a noun. And mine are learn, make, share, reflect and bingewatch.
 
-### Now designing AI-assisted papers [@Goodnotes](https://www.goodnotes.com/).
-Organizing community events [@Mixed Initiative](https://mixedinitiative.notion.site/).
-Exploring a voice with “[AI art](https://www.instagram.com/unun.leg/)”.
-I admit myself as [an inadvertent writer](https://www.facebook.com/ouradhk), bad at small talk and yoga.
+### Now designing AI-assisted papers [@Goodnotes](https://www.goodnotes.com/). Organizing community events [@Mixed Initiative](https://mixedinitiative.com/). Exploring a voice with “[AI art](https://www.instagram.com/unun.leg/)”.
+### I admit myself as [an inadvertent writer](https://www.facebook.com/ouradhk), bad at small talk and yoga.
 
 
 ---

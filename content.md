@@ -17,4 +17,4 @@ Before you leave, here are some stuff I've hoarded:
 | [Design Toolbox](https://www.notion.so/Design-Toolbox-02b64d114ce842178fece9b35acc14a8?pvs=21) | Design tools and guides that turned me into a superstar IC designer (or at least helped me fake it ’til I made it)|
 
 ---
-© 2026   🇭🇰
+[Website vibe-coded with Cursor](https://github.com/shuffleo/leolau.hk). © 2026   🇭🇰

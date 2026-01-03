@@ -1,10 +1,5 @@
 .DS_Store
 *.log
 node_modules/
-
-# Content files (not needed in repo)
-content.md
-sample-content.md
 SETUP.md
 push-to-github.sh
-

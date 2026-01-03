@@ -1,4 +1,4 @@
-# Welcome to Markdown Reader
+# Leo Lau
 
 This is a clean, Notion-style markdown reader. Simply edit this `content.md` file to update the content displayed on the page.
 

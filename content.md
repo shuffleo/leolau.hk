@@ -1,19 +1,16 @@
 # 🦁 Leo Lau 劉昆祐
-(he/him)
 
-### People should be defined by verbs, not a noun. And mine are learn, make, share, reflect and bingewatch.
-
-### Now designing AI-assisted papers [@Goodnotes](https://www.goodnotes.com/). Organizing community events [@Mixed Initiative](https://mixedinitiative.com/). Exploring a voice with “[AI art](https://www.instagram.com/unun.leg/)”. Drawing better images of AI [here](https://betterimagesofai.org/images?artist=LeoLau&title=WheelofProgress) and [there](https://betterimagesofai.org/images?artist=LeoLau&title=KnowledgeSweatshop). I admit myself as [an inadvertent writer](https://www.amazon.com/-/zh_TW/%E6%9B%BE%E9%8C%A6%E7%A8%8B-ebook/dp/B07KKCKDY9), bad at small talk and yoga.
-
+[☁ ABOUT](/)  ||  [☁ WORKS](/works/)  ||  [☁ WRITINGS](/writings/)
 
 ---
 
-Before you leave, here are some stuff that helped me grow along the way. Just in case you are at a carrer crossroad like I did...
-| The Stuff | Notes |
-|---------|--------
-| [Full-online Courses for AI Designers](https://www.notion.so/Full-online-Courses-for-AI-Designers-49fa1766499949e597e329992192eae7?pvs=21) | Learning is lifelong. And the Internet is the best college alternative.|
-| [Design Toolbox](https://www.notion.so/Design-Toolbox-02b64d114ce842178fece9b35acc14a8?pvs=21) | Design tools and guides that turned me into a capable IC designer (or at least helped me fake it ’til I made it)|
+### People should be defined by verbs, not a noun. And mine are learn, make, share, reflect and bingewatch. A primary quest of my work revolves around identity, authenticity, and cybernetics.
+
+### Now designing AI-assisted papers [@Goodnotes](https://www.goodnotes.com/). Organizing community events [@Mixed Initiative](https://mixedinitiative.com/). Drawing better images of AI [here](https://betterimagesofai.org/images?artist=LeoLau&title=WheelofProgress) and [there](https://betterimagesofai.org/images?artist=LeoLau&title=KnowledgeSweatshop). Exploring a voice with “[AI art](https://www.instagram.com/unun.leg/)”. 
+
+### I admit myself as [an inadvertent writer](https://www.amazon.com/-/zh_TW/%E6%9B%BE%E9%8C%A6%E7%A8%8B-ebook/dp/B07KKCKDY9), bad at small talk and yoga. 
 
 ---
+
 Find me on [LinkedIn](https://www.linkedin.com/in/shuffleo/) / [Instagram](https://www.instagram.com/shuffleo/) / [GitHub](https://github.com/shuffleo) / [Email](mailto:shuffleo@gmail.com)
 © 2026   🇭🇰

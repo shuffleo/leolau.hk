@@ -12,7 +12,6 @@ Author: Leo Lau
 Let's begin with a simple question:
 
 > When we say a work of art has 'soul', what exactly do we mean?
->
 
 Is it the artist's labor: the time spent or the physical effort implied?
 
@@ -58,7 +57,6 @@ Andy Hamilton defines this aesthetics of imperfection as an "open, spontaneous r
 However, imperfection can also be easily simulated and commoditized into yet another template. This has been the case long before the digital era, which is why we couldn't regard imperfection itself as a trustworthy aesthetic trait. Today, it's even just one effortless prompt away:
 
 > "slightly overexposed, half-cut faces, red-eye, subject mid-motion, low dynamic range, raw unedited, poorly timed candid, spontaneous group selfie"
->
 
 ---
 
@@ -264,45 +262,45 @@ This essay draws on a mix of philosophy, aesthetics, media theory, and contempor
 
 [Charles Guignon. "*On Being Authentic"*. 2004.](https://www.taylorfrancis.com/books/mono/10.4324/9780203646793/being-authentic-charles-guignon)
 
-[George E. Newman, and Rosanna K. Smith. "Kinds of Authenticity". 2016.](https://philpapers.org/rec/NEWKOA)
+[George E. Newman, and Rosanna K. Smith. "*Kinds of Authenticity*". 2016.](https://philpapers.org/rec/NEWKOA)
 
-[Walter Benjamin. "The Work of Art in the Age of Mechanical Reproduction". 1968.](https://archive.org/details/illuminations0000benj_p3m7)
+[Walter Benjamin. "*The Work of Art in the Age of Mechanical Reproduction*". 1968.](https://archive.org/details/illuminations0000benj_p3m7)
 
-Denis Dutton. "Authenticity in Art". 2003.
+Denis Dutton. "*Authenticity in Art*". 2003.
 
 [John Dewey. "*Art as Experience".* 1934.](https://ia902908.us.archive.org/28/items/deweyjohnartasanexperience/DEWEY%20John,%20Art%20as%20an%20Experience%22.pdf)
 
-[Andy Hamilton. "The Aesthetics of Imperfection Reconceived: Improvisations, Compositions, and Mistakes". 2020.](https://academic.oup.com/jaac/article/78/3/289/6049408?login=false)
+[Andy Hamilton. "*The Aesthetics of Imperfection Reconceived: Improvisations, Compositions, and Mistakes*". 2020.](https://academic.oup.com/jaac/article/78/3/289/6049408?login=false)
 
-[Cornelius Holtorf. "Perceiving the Past: From Age Value to Pastness". 2017.](https://www.cambridge.org/core/journals/international-journal-of-cultural-property/article/abs/perceiving-the-past-from-age-value-to-pastness/F3A99D23A2DE1A7DF9C25E77112DFCE5)
+[Cornelius Holtorf. "*Perceiving the Past: From Age Value to Pastness*". 2017.](https://www.cambridge.org/core/journals/international-journal-of-cultural-property/article/abs/perceiving-the-past-from-age-value-to-pastness/F3A99D23A2DE1A7DF9C25E77112DFCE5)
 
 Jun'ichiro Tanizaki. "*In Praise of Shadows"*. 1977.
 
-[Billy Childish, and Charles Thomson. "The Stuckists Manifesto". 1999.](https://www.stuckism.com/stuckistmanifesto.html)
+[Billy Childish, and Charles Thomson. "*The Stuckists Manifesto*". 1999.](https://www.stuckism.com/stuckistmanifesto.html)
 
 ### AI, creativity, and agency
 
-[Simon Colton, Alison Pease, and Rob Saunders. "Issues of Authenticity in Autonomously Creative Systems". 2018.](https://computationalcreativity.net/iccc2018/sites/default/files/papers/ICCC_2018_paper_64.pdf)
+[Simon Colton, Alison Pease, and Rob Saunders. "*Issues of Authenticity in Autonomously Creative Systems*". 2018.](https://computationalcreativity.net/iccc2018/sites/default/files/papers/ICCC_2018_paper_64.pdf)
 
-[Lindsay Brainard. "The Curious Case of Uncurious Creation". 2025.](https://www.tandfonline.com/doi/abs/10.1080/0020174X.2023.2261503)
+[Lindsay Brainard. "*The Curious Case of Uncurious Creation*". 2025.](https://www.tandfonline.com/doi/abs/10.1080/0020174X.2023.2261503)
 
-[Mihaly Csikszentmihalyi. "The Systems Model of Creativity and Its Applications". 2014.](https://onlinelibrary.wiley.com/doi/10.1002/9781118367377.ch25)
+[Mihaly Csikszentmihalyi. "*The Systems Model of Creativity and Its Applications*". 2014.](https://onlinelibrary.wiley.com/doi/10.1002/9781118367377.ch25)
 
-[Eric Horvitz. "Principles of Mixed-Initiative User Interfaces". 1999.](https://erichorvitz.com/chi99horvitz.pdf)
+[Eric Horvitz. "*Principles of Mixed-Initiative User Interfaces*". 1999.](https://erichorvitz.com/chi99horvitz.pdf)
 
-[Emily M. Bender, Timnit Gebru, Angelina McMillan-Major, and Shmargaret Shmitchell. "On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?". 2021.](https://dl.acm.org/doi/10.1145/3442188.3445922)
+[Emily M. Bender, Timnit Gebru, Angelina McMillan-Major, and Shmargaret Shmitchell. "*On the Dangers of Stochastic Parrots: Can Language Models Be Too Big*?". 2021.](https://dl.acm.org/doi/10.1145/3442188.3445922)
 
-[Ted Chiang. "Why A.I. Isn't Going to Make Art". 2024.](https://www.newyorker.com/culture/the-weekend-essay/why-ai-isnt-going-to-make-art)
+[Ted Chiang. "*Why A.I. Isn't Going to Make Art*". 2024.](https://www.newyorker.com/culture/the-weekend-essay/why-ai-isnt-going-to-make-art)
 
-[Ted Chiang. "ChatGPT Is a Blurry JPEG of the Web". 2023.](https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web)
+[Ted Chiang. "*ChatGPT Is a Blurry JPEG of the Web*". 2023.](https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web)
 
 [Coalition for Content Provenance and Authenticity. "C2PA"](https://c2pa.org/)
 
 ### Personal reflections, and community events
 
 Youtube videos of my reflections after SXSW 2024 and "AI, Music, and Creativity: International Symposium & 2023/24 Rayson Huang Lectures":
-[Mixed Initiative. "Ethnographic Research of A.I. Creativity Rituals" ](https://www.youtube.com/playlist?list=PLQvdqBqON2nFtL3J1p6W9YHDMIlnrb-_u)
+[Mixed Initiative. "*Ethnographic Research of A.I. Creativity Rituals*"](https://www.youtube.com/playlist?list=PLQvdqBqON2nFtL3J1p6W9YHDMIlnrb-_u) 
 
 Youtube videos of my community events using AI, memory recollection, and heat-transfer printing as artistic material:
-[Mixed Initiative. "Thermal Cinema - Receipts for What Never Was". YouTube video.](https://youtu.be/60zHfWOosC8?si=zvMY1PZPv2VElTTb)
-[Mixed Initiative. "By You, for You, of You: An AI Storytelling Experiment". YouTube video.](https://www.youtube.com/watch?v=JJiweyaLpC4)
+[Mixed Initiative. "*Thermal Cinema - Receipts for What Never Was*". YouTube video.](https://youtu.be/60zHfWOosC8?si=zvMY1PZPv2VElTTb)
+[Mixed Initiative. "*By You, for You, of You: An AI Storytelling Experiment*". YouTube video.](https://www.youtube.com/watch?v=JJiweyaLpC4)

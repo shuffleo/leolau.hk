@@ -26,7 +26,7 @@ ENTRY_DIR_RE = re.compile(
 )
 
 NAV_LINE = (
-    "[☁ ABOUT](/)  ||  [☁ WORKS](/works/)  ||  [☁ WRITINGS](/writings/)"
+    "[☁ ABOUT](../)  ||  [☁ WORKS](../works/)  ||  [☁ WRITINGS](../writings/)"
 )
 
 SECTION_INDEX_HTML = """<!DOCTYPE html>
@@ -36,8 +36,8 @@ SECTION_INDEX_HTML = """<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title} - Leo Lau</title>
     <meta name="description" content="{description}">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="stylesheet" href="../styles.css">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked-extended-tables/lib/index.umd.js"></script>
 </head>
@@ -48,7 +48,7 @@ SECTION_INDEX_HTML = """<!DOCTYPE html>
         </div>
     </div>
 
-    <script src="/app.js"></script>
+    <script src="../app.js"></script>
 </body>
 </html>
 """
@@ -60,8 +60,8 @@ ENTRY_INDEX_HTML = """<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title} - Leo Lau</title>
     <meta name="description" content="{title}">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+    <link rel="stylesheet" href="../../styles.css">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked-extended-tables/lib/index.umd.js"></script>
 </head>
@@ -72,7 +72,7 @@ ENTRY_INDEX_HTML = """<!DOCTYPE html>
         </div>
     </div>
 
-    <script src="/app.js"></script>
+    <script src="../../app.js"></script>
 </body>
 </html>
 """
@@ -155,7 +155,7 @@ def render_listing_markdown(
     if entries:
         for entry in entries:
             lines.append(
-                f"{entry.pub_date} - [{entry.title}]({section_path}/{entry.folder}/)"
+                f"{entry.pub_date} - [{entry.title}](./{entry.folder}/)"
             )
     else:
         lines.append(empty_message)

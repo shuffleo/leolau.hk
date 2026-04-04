@@ -1,6 +1,6 @@
 # 🦁 Leo Lau 劉昆祐
 
-[☁ ABOUT](/)  ||  [⛰ WORKS](/works/)  ||  [⚯ WRITINGS](/writings/)
+[☁ ABOUT](./)  ||  [⛰ WORKS](./works/)  ||  [⚯ WRITINGS](./writings/)
 
 ---
 

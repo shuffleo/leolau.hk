@@ -1,7 +1,7 @@
-[☁ ABOUT](../)  ||  [☁ WORKS](../works/)  ||  [☁ WRITINGS](../writings/)
+[☁ ABOUT](../)  ||  [⛰ WORKS](../works/)  ||  [⚯ WRITINGS](../writings/)
 
 ---
 
 # Works
 
-Coming soon...
+No case studies yet.

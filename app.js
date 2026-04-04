@@ -106,6 +106,7 @@ function renderMarkdown(content) {
     } else {
         contentDiv.innerHTML = '<p>Error: Marked.js library failed to load.</p>';
     }
+    contentDiv.classList.add('loaded');
 }
 
 // Load markdown from file
@@ -123,13 +124,15 @@ function loadContent() {
         })
         .then(text => renderMarkdown(text))
         .catch(error => {
-            document.getElementById('content').innerHTML = 
+            const contentDiv = document.getElementById('content');
+            contentDiv.innerHTML = 
                 `<div style="padding: 2em; color: #d32f2f;">
                     <h2>Error loading markdown file</h2>
                     <p><strong>${error.message}</strong></p>
                     <p>Make sure you have a file named <code>${mdFile}</code> in the same directory as this HTML file.</p>
                     <p>You can also specify a different file using the URL parameter: <code>?file=yourfile.md</code></p>
                 </div>`;
+            contentDiv.classList.add('loaded');
         });
 }
 

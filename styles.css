@@ -228,10 +228,17 @@ body {
     margin-top: 0;
 }
 
-/* Loading state */
+/* Content fade-in */
+.markdown-content {
+    opacity: 0;
+    transition: opacity 0.35s ease-in;
+}
+
+.markdown-content.loaded {
+    opacity: 1;
+}
+
 .loading {
-    text-align: center;
-    padding: 2em;
-    color: var(--text-soft);
+    visibility: hidden;
 }
 

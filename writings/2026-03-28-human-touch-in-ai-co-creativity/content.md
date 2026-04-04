@@ -300,10 +300,9 @@ Jun'ichiro Tanizaki. "*In Praise of Shadows"*. 1977.
 
 ### Personal reflections, and community events
 
-Youtube videos of my reflections after SXSW 2024 and "AI, Music, and Creativity: International Symposium & 2023/24 Rayson Huang Lectures".
+Youtube videos of my reflections after SXSW 2024 and "AI, Music, and Creativity: International Symposium & 2023/24 Rayson Huang Lectures":
 [Mixed Initiative. "Ethnographic Research of A.I. Creativity Rituals" ](https://www.youtube.com/playlist?list=PLQvdqBqON2nFtL3J1p6W9YHDMIlnrb-_u)
 
-Youtube videos of my community events using AI, memory recollection, and heat-transfer printing as artistic material.
-[Mixed Initiative. "Thermal Cinema - Receipts for What Never Was". YouTube video.](https://youtu.be/60zHfWOosC8?si=zvMY1PZPv2VElTTb).
-
-[Mixed Initiative. "By You, for You, of You: An AI Storytelling Experiment". YouTube video.](https://www.youtube.com/watch?v=JJiweyaLpC4).
+Youtube videos of my community events using AI, memory recollection, and heat-transfer printing as artistic material:
+[Mixed Initiative. "Thermal Cinema - Receipts for What Never Was". YouTube video.](https://youtu.be/60zHfWOosC8?si=zvMY1PZPv2VElTTb)
+[Mixed Initiative. "By You, for You, of You: An AI Storytelling Experiment". YouTube video.](https://www.youtube.com/watch?v=JJiweyaLpC4)

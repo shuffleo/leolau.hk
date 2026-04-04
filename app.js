@@ -1,6 +1,31 @@
 // Default markdown file to load (in the same directory as this HTML file)
 const DEFAULT_MD_FILE = 'content.md';
 
+let markedTablesConfigured = false;
+
+function getExtendedTablesPluginFactory() {
+    if (typeof window === 'undefined') return null;
+
+    // Support different UMD/global export names.
+    const direct = window.extendedTables || window.markedExtendedTables;
+    if (typeof direct === 'function') return direct;
+
+    if (direct && typeof direct.default === 'function') return direct.default;
+
+    return null;
+}
+
+function configureMarkedExtensions() {
+    if (markedTablesConfigured || typeof marked === 'undefined') return;
+
+    const extendedTablesFactory = getExtendedTablesPluginFactory();
+    if (typeof extendedTablesFactory === 'function') {
+        marked.use(extendedTablesFactory());
+    }
+
+    markedTablesConfigured = true;
+}
+
 // Extract YouTube video ID from various URL formats
 function getYouTubeId(url) {
     const patterns = [
@@ -63,6 +88,7 @@ function improveImageHandling(html) {
 function renderMarkdown(content) {
     const contentDiv = document.getElementById('content');
     if (typeof marked !== 'undefined') {
+        configureMarkedExtensions();
         // Configure marked options
         marked.setOptions({
             breaks: true,

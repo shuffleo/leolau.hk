@@ -26,7 +26,7 @@ ENTRY_DIR_RE = re.compile(
 )
 
 NAV_LINE = (
-    "[☁ ABOUT](../)  ||  [⛰ WORKS](../works/)  ||  [⚯ WRITINGS](../writings/)"
+    "[ABOUT](../)  ||  [WORKS](../works/)  ||  [WRITINGS](../writings/)"
 )
 
 SECTION_INDEX_HTML = """<!DOCTYPE html>

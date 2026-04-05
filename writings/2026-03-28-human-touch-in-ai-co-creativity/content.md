@@ -1,6 +1,6 @@
 [ABOUT](../../)  ||  [WORKS](../../works/)  ||  [WRITINGS](../../writings/)
 
-# Human Touch in AI Co-Creativity
+# Human Touch and the Problem of AI Art
 
 Published: 2026-03-28  
 Author: Leo Lau
@@ -11,9 +11,9 @@ Author: Leo Lau
 
 Let's begin with a simple question:
 
-> When we say a work of art has 'soul', what exactly do we mean?
+> When we say a work of art has a 'soul', what exactly do we mean?
 
-Is it the artist's labor: the time spent or the physical effort implied?
+Is it the artist's labor: the time spent and the physical effort implied?
 
 Is it a point of view: a sense that a mind has arranged stuff and ideas in a particular way?
 
@@ -23,26 +23,26 @@ And if any of the above is the answer, then what happens when humans apply GenAI
 
 Today, the ability to create anything is right at our fingertips... and yet, why haven't we got an abundance of masterpieces already? Why does most AI creative work seem to be slop?
 
-These questions have been haunting me for the last 3 years as I've been working on my own AI art projects, trying new AI tools, and attending many conferences. I even started an IRL community ([Mixed Initiative](https://mixedinitiative.com/)) to run workshops to approach this from various empirical angles.
+These questions have been haunting me for the last 3 years as I've been working on my own "AI art" projects, trying new AI tools, and attending many conferences. I even started an IRL community ([Mixed Initiative](https://mixedinitiative.com/)) to run workshops to approach this from various empirical angles.
 
-So here's what I'll try to do with this essay. I'll summarise what I've learned over the years on this topic, the different approaches to understanding the human touch in AI creativity, how each is inadequate on its own, and how we could make sense of them together.
+So here's what I'll try to do with this essay. I'll summarise what I've learned over the years on this topic, the different approaches to understanding human touch in AI co-creativity, how each is inadequate on its own, and how we could make sense of them all together.
 
 ---
 
-## So what is this human touch or soul in (AI) art?
+## The Soul Debate in AI Creativity
 
-AI creativity is debated everywhere, mostly framed in polarities of hype v.s. skepticism. On one side, the "Tech Bros" are telling us that AI is democratising imagination and creative labor. This coincides with the Computer Science narrative, in which creativity is framed as a mathematical or engineering problem to be modeled and eventually solved. Meanwhile, in academia and art circles, the conversation mostly centers on philosophy of mind, authorship, ethics, unemployment, carbon footprint, aesthetic value, ontology, etc.
+AI creativity is debated everywhere, mostly framed in polarities of hype v.s. skepticism. On one side, the "Tech Bros" are telling us that AI is democratising imagination and creative labor. This coincides with the Computer Science narrative, in which creativity is framed as a mathematical problem to be solved. Meanwhile, in academia and art circles, the conversation mostly centers on philosophy of mind, authorship, ethics, unemployment, carbon footprint, aesthetic value, ontology, etc.
 
 It feels like the whole world is still undecided on whether we should protest, compete, or collaborate with AI. But one thing everyone tends to share is this strange conviction, if not blind faith, in the idea of "human touch" or "soul".
 
 Whenever we talk about the potential demise of human creativity, whether they're Pro-AI or Anti-AI, they all believe there's a sacred quality that differentiates good work from slop. Some would say, AI art, by its very nature, is meaningless because of the insufficiency of human touch. Or some would say that, even if something is computationally generated, as long as it has some human touch, it's still considered valuable and worthy of appreciation.
 
-This mystical "humanness" comes with many different names in the search, often used causally interchangeably: "soul", "aura", "point of view", "authenticity", "mind and heart", "feeling alive", etc. I wonder if these words are just poetic placeholders? Or are they getting at something that our current technical stack still can't adequately model?
+This mystical "humanness" comes with many different names in my research and public conversations, often used causally interchangeably: "soul", "substance", "aura", "point of view", "authenticity", "mind and heart", "feeling alive", etc. I wonder if these words are just poetic placeholders? Or are they getting at something?
 
-And if this "human touch" or "soul" is so important, why can't so many of us who use these words explain what they mean? That, to me, is where things get interesting.
+And if this "human touch" or "soul" is so important, why can't so many of us who use these words explain what exactly they mean? That, to me, is where things get interesting.
 
-- For the Anti-AI camp: How do you defend human creativity if you can't describe the human element accurately?
-- For the Pro-AI camp: How do you model this last piece of the puzzle if you can't decompose it into an optimizable function?
+- For the Anti-AI folks: How do you defend human creativity if you can't describe the human element accurately?
+- For the Pro-AI folks: How do you model this last piece of the puzzle if you can't decompose it into an optimizable function?
 
 ---
 
@@ -52,7 +52,7 @@ A common instinct tells us that human touch must involve imperfection. In a cult
 
 The light leaks in unsteady street snaps, the slightly mistimed edits, the awkward hesitations in performance, the squeak of fingers on guitar strings... These mistakes tell us that something was at risk in the making, and that someone was there to improvise.
 
-Andy Hamilton defines this aesthetics of imperfection as an "open, spontaneous response to contingencies." What moves us is not the flaw, but the trace of a mind encountering spontaneity and accepting accidents from the world.
+Andy Hamilton defines this aesthetics of imperfection as an "open, spontaneous response to contingencies." We often see this in dance and caligraphy. What moves us isn't the flaw, but the trace of a mind encountering and accepting accidents from the world. 
 
 However, imperfection can also be easily simulated and commoditized into yet another template. This has been the case long before the digital era, which is why we couldn't regard imperfection itself as a trustworthy aesthetic trait. Today, it's even just one effortless prompt away:
 
@@ -64,13 +64,13 @@ However, imperfection can also be easily simulated and commoditized into yet ano
 
 Something about the physical act of making seems to carry meaning. That could be the reason why people often dismiss AI outputs because they assume they are zero-effort: you click a button, type a lazy prompt, and call yourself an artist. Fair enough, a lot of AI slop we see online has earned that skepticism.
 
-If Walter Benjamin or John Dewey were alive today to critique Gen AI, they might feel uneasy that this AI creative process skips over the very struggle that gives art its aura. The creator may never enter the kind of sustained dialogue with their material through which a vision or inner feelings gradually emerge.
+If Walter Benjamin or John Dewey were alive today to critique GenAI, they might feel uneasy that this AI creative process skips over the very struggle that gives art its aura. The creator may never enter the kind of sustained dialogue with their material through which a vision or inner feelings gradually emerge.
 
 One can argue that effort is not simply a means to an end. Effort is, in itself, a source of meaning. There is dignity in struggle, particularly in the pursuit of something worthy. AI, for all its fluency, can neither suffer nor understand what hard work is. And in its efficiency of removing friction, it's also efficiently removing the conditions that make creation feel earned, and therefore joyful.
 
 However, if we follow this argument, there still seems to be room for dignity and meaning in the AI co-creativity process. With painstakingly thorough prompt flows, intentional selection and sequencing, integration of mixed media, or even grounding the context with lived memory, one can still feel the joy that comes from failing 100 times and finally succeeding.
 
-Of course, creativity is not measured by hours of labor, and not all human-made things are soulful. A painting can be handmade yet hollow. So perhaps the "soul" of creativity or GenAI work does not lie in effort itself, but in the presence of a mind, someone, somewhere, has asked an interesting question about the world or has shaped an answer through form with intent.
+Of course, creativity is not measured by hours of labor, and not all human-made things are soulful. A painting can be handmade yet hollow. So perhaps the "soul" of creativity or GenAI work does not lie in effort itself, but in the presence of a mind, someone, somewhere, has asked an interesting question about the world and has answered through form with intent.
 
 ---
 
@@ -82,11 +82,11 @@ A creator has a point of view because they are in the world, of the world, shape
 
 However, does this inability to intend or to "bring meaning into the world" prevent us from using AI to create meaningful and valuable art?
 
-Artists have long collaborated with forces beyond their full control. Consider Jackson Pollock's drips and gravity-driven flows, or artworks influenced by wind, chemical reactions, natural decay, or even fungi producing marks on canvas. Are these works less creative because the artist did not dictate every detail?
+Artists have long collaborated with forces beyond their full control. Consider Jackson Pollock's drips and gravity-driven flows, or artworks influenced by wind, chemical reactions, natural decay, or even fungi. Are these works less creative because the artist did not dictate every detail?
 
-The composer John Cage famously embraced chance as a compositional tool. Using methods derived from the I Ching, he removed his own intention, tastes, and ego from the music. But this was not a total abandonment of authorship, as Cage still designed the system's rules. He chose the framework within which chance would operate. This suggests a useful way to think about artistic agency for Gen AI: the artist may not control every outcome, but they design the conditions of emergence, sometimes with prompts, sometimes with more.
+The composer John Cage famously embraced chance as a compositional tool. Using methods derived from the I Ching, he removed his own intention, tastes, and ego from the music. But this was not a total abandonment of authorship, as Cage still designed the system's rules. He chose the framework within which chance would operate. This suggests a useful way to think about artistic agency for GenAI: the artist may not control every outcome, but they design the conditions of emergence, sometimes with prompts, sometimes with more.
 
-Another question we could ask is whether artistic vision and intent can be meaningfully shared between human creators and AI, perhaps within a mixed-initiative process. Suppose creators use AI to capture and reinterpret their lived experiences, engaging it as a thinking partner to critique and bounce ideas. Does this still involve the depth of intention we associate with art-making? Can authenticity emerge from such a symbiotic collaboration? And would its results still feel real to an audience?
+Another question we could ask is whether artistic vision and intent can be meaningfully shared between human creators and AI, perhaps within a mixed-initiative process. Suppose creators use AI to capture and reinterpret their lived experiences, engaging it as a thinking partner to critique and bounce ideas. Does this still involve the depth of intention we associate with art-making? Can authenticity emerge from such a symbiotic collaboration? And would its results still feel real to the audience?
 
 ---
 
@@ -98,35 +98,33 @@ The concept of authenticity plays an important role in how we think about creati
 
 ### Historical authenticity
 
-A surprising amount of what the art industry values in art has a lot to do with lineage and providence. We want to know where the thing came from and whether it is really what it says it is. That is one of the oldest meanings of authenticity. Before authenticity became a virtue or a lifestyle, it was a question of origin or its spatiotemporal link.
-
-Philosophers and aestheticians have used several names for this: historical authenticity, nominal authenticity, authenticity of origin, objective authenticity, or indexical authenticity. Basically, they all mean: is it the thing, or not?
+A surprising amount of what the art industry values in art has a lot to do with lineage and providence. We want to know where the thing came from and whether it is really what it says it is. That is one of the oldest meanings of authenticity. Before authenticity became a virtue or a lifestyle, it was a question of origin or its spatiotemporal link. Philosophers and aestheticians have used several names for this: historical authenticity, nominal authenticity, authenticity of origin, objective authenticity, or indexical authenticity.
 
 Imagine a forgery so perfect that no ordinary viewer could tell the difference. Seen in isolation, it might move us just as much as the original. Yet many of us would still feel cheated once the truth came out. The disappointment is not mere snobbery, though it could contain some. It is the disillusionment of the sublime contact we had with the artist and the process of making. This is why we still travel to see the real painting, even though reproductions are plentiful these days.
 
-Like many predecessor art movements and technological shifts, AI art unsettles authorship at the level of origin. What, exactly, is the source of an AI-generated image? The user who typed the prompt? The model developers? The millions of prior images whose styles and conventions were compressed into the model? The machine itself, though "itself" is already the wrong word for such a distributed architecture? In AI art, the origin story is much harder to pin down.
+Like many predecessor art movements and technological shifts, AI art unsettles authorship at the level of origin. What, exactly, is the source of an AI-generated image? The user who typed the prompt? The model developers? The millions of prior images whose styles and conventions were compressed into the model? The model itself, though "itself" is already the wrong word for such a distributed architecture? In AI art, the origin story is much harder to pin down.
 
-In the face of such obscurity, some artists would document all their prompt flows, model versions, reference images, and edits with forensic care. Sometimes this is done generously, as part of a community of practice. Sometimes it is done defensively, to prove innocence in response to accusations of theft. And sometimes the documentation is itself the point: a way of exposing the medium's politics.
+In the face of such obscurity, some artists would document all their prompt flows, model versions, reference images, and edits with forensic care. Sometimes this is done generously, for their community of practice. Sometimes it is done defensively, to prove innocence in response to accusations of theft. And sometimes the documentation is itself the point: a way of exposing the medium's politics.
 
 On the other end, the tech industry has also developed AI detection, fingerprinting, and the C2PA credentials system in response to a similar call. It's now super easy to check where a file came from and whether it has been altered along the way.
 
 The same anxiety also explains the appeal of blockchain and NFTs, at least in their more idealistic formulation. Much of the Web3 art rhetoric revolved around proof of ownership and traceable history. Whether the technology fulfilled those hopes is another matter.
 
-Behind all this bureaucratic ingenuity, it seems that we keep trying to smuggle scarcity back in when faced with digital abundance, through documentation. When replication becomes effortless, we begin to value not only the work but also the records of its arrival in the world, as if the metadata could restore some moral clarity. However, historical authenticity, for all its force, is a shaky guide to artistic value. It never tells us whether the work is thoughtful, banal, or emotionally true.
+Behind all these bureaucratic ingenuity, it seems that we keep trying to smuggle scarcity back in when faced with digital abundance, through documentation. When replication becomes effortless, we begin to value not only the work but also the records of its arrival in the world, as if the metadata could restore some moral clarity. However, historical authenticity, for all its force, is a shaky guide to artistic value. It never tells us whether the work is thoughtful, banal, or emotionally true.
 
 ### Type authenticity
 
-This second authenticity is the kind of people reach for when they talk about a work "feeling right." This idea has been called by philosophers as type authenticity, categorical authenticity, iconic authenticity, authenticity of kind, constructed authenticity, or approximate authenticity. They all mean that authenticity can be judged by whether something conforms to the beliefs, expectations, or essential qualities of a category.
+This second authenticity is the kind of people reach for when they talk about a work "feeling right". This idea has been called by philosophers as type authenticity, categorical authenticity, iconic authenticity, authenticity of kind, constructed authenticity, or approximate authenticity. They all mean that authenticity can be judged by whether something conforms to the beliefs, expectations, or essential qualities of a category.
 
-The keyword here is expectations. Type authenticity is socially volatile because it's more than just the object; it's also about the observer's idea of what the category should be. And the picture in their heads may itself be a fantasy built from movies, marketing, nostalgia, or selective memory.
+The keyword here is expectations. Type authenticity is socially volatile because it's more than just the object; it's also about the observer's idea of what the category should be. And the picture in their heads may itself be a fantasy built from movies, marketing, or selective memory.
 
-Punk, blues, hip-hop, rap, grunge, and underground electronic music: each of these musical genres has its own authenticity tests. Does the performer seem too polished? Do they belong to a particular social circle? Do they share the struggle that gives the genre its meaning? The "right sounds" are not enough.
+Punk, blues, rap, grunge, and underground electronic music: each of these musical genres has its own authenticity tests. Does the performer seem too polished? Do they belong to a particular social circle? Do they share the struggle that gives the genre its meaning? The "right sounds" are often not enough.
 
 We'd also say a neighborhood cafe feels inauthentic because it has all the design cues of a local place but has been flattened into a brand guideline. Anyone who has been to a touristy restaurant knows the weirdness of "authentic culture" on display. They might have all the right ingredients, but the whole arrangement feels like it's been interpreted for an outsider. Every cultural symbol is packed too tightly, stripped out of its historical context. The food may have been cooked by local hands, sold by local families, and made in the region itself. Yet it can still feel inauthentic because it has been over-optimized to the type expectation and has become a self-conscious performance. This is how type authenticity can become performative authenticity.
 
-The problem is especially clear when an outsider appropriates a tradition as an aesthetic style to be exploited for attention and money. This is one of the common anxieties around AI slop in entertainment. Gen AI is exceptionally good at categorical fluency. Every type of work becomes equally promptable, regardless of time period, region, or technical complexity.
+The problem is especially clear when an outsider appropriates a tradition as an aesthetic style to be exploited for attention and money. This is one of the common anxieties around AI slop in entertainment. GenAI is exceptionally good at categorical fluency. Every type of work becomes equally promptable, regardless of time period, region, or technical complexity.
 
-However, an AI model does not inherit a tradition in the way a person does. It does not grow up inside a genre, misunderstand it, rebel against it, or return to it years later with altered sympathy. AI models are indifferent and don't share a history with their training data. And yet, it can convincingly mimic most of them.
+However, an AI model does not inherit a tradition in the way a person does. It does not grow up inside a genre, misunderstand it, rebel against it, and return to it years later with altered sympathy. AI models are indifferent and don't share a history with their training data. And yet, it can convincingly mimic most of them.
 
 So the question isn't whether AI outputs can look true to a type. Plainly, many already can. The question is what kind of relationship the creators or their machines have to that type. Are they simply shopping among styles as though culture were a library of prompts? Or do they have the discipline to understand and connect to the shared trauma and communal memory that bred such an art form?
 
@@ -134,21 +132,21 @@ So the question isn't whether AI outputs can look true to a type. Plainly, many 
 
 This third meaning of authenticity asks whether a work is true to the creator's beliefs and expresses what they actually mean. Or does it feel opportunistic, dressed up for fame and fortune? Philosophers call it expressive authenticity, value authenticity, or moral authenticity.
 
-This idea has a long history. Romanticism emphasized the unique, expressive individual who leans into their intuition and emotion. Existentialism turns this into an ethical virtue: to live honestly with our own commitments rather than disappearing into the role-playing of people's expectations, which is ironically the opposite of true authenticity's requirement. Psychologists call this self-congruence, the idea that we feel and function better when our external self matches our internal self. It involves the alignment among what I feel, what I recognize myself as feeling, and what I show to others.
+This idea has a long history. Romanticism emphasized the expressive individual who leans into their intuition and emotion. Existentialism turns this into an ethical virtue: to live honestly with our own commitments rather than disappearing into the role-playing of people's expectations, which is ironically the opposite of type authenticity's requirement. It involves the alignment among what I feel, what I recognize myself as feeling, and what I show to others. Psychologists call this self-congruence, the idea that we feel and function better when our external self matches our internal self.
 
 It is not hard to see why this idea became attached to art. Art often appears to us as one of the few places where people are allowed, sometimes even required, to mean something beyond utility and social norms.
 
-Yet, as spectators, we cannot open an artwork and inspect authenticity. We can only infer. And human culture is full of such staged expressions. Brands and influencers speak in the language of intimacy with detailed planning. Artists, too, can learn to reproduce the signs of authenticity strategically. With the help of curators and critics, artists can reframe their upbringing, confess how their lived experience has shaped who they are, and how it has manifested in their works. Then this story can be mediated through interviews, brochures, and text on the white wall to arouse a sense of authenticity from the audience.
+Yet, as spectators, we cannot open an artwork and inspect authenticity. We can only infer. And human culture is full of such staged expressions. Brands and influencers speak in the language of intimacy with detailed planning. Artists, too, can learn to reproduce the signs of authenticity strategically. With the help of curators and critics, artists can reframe their upbringing, confess how their lived experience has shaped who they are, and how it has manifested in their work. Then this story can be mediated through interviews, brochures, and text on the white wall to arouse a sense of authenticity from the audience.
 
-Just as we cannot open an artwork, creators also cannot reliably open their hearts and minds to inspect the self. The subject of the self has been one of the most enigmatic problems in science, psychology, religion, and philosophy. Oftentimes, we don't actually understand ourselves that much. Plus, the self is not a fixed object tucked away somewhere inside, waiting to be expressed. It is in constant flux, built on top of our memories that are continually decaying and reinventing. This begs the philosophical question: if authenticity relies on the truthful expression of the inner self, and if the self has no stable truth in itself, then what exactly is the truth to be expressed?
+Just as we cannot open an artwork, creators also cannot reliably open their hearts and minds to inspect the self. The subject of the self has been one of the most enigmatic problems in science, psychology, religion, and philosophy. Oftentimes, we don't actually understand ourselves that much. Plus, the self is not a fixed object tucked away somewhere inside, waiting to be expressed. It is in constant flux, built on top of our memories that are continually decaying and reinventing. This begs the philosophical question: if authenticity relies on the truthful expression of the inner-self, and if the inner-self has no stable truth in itself, then what exactly is the truth to be expressed?
 
-Besides the source of expression, we could also question the process of expression.
+Besides questioning the source of expression, we could also look into the process of expression.
 
-Consider that someone uses AI to create art from personal memory in order to express inner feelings. The process is layered. First, there is the original experience and one's awareness of it. Then the remembered scene must be translated into language or visual prompts. The model processes that prompt statistically and returns multiple possibilities. The creator selects, combines, and iterates. At each stage, there is loss and reframing, either by the creator, by the medium, or now by the statistical biases in GenAI. That said, it may still be perceived by the creator and audience as a faithful representation with some emotional truth.
+Consider that someone uses AI to create art from personal memory in order to express inner feelings. The process is layered. First, there is the original experience and one's awareness of it. Then the remembered scene must be translated into language or visual prompts. The model processes that prompt statistically and returns multiple possibilities. The creator selects, combines, and iterates. At each stage, there is loss and reframing, either by the creator, by the medium, or now by the statistical biases in GenAI. That said, it may still be perceived by the creator and audience as a sufficiently faithful representation with some emotional truth.
 
-The anti-AI camp often assumes that if AI mediates expression, it must automatically dilute or falsify it. This argument can easily be turned into a kind of essentialist or purity politics. It tempts us to imagine that the most authentic art is the least mediated art, as though mediation itself were corruption. But art has always been made through mediations, with or without digital technology.
+The Anti-AI camp often assumes that if AI mediates expression, it must automatically dilute or falsify it. This argument can easily be turned into a kind of essentialist or purity politics. It tempts us to imagine that the most authentic art is the least mediated art, as though mediation itself were corruption. But art has always been made through mediations, with or without digital technology.
 
-The challenge here is how a process can count as expressively authentic if the human creator delegated most of the generative work to the system, given that the system lacks a self with lived experience or awareness. Perhaps the answer depends on who we treat as the subject of expression. If it's the stochastic machine, then no, there are no feelings and thoughts to be expressed, even if it can behave as if it's emotionally intelligent. If it's the human creator who prompts, then it depends on how much emotional labor is involved.
+The challenge here is how a process can count as expressively authentic if the human creator delegated most of the generative work to the system, given that the system lacks a self with lived experience or awareness. Perhaps the answer depends on who we treat as the subject of expression. If it's the stochastic machine, then no, there are no feelings and thoughts to be expressed, even if it can behave as if it's emotionally intelligent. If it's the human creator, then it depends on how much emotional labor is involved.
 
 The objection we should raise is not that the machine lacks feeling, but that it may encourage artists to bypass feelings and skip to the outcome. They may short-circuit the struggle by which art connects makers to themself. If every vague mood can be quickly turned into persuasive-looking imagery, one may be tempted to confuse articulation with epiphany. And soon, before we noticed, we became overly reliant on AI to self-express, and lost the ability to do it ourselves.
 
@@ -160,17 +158,17 @@ Therefore, human touch in AI art, in this third sense, is the presence of someon
 
 This final meaning of authenticity concerns the felt experience of realness and connection for both the creator and the audience. This is the form of authenticity people often mean when they say that something "hit them". It doesn't care whether the object is original, or whether it belongs to a category, or whether the maker's motive appears sincere. It is a first-person qualitative sense or a "qualia" (e.g., the "redness" of red). In this case, the "authenticitiness" of authenticity.
 
-Sometimes, it can be evoked by imperfection, effortful craft, or a sad narrative behind the making. Many people experience it in different ways, with or without human artifacts. To John Ruskin, it sometimes has to do with old architecture, with a deep sense of voicefulness that seems to speak from the walls. To Jun'ichiro Tanizaki, it could be a shadowy teacup lit by moonshine that teaches us to appreciate the impermanence of life. For moviegoers, it could be nostalgic sequels that bring about a sense of the past and collective memories. For teamLab visitors, it could be an immersive audiovisual set that overwhelms their senses, inducing a trance state.
+Sometimes, it can be evoked by imperfection, effortful craft, or a sad narrative behind the making. Many people experience it in different ways, with or without human artifacts. To John Ruskin, it sometimes has to do with old architecture, with a deep sense of voicefulness that seems to speak from the walls. To Jun'ichiro Tanizaki, it could be a shadowy teacup lit by moonshine that teaches us to appreciate the impermanence of life. For blockbuster moviegoers, it could be nostalgic sequels that bring about a sense of the past and collective memories. For teamLab visitors, it could be an immersive audiovisual set that overwhelms their senses, inducing a trance state.
 
-All of these experiences require active imagination and meditation, so that we can connect our senses to the primitivist nature, to the passage of time, to other living or deceased souls, or to the self situated within all of the above. It is this experienced authenticity that could keep us calm and restore continuity in a volatile present.
+All of these experiences may require active sensing and imagination, so that we can connect our senses to the primitivist nature, to the passage of time, to other living or deceased souls, or to the self situated within all of the above. It is this experienced authenticity that could keep people calm and restore continuity in a volatile present.
 
 However, there are two issues with this concept of authenticity. It's easy to confuse experiential authenticity with mere intensity or entertainment. An experience can be vivid, emotionally charged, and still shallow. The viewer's senses can be flattered spectacularly, as if they were connected with something larger than themselves, while leaving them no wiser about what they are feeling. Moreover, this way of thinking authenticity invites self-sealing logic. If authenticity is whatever feels authentic to someone, then criticism becomes almost impossible. People can be moved by commercial manipulation and kitsch.
 
-Experiential authenticity must therefore remain in conversation with the earlier kinds of authenticity, not replace them. A work may score highly on one and poorly on another. An AI-generated image of a fictional childhood scene may have no historical authenticity at all, and yet carry expressive and experiential force for the author.
+Experiential authenticity must therefore remain in conversation with the earlier kinds of authenticity, not replace them. A work may score highly on one and poorly on another. An AI-generated image of a fictional childhood scene may have no historical authenticity at all, and yet carry expressive and experiential force for the creator.
 
 When we apply experiential authenticity to the discussion of AI co-creativity, the dispute we're concerned with becomes: under what conditions can an AI-mediated process still produce experiential authenticity for the creator during creation, and for the audience, even if the audience knows it was created with AI.
 
-AI cannot feel, cannot experience. But it can make us feel and experience. And what we should learn to see is to project that interpretation and feeling not only onto the creator behind the work, but also onto the dataset, the algorithm, and their making. It might take some effort to get into a state that situates you in the vastness of a parameterized universe, where everything and everyone across time and space becomes connected as vectors in latent space. Personally, I think it's a new kind of qualia we could get used to as we create and appreciate AI art.
+AI cannot feel, cannot experience. But it can make us feel and experience. What we should learn is to project our interpretations and feelings not only onto the creator, but also onto the dataset, the algorithm, and their making. What's even better is to get into a state that situates you in the vastness of a parameterized universe, where everything and everyone across time and space becomes connected as vectors in latent space. It might take some effort and willing suspension of disbelief. But personally, I think it's a new kind of qualia we could get used to as we create and appreciate AI art.
 
 ---
 

@@ -1,4 +1,4 @@
-[☁ ABOUT](../)  ||  [⛰ WORKS](../works/)  ||  [⚯ WRITINGS](../writings/)
+[ABOUT](../)  ||  [WORKS](../works/)  ||  [WRITINGS](../writings/)
 
 ---
 

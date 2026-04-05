@@ -17,7 +17,7 @@
 }
 
 body {
-    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", "Times New Roman", "Liberation Serif", Georgia, serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
     line-height: 1.75;
     color: var(--text);
     background-color: var(--bg);

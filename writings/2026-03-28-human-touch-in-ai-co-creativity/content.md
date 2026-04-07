@@ -176,77 +176,62 @@ AI cannot feel, cannot experience. But it can make us feel and experience. What 
 
 OK, now let's recap.
 
-The familiar arguments about AI art can now be divided into two categories. The first says AI art is perfectly valid because AI is simply another tool, no more philosophically troubling than a camera, a paintbrush, or Photoshop. We can still create effortful, intentional, and authentic art with this cool new tool. The second argument says AI art is invalid because AI lacks the lived experience necessary for authentic expression, it biases its output towards generic slop, and it strips away meaningful introspection and emotional labor.
+The AI art debate keeps returning to ideas like “soul” and “human touch,” but those terms are often left vague. The usual candidates for what we mean by them are imperfection, effort, intent, and authenticity. Each explains part of the issue, but each breaks down when treated as the whole answer. Of the four, authenticity is the most important and also the most elusive. It includes authenticity of origin, type, expression, and experience. All in all, human touch is the sign that a real person was present: taking risks, making judgments, and being commited to the work. It is also about whether the work carries a meaningful connection to how it was made, the medium and practice it comes from, the history and community behind that practice, the maker’s inner life, and the audience’s experience of it. This leaves us with a clearer question: how do these dimensions of human touch remain relevant in a creative process heavily mediated by AI?
 
-AI art is confusingly interesting precisely because it can fit either argument, or neither, depending on the artist. What makes AI co-creativity distinctive is this sense of partial and distributed creative control. We are not entirely in command of the medium but are negotiating with it. It is part of the medium's message, and we would be wise to treat it as such, even if it causes some unfamiliar discomfort.
+With that in mind, the familiar arguments about AI art can now be divided into two categories. The first says AI art is perfectly valid because AI is simply another tool, no more philosophically troubling than a camera, a paintbrush, or Photoshop. We can still create effortful, intentional, and authentic art with this cool new tool. The second argument says AI art is invalid because AI lacks the lived experience necessary for authentic expression, it biases its output towards generic slop, and it strips away meaningful introspection and emotional labor.
 
-One way to describe that discomfort is to say that AI visuals possess a kind of semi-aura. They feel neither fully original nor merely copied. They are not auratic in the old sense, because they lack the reassuring dignity of a singular original. Yet they carry some uncanny human traces that reveal the negotiation.
+AI art is confusingly interesting precisely because it can fit either argument, or neither, depending on the artist and the process of making. What makes AI co-creativity distinctive is this sense of partial and distributed creative control. We are not entirely in command of the medium but are negotiating with it. It is part of the medium's message, and we would be wise to treat it as such, even if it causes some unfamiliar discomfort.
+
+One way to describe that discomfort is to say that AI visuals possess a kind of "semi-aura", as suggested by David Salas Espasa and Mar Camacho. AI art feel neither fully original nor merely copied. They are not auratic in the old sense, because they lack the reassuring dignity of a singular original. Yet they carry some uncanny human traces that reveal the negotiation process.
 
 When an AI model generates, it parrots the sediment of many lives at once. One could think of generative AI as a lossy compression of all the lived experiences captured by the internet corpus. When you mention a personal memory in the prompt, your recollection passes through a latent space abstracted from a population of past expressions. As the model begins making confident assumptions, certain faces may drift toward whiteness unless otherwise specified. And certain scenes may arrive bathed in a generic warm golden-hour glow. The result is a statistical visualization of your prompt's connection to the biased collective visual culture, mediated by you and the AI.
 
-Once you notice this, it becomes difficult to unsee. The model is always trying to imagine for you, using the dominant patterns it has learned about what faces, families, beauty, nostalgia, and personhood are supposed to look like. Sometimes a mismatch produces frustration. Sometimes it produces surprise, or even comedy. And sometimes the stereotype itself becomes the work's point. But in every case, this friction reveals that AI comes loaded with default probabilities about what the world ought to be.
+Once you notice this, it becomes difficult to unsee. The model is always trying to imagine for you, using the dominant patterns it has learned about what dumbbells, pelicans, and tokyo streetscapes are supposed to look like. Sometimes a mismatch produces frustration. Sometimes it produces surprise, or even comedy. And sometimes the stereotype itself becomes the work's point. But in every case, this friction reveals that AI comes loaded with default probabilities about what the world ought to be.
 
 There is also something dreamlike in watching one's own life return slightly wrong and slightly alien. A family kitchen cleaner than it ever was. A face resembles your mother and a magazine's idea of your mother at the same time. This is why AI aesthetics can feel haunted and uncanny, as they are closer to a statistical afterlife of public expression.
 
-The model's biases are not bugs; they are the features that could become artistic material. One can play with it, subvert it, and force it into the open. Instead of treating it as noise to be edited away, we should expose them to start a dialogue: here is what the machine thinks my childhood looks like; here is what it assumes how many fingers your hand has; here is the mean shape of our world. Looking at those AI artifacts and biases is like learning to appreciate the model's unpredictable imperfections and contingency.
+These biases in the models are not bugs; they are features that could become artistic material. We can play with them, subvert them, and force them into the open. Instead of treating them as noise to be edited away, we should expose them to start a dialogue: here is what the machine thinks my childhood looks like; here is what it assumes how many fingers your hand has; here is the mean shape of our world. Looking at those AI artifacts and biases is like learning to appreciate visualizations of the imperfections and contingencies in our digital doppelgänger world, and to listen to what this distorted mirror tells us about ourselves.
 
-Under this approach, the question of human touch in AI art becomes how we work with this compressed social residue and streamlined process, to expose the scripted categories of our realities, and to deconstruct the conventions of authenticity. And yet, after all this deconstruction, something true can still remain. Something essential, even sincere. That is where the older ideas of human touch need revision. This, perhaps, is the beginning of a new humanist language of authenticity in AI art.
+Under this approach, the question of human touch in AI art becomes how we work with this compressed social residue and streamlined process, to expose the scripted categories of our realities, and to deconstruct the conventions of authenticity. And yet, after all this deconstruction, something true can still remain. Something essential, even sincere. Like piecing together shattered porcelain with kintsugi, we use AI to break apart and recombine reality’s inherited forms. Human touch lies in the golden seams and in the repairing. It is there in what we choose to keep, in how we join the broken pieces, and in the final form. That is where the older ideas of human touch need revision. This, perhaps, is the beginning of a new humanist language of authenticity in AI art.
 
-Creative works remain distinct because they communicate felt experience between beings who share a world. Part of the value of literature, music, and art has always been the sense that one consciousness is saying to another: *this is what it felt like.* In AI co-creativity, the AI artist becomes a mediator who channels the dataset's mean thoughts, negotiates with their own lived experience, and says (perhaps with some unease and irony, but still sincerely) this is what it felt like for me, for it, for them, for us all.
+In AI co-creativity, the human artist usually remains the primary subject of expression, while the system acts as a mediator that channels the dataset’s average thoughts. Or in a more nuanced lens, expression is distributed across a strange assemblage: the human artist, the dataset and its contributors, the model, and the people who built it. There is, however, a harder case that this essay has mostly left aside: the fully autonomous creative system. 
 
----
+As Simon Colton, Alison Pease, and Rob Saunders suggest in "Issues of Authenticity in Autonomously Creative Systems", such a system may still make valid art not by pretending to human authenticity, but by openly inhabiting a non-authentic position of its own. It would move closer to something like human authenticity only if it could create from its own history, purposes, and situated relation to a world. That possibility may be nearer than it sounds. Embodied robots, AI capable of building social bonds, extended memory logs, and self-revising its own system prompts are all technically within reach. What remains underexplored is how these capacities would reshape our understanding of art and authenticity. That larger question lies beyond the scope of this essay, and deserves another piece.
 
-## Suggestions for Creators and Audiences
-
-I'm afraid the reason I use so many fluffy words in the last chapter is that I struggle to find a clean, conclusive answer to the question I started this essay with. What I could confidently offer here is a list of plausible criteria of human touch. We can use this no-fluff checklist as a test for ourselves while creating or appreciating AI art, or use it as pointers for further research and discussion.
-
-### When you create with AI
-
-Be present. Be intentional.
-
-Keep asking yourself: Why am I making this? What in it is actually mine? What choices am I making just because they feel easy or impressive? And what choices are tied to my values and my history?
-
-Build your own dataset. Fine-tune your own models.
-
-Research the traditions and styles mentioned in your prompt. Understand its history, the community behind it, and your relation to them.
-
-Punch up. Don't punch down.
-
-Be accountable. Document and disclose your process.
-
-Stop treating AI as a tool. Treat it as an artistic material, and understand its properties.
-
-Be careful of AI's sycophancy and biases.
-
-Playing ping pong with AI cautiously, and see where this dance brings you.
-
-Design the conditions of emergence, before letting randomness play its own game
-
-Trust the process to help you come into more honest contact with your inner worlds.
-
-Stay away from staged or performative authenticity. If you can't, deconstruct and expose it with AI in an interesting way.
-
-Keep interesting flaws. Let the awkwardness become part of the work.
-
-### When you look at AI art
-
-Be present. Be intentional.
-
-Think about how this work came into being.
-
-Don't assume there's just one "subject". Look for the layers of agency: the human creator, the statistical model, the people who contributed to the dataset, and the broader visual culture.
-
-Notice the defaults, the normal distribution, and the flaws.
-
-Check whether it's deepening or subverting the tradition it references, or simply exploiting their recognizability.
-
-Ask what it does to your sense of the world.
+Creative works remain distinct because they communicate felt experience between beings who share a world. Part of the value of literature, music, and art has always been the sense that one consciousness is saying to another: *this is what it felt like.* In AI art, the claim becomes: *this could have been what it felt like for me, for it, for them, and for us all* (Perhaps with some unease and irony, but still sincerely).
 
 ---
 
 ## Afterword
 
-On a more personal note, one of my ongoing commitments is to explore how AI co-creation tools might augment human well-being, or at least how we could cope with the dystopian crisis they might create. Companies are going to build AI anyway, in good ways and bad ways. The least we can do is surface the issues, calibrate our understanding, and keep the conversation going with a little more nuance. As we shape and use tools, our tools shape and use us, and together we shape the world. This is why the topic still feels worth writing about, even after the hype fatigue.
+I'm afraid the reason I use so many fluffy words in this essay is that I struggle to find a clean, conclusive answer to the question I started this essay with. What I could confidently offer here is a list of plausible criteria of human touch. We can use this no-fluff checklist as a test for ourselves while creating or appreciating AI art, or use it as pointers for further research and discussion.
+
+### When you create with AI
+
+- Be present. Be intentional.
+- Keep asking yourself: Why am I making this? What in it is actually mine? What choices am I making just because they feel easy or impressive? And what choices are tied to my values and my history?
+- Build your own dataset. Fine-tune your own models.
+- Research the traditions and styles mentioned in your prompt. Understand its history, the community behind it, and your relation to them.
+- Punch up. Don't punch down.
+- Be accountable. Document and disclose your process.
+- Stop treating AI as a tool. Treat it as an artistic material, and understand its properties.
+- Be careful of AI's sycophancy and biases.
+- Playing ping pong with AI cautiously, and see where this dance brings you.
+- Design the conditions of emergence, before letting randomness play its own game
+- Trust the process to help you come into more honest contact with your inner worlds.
+- Stay away from staged or performative authenticity. If you can't, deconstruct and expose it with AI in an interesting way.
+- Keep interesting flaws. Let the awkwardness become part of the work.
+
+### When you look at AI art
+
+- Be present. Be intentional.
+- Think about how this work came into being.
+- Don't assume there's just one "subject". Look for the layers of agency: the human creator, the statistical model, the people who contributed to the dataset, and the broader visual culture.
+- Notice the defaults, the normal distribution, and the flaws.
+- Check whether it's deepening or subverting the tradition it references, or simply exploiting their recognizability.
+- Ask what the work does to your sense and understanding of the world.
+
+Finally, on a more personal note, one of my ongoing commitments is to explore how AI co-creation tools might augment human well-being, or at least how we could cope with the dystopian crisis they might create. Companies are going to build AI anyway, in good ways and bad ways. The least we can do is surface the issues, calibrate our understanding, and keep the conversation going with a little more nuance. As we shape and use tools, our tools shape and use us, and together we shape the world. This is why the topic still feels worth writing about, even after the hype fatigue.
 
 Get in touch if this is a corner of the internet you want to think through together. I intend to keep exploring it, in community events, in art-making, and in research writing like this.
 
@@ -281,6 +266,12 @@ Jun'ichiro Tanizaki. "*In Praise of Shadows"*. 1977.
 [Simon Colton, Alison Pease, and Rob Saunders. "*Issues of Authenticity in Autonomously Creative Systems*". 2018.](https://computationalcreativity.net/iccc2018/sites/default/files/papers/ICCC_2018_paper_64.pdf)
 
 [Lindsay Brainard. "*The Curious Case of Uncurious Creation*". 2025.](https://www.tandfonline.com/doi/abs/10.1080/0020174X.2023.2261503)
+
+[David Salas Espasa, and Mar Camacho. "*From Aura to Semi-Aura: Reframing Authenticity in AI-Generated Art—A Systematic Literature Review*". 2025.](https://link.springer.com/article/10.1007/s00146-025-02361-3)
+
+[Eryk Salvaggio. "*Critical Topics: AI Images*". 2024.](https://www.cyberneticforests.com/ai-images)
+
+[Hito Steyerl. "*Mean Images*". 2023.](https://newleftreview.org/issues/ii140/articles/hito-steyerl-mean-images)
 
 [Mihaly Csikszentmihalyi. "*The Systems Model of Creativity and Its Applications*". 2014.](https://onlinelibrary.wiley.com/doi/10.1002/9781118367377.ch25)
 

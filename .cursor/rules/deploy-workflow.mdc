@@ -1,0 +1,34 @@
+---
+description: Rules for git commits, pushes, and deployments on this site
+alwaysApply: true
+---
+
+# Deploy Workflow
+
+## Publishing
+
+- NEVER push to remote or publish without explicitly asking the user first.
+- When the user asks to "publish", confirm before running `git push`.
+- After committing locally, present the commit summary and ask: "Ready to push and publish?"
+
+## Pre-commit checks
+
+- Run `python3 update-subpages.py` before committing whenever article folders or content.md files have changed.
+- `works/content.md` is manually maintained (custom table layout) — the script will not overwrite it.
+
+## Commit messages
+
+Write commit messages that describe **what changed and why**.
+
+**Subject line:**
+- Use imperative ("Add", "Fix", "Update", "Revise", not "Added", "Fixed")
+- Lead with the user-facing or architectural change, not the file touched
+- Be specific: "Add hover preview for works table" not "Update app.js"
+- For content-only edits, name the content: "Revise essay: tighten afterword intro"
+
+**Body (for multi-file or architectural changes):**
+- Add a blank line after the subject
+- List each distinct change as a `- ` bullet
+- Each bullet should explain the what and why, not the diff
+- Wrap lines at ~72 characters
+- Omit the body for trivial single-file edits (typo fixes, punctuation)

@@ -1,0 +1,37 @@
+---
+description: Site architecture, tech stack, and content conventions
+alwaysApply: true
+---
+
+# Project Architecture
+
+## Tech stack
+
+- Static site hosted on GitHub Pages at leolau.hk (no build step)
+- Client-side Markdown rendering via Marked.js (loaded from jsDelivr CDN)
+- Extended table support via `marked-extended-tables`
+- Shared `app.js` and `styles.css` at repo root, referenced by all pages
+
+## Site structure
+
+- `/` — homepage (`index.html` + `content.md`)
+- `/writings/` — listing page + individual essay subpages
+- `/works/` — listing page (custom table with hover previews) + individual work subpages
+
+## URL system (Notion-style)
+
+- Folders: `{title-slug}-{32-char-hex-id}/` — created once, never renamed
+- Generate IDs with `openssl rand -hex 16`
+- Browser URL auto-updates to current title via `history.replaceState`
+- Stale-slug URLs resolve via `404.html` → `articles.json` lookup → redirect
+
+## Adding content
+
+- New article: create folder, add `content.md` (with `# Title` and `Published: YYYY-MM-DD`), run `python3 update-subpages.py`
+- Title change: edit `# Title` in `content.md`, run `python3 update-subpages.py` — no folder rename needed
+- Works entries: also add a `preview.jpg` (800x800) and manually update `works/content.md` table
+
+## YouTube embed behavior
+
+- Bare YouTube URLs in markdown → embedded player (iframe)
+- YouTube URLs with custom anchor text like `[text](youtube-url)` → plain hyperlink

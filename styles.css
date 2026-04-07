@@ -169,21 +169,25 @@ body {
     width: 100%;
     margin: 1.25em 0;
     font-size: 0.95em;
-    background: #ededed;
+    background: transparent;
     table-layout: fixed;
 }
 
 .markdown-content table th,
 .markdown-content table td {
-    border: 1px solid var(--rule);
-    padding: 8px 12px;
+    border: none;
+    border-bottom: 1px solid var(--rule);
+    padding: 1.3em 0 10em;
     text-align: left;
     vertical-align: top;
 }
 
 .markdown-content table th {
-    background-color: var(--table-head-bg);
+    background: none;
     font-weight: 600;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 0.7em 0;
 }
 
 .markdown-content img {
@@ -243,19 +247,18 @@ body {
     visibility: hidden;
 }
 
-/* Hover preview image for works table */
+/* Hover preview image behind table */
 @media (hover: hover) and (pointer: fine) {
     .hover-preview {
-        position: fixed;
+        position: absolute;
         pointer-events: none;
-        z-index: 1000;
-        width: 200px;
-        height: 200px;
+        z-index: -1;
+        width: 44vw;
+        max-width: 560px;
+        height: auto;
         object-fit: cover;
-        border-radius: 6px;
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
         opacity: 0;
-        transition: opacity 0.18s ease;
+        transition: opacity 0.25s ease;
     }
     .hover-preview.visible {
         opacity: 1;

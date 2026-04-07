@@ -179,9 +179,18 @@ function initHoverPreviews() {
     img.className = 'hover-preview';
     document.body.appendChild(img);
 
+    var cache = {};
     previewLinks.forEach(function (link) {
         var href = link.getAttribute('href').replace(/\/?$/, '/');
-        var src = href + 'preview.jpg';
+        var src = href + 'preview.webp';
+        var preload = new Image();
+        preload.src = src;
+        cache[src] = preload;
+    });
+
+    previewLinks.forEach(function (link) {
+        var href = link.getAttribute('href').replace(/\/?$/, '/');
+        var src = href + 'preview.webp';
         var angle = (Math.random() * 30 - 15).toFixed(1);
         link.addEventListener('mouseenter', function () {
             var rect = link.getBoundingClientRect();
@@ -194,6 +203,7 @@ function initHoverPreviews() {
         });
         link.addEventListener('mouseleave', function () {
             img.classList.remove('visible');
+            img.removeAttribute('src');
         });
     });
 }

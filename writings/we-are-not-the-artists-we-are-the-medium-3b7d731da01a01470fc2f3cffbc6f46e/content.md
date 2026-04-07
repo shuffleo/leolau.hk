@@ -9,7 +9,7 @@ Author: Leo Lau
 
 So I've been playing with this text-to-image generator [MidJourney](https://www.midjourney.com/) for a month, in an attempt to understand what it means to co-create with an AI. (Works on [Youtube](https://www.youtube.com/channel/UCPKOU1Y7qbnMxurgfvYIwCQ) and [Instagram](https://www.instagram.com/unun.leg/)) It's one thing to watch "Two Minute Papers", but quite another to get your hands dirty.
 
-![A peaceful morning garden of Kowloon ruins](./morning-garden.png)
+![A peaceful morning garden of Kowloon ruins](./morning-garden.webp)
 > *Image prompt: "a peaceful morning garden of Kowloon ruins, small butterflies and flower buds, kids playing, post apocalyptic oil painting, hyperdetailed"*
 
 
@@ -17,7 +17,7 @@ Shock and awe! This usually is the first reaction people have when they first se
 
 However, the more I play with it, the more I feel like it's a new paradigm of art. Just like Surrealism and Pop art from the last century, we are witnessing a new art form that is fed and trained by the collective human experience (which we call datasets), and yet capable of hallucinating a reality that doesn't exist.
 
-![Hello Kitty marble statue](./hello-kitty-statue.png)
+![Hello Kitty marble statue](./hello-kitty-statue.webp)
 
 > *Image prompt: "hello kitty, marble statue, 8th century"*
 

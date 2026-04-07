@@ -49,14 +49,25 @@ Edit the `# Title` heading in `content.md`. That's it. No folder renames or link
 ## Images
 
 - All images should be in **WebP** format for optimal loading speed.
+- Every `.webp` image has a tiny `*-tiny.webp` sibling (~32px wide, <500 bytes) used as a blur placeholder.
 - Run `python3 optimize-images.py` for a dry-run preview of convertible images.
-- Run `python3 optimize-images.py --run` to convert all JPG/JPEG/PNG to WebP and delete the originals.
+- Run `python3 optimize-images.py --run` to convert all JPG/JPEG/PNG to WebP, delete the originals, and generate any missing blur thumbnails.
 - After conversion, update any markdown references from `.jpg`/`.png` to `.webp`.
+
+## Blur-Up Image Loading
+
+All `.webp` images in articles use a Medium-style blur-up loading effect:
+
+1. A tiny blurred placeholder (`*-tiny.webp`) loads instantly.
+2. The full image loads in the background.
+3. When ready, the full image fades in over the blur, then the blur hides.
+
+This applies to both inline article images and the works table hover previews. The effect degrades gracefully — if no tiny version exists, the image loads normally.
 
 ## Works Hover Preview
 
 - Links in the works table that point to folders with a 32-char hex ID automatically get a hover preview.
-- The preview image is loaded from `preview.webp` inside the work's folder.
+- The preview image is loaded from `preview.webp` inside the work's folder (with `preview-tiny.webp` as the blur placeholder).
 - On desktop, hovering a title shows the image large and tilted behind the text. Disabled on touch devices.
 
 ## Acknowledgments

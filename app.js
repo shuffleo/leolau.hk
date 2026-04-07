@@ -73,18 +73,63 @@ function improveImageHandling(html) {
     const temp = document.createElement('div');
     temp.innerHTML = html;
     
-    // Find all images and ensure they're properly styled
     const images = temp.querySelectorAll('img');
     images.forEach(img => {
-        // Add loading="lazy" for better performance
         img.setAttribute('loading', 'lazy');
-        // Ensure images are centered if they're in a paragraph
-        if (img.parentElement.tagName === 'P') {
-            img.parentElement.style.textAlign = 'center';
-        }
     });
     
     return temp.innerHTML;
+}
+
+function initBlurUpImages() {
+    var contentDiv = document.getElementById('content');
+    if (!contentDiv) return;
+
+    var images = contentDiv.querySelectorAll('img');
+    var imgArray = Array.prototype.slice.call(images);
+    imgArray.forEach(function (img) {
+        var src = img.getAttribute('src');
+        if (!src || !/\.webp$/i.test(src) || /^https?:\/\//.test(src) || /-tiny\.webp$/i.test(src)) return;
+
+        var tinySrc = src.replace(/\.webp$/i, '-tiny.webp');
+
+        var wrapper = document.createElement('div');
+        wrapper.className = 'img-blur-wrap';
+
+        var blurImg = document.createElement('img');
+        blurImg.className = 'img-blur';
+        blurImg.src = tinySrc;
+        blurImg.alt = '';
+
+        img.classList.add('img-full');
+
+        var parent = img.parentNode;
+        if (parent && parent.tagName === 'P' && parent.querySelectorAll('img').length === 1) {
+            parent.parentNode.insertBefore(wrapper, parent);
+            wrapper.appendChild(blurImg);
+            wrapper.appendChild(img);
+            if (!parent.textContent.trim()) {
+                parent.parentNode.removeChild(parent);
+            }
+        } else {
+            img.parentNode.insertBefore(wrapper, img);
+            wrapper.appendChild(blurImg);
+            wrapper.appendChild(img);
+        }
+
+        if (img.complete && img.naturalWidth > 0) {
+            img.classList.add('loaded');
+            blurImg.classList.add('hidden');
+        } else {
+            img.onload = function () {
+                img.classList.add('loaded');
+                blurImg.classList.add('hidden');
+            };
+            blurImg.onerror = function () {
+                img.classList.add('loaded');
+            };
+        }
+    });
 }
 
 // Render markdown
@@ -110,6 +155,7 @@ function renderMarkdown(content) {
         contentDiv.innerHTML = '<p>Error: Marked.js library failed to load.</p>';
     }
     contentDiv.classList.add('loaded');
+    initBlurUpImages();
     highlightActiveNav();
     updateUrlSlug();
     initHoverPreviews();

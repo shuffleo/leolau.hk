@@ -52,17 +52,19 @@ TINY_QUALITY = 50
 
 
 def generate_tiny_thumbnails(repo_root: Path) -> int:
-    """Generate preview-tiny.webp for any preview.webp missing one."""
+    """Generate a -tiny.webp sibling for every .webp that lacks one."""
     count = 0
     for d in SCAN_DIRS:
         scan = repo_root / d
         if not scan.exists():
             continue
-        for preview in scan.rglob("preview.webp"):
-            tiny = preview.with_name("preview-tiny.webp")
+        for webp in scan.rglob("*.webp"):
+            if webp.stem.endswith("-tiny"):
+                continue
+            tiny = webp.with_name(webp.stem + "-tiny.webp")
             if tiny.exists():
                 continue
-            img = Image.open(preview)
+            img = Image.open(webp)
             w, h = img.size
             new_w = TINY_WIDTH
             new_h = max(1, int(h * new_w / w))

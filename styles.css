@@ -199,6 +199,42 @@ body {
     box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
 }
 
+/* Blur-up image loading */
+.img-blur-wrap {
+    position: relative;
+    overflow: hidden;
+    margin: 1.65em auto;
+    max-width: 100%;
+}
+.img-blur-wrap .img-blur {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: blur(20px);
+    transition: opacity 0.15s ease;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+.img-blur-wrap .img-blur.hidden {
+    opacity: 0;
+}
+.img-blur-wrap .img-full {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+.img-blur-wrap .img-full.loaded {
+    opacity: 1;
+}
+
 /* YouTube embed container */
 .youtube-embed {
     position: relative;

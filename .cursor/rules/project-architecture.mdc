@@ -31,6 +31,13 @@ alwaysApply: true
 - Title change: edit `# Title` in `content.md`, run `python3 update-subpages.py` — no folder rename needed
 - Works entries: also add a `preview.webp` and manually update `works/content.md` table
 
+## Image loading
+
+- All `.webp` images get blur-up loading: a `*-tiny.webp` placeholder (~32px) shows instantly, full image fades in on load
+- Naming convention: `photo.webp` → `photo-tiny.webp`, `preview.webp` → `preview-tiny.webp`
+- `optimize-images.py --run` generates missing tiny thumbnails automatically
+- Works hover previews also use blur-up (two-layer: `preview-tiny.webp` + `preview.webp`)
+
 ## YouTube embed behavior
 
 - Bare YouTube URLs in markdown → embedded player (iframe)

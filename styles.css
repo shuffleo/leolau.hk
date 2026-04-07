@@ -9,10 +9,12 @@
     --paper: #eaeaea;
     --text: #2b2b2b;
     --text-soft: #5a5a5a;
-    --rule: #c8c8c8;
+    --rule: #000000;
     --link: #0000EE;
     --link-hover: #0000BB;
     --code-bg: #e4e4e4;
+    --code-border: #c8c8c8;
+    --blockquote-border: #ababab;
     --table-head-bg: #dcdcdc;
 }
 
@@ -114,7 +116,7 @@ body {
 }
 
 .markdown-content blockquote {
-    border-left: 2px solid #ababab;
+    border-left: 2px solid var(--blockquote-border);
     padding: 0.15em 0 0.15em 1em;
     margin: 1em 0;
     color: var(--text-soft);
@@ -123,7 +125,7 @@ body {
 
 .markdown-content code {
     background-color: var(--code-bg);
-    border: 1px solid #c8c8c8;
+    border: 1px solid var(--code-border);
     border-radius: 5px;
     padding: 0.14em 0.36em;
     font-size: 0.84em;
@@ -177,7 +179,7 @@ body {
 .markdown-content table td {
     border: none;
     border-bottom: 1px solid var(--rule);
-    padding: 1.3em 0 10em;
+    padding: 1.3em 0 8em;
     text-align: left;
     vertical-align: top;
 }

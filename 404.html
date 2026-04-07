@@ -3,24 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting…</title>
+    <title>Leo Lau</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="stylesheet" href="/styles.css">
-</head>
-<body>
-    <div class="container">
-        <div id="content" class="markdown-content loaded">
-            <p>Redirecting…</p>
-        </div>
-    </div>
     <script>
     (function () {
         var path = window.location.pathname.replace(/\/+$/, '');
         var match = path.match(/([0-9a-f]{32})$/);
-        if (!match) { show404(); return; }
+        if (!match) return;
 
         var id = match[1];
         var base = path.substring(0, path.indexOf('/writings/'));
+
+        window.__redirecting = true;
         fetch(base + '/writings/articles.json')
             .then(function (r) { return r.json(); })
             .then(function (map) {
@@ -28,16 +23,32 @@
                 if (folder) {
                     window.location.replace(base + '/writings/' + folder + '/');
                 } else {
+                    window.__redirecting = false;
                     show404();
                 }
             })
-            .catch(function () { show404(); });
-
-        function show404() {
-            document.getElementById('content').innerHTML =
-                '<h1>Page not found</h1><p><a href="' + base + '/">Go home</a></p>';
-        }
+            .catch(function () {
+                window.__redirecting = false;
+                show404();
+            });
     })();
+
+    function show404() {
+        var el = document.getElementById('content');
+        if (el) {
+            el.innerHTML = '<h1>Page not found</h1><p><a href="/">Go home</a></p>';
+            el.classList.add('loaded');
+        }
+    }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div id="content" class="markdown-content">
+        </div>
+    </div>
+    <script>
+    if (!window.__redirecting) show404();
     </script>
 </body>
 </html>

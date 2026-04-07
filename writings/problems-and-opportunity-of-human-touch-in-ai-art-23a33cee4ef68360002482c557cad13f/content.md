@@ -1,6 +1,6 @@
 [ABOUT](../../)  ||  [WORKS](../../works/)  ||  [WRITINGS](../../writings/)
 
-# Human Touch and the Problem of AI Art
+# Problems and Opportunity of Human Touch in AI Art
 
 Published: 2026-03-28  
 Author: Leo Lau

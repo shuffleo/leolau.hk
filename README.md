@@ -33,9 +33,31 @@ Article URLs use a Notion-style scheme: `{title-slug}-{32-char-hex-id}`.
 3. Add `content.md` inside it (include a `# Title` heading and `Published: YYYY-MM-DD`).
 4. Run `python3 update-subpages.py` — this regenerates `index.html`, the listings page, and `articles.json`.
 
+### Adding a new work
+
+1. Generate a 32-char hex ID: `openssl rand -hex 16`
+2. Create a folder: `works/{title-slug}-{id}/`
+3. Add `content.md` inside it (with `# Title`, `Year:`, `Type:`, and a YouTube link).
+4. Add a `preview.webp` image (used for hover preview on the works table).
+5. Manually add a row to `works/content.md` (custom table layout).
+6. Run `python3 update-subpages.py` — this regenerates `index.html` and `articles.json`.
+
 ### Changing an article title
 
 Edit the `# Title` heading in `content.md`. That's it. No folder renames or link updates needed — `replaceState` handles the URL, and `update-subpages.py` picks up the new title for the listing page.
+
+## Images
+
+- All images should be in **WebP** format for optimal loading speed.
+- Run `python3 optimize-images.py` for a dry-run preview of convertible images.
+- Run `python3 optimize-images.py --run` to convert all JPG/JPEG/PNG to WebP and delete the originals.
+- After conversion, update any markdown references from `.jpg`/`.png` to `.webp`.
+
+## Works Hover Preview
+
+- Links in the works table that point to folders with a 32-char hex ID automatically get a hover preview.
+- The preview image is loaded from `preview.webp` inside the work's folder.
+- On desktop, hovering a title shows the image large and tilted behind the text. Disabled on touch devices.
 
 ## Acknowledgments
 

@@ -15,6 +15,7 @@ alwaysApply: true
 
 - Run `python3 update-subpages.py` before committing whenever article folders or content.md files have changed.
 - `works/content.md` is manually maintained (custom table layout) — the script will not overwrite it.
+- Run `python3 optimize-images.py --run` before committing to convert any new JPG/JPEG/PNG images to WebP and remove the originals. Update any markdown references from .jpg/.png to .webp.
 
 ## Commit messages
 

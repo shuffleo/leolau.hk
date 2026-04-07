@@ -1,0 +1,55 @@
+---
+description: Conventions for organising and editing artwork entries in /works/
+globs: works/**/content.md
+alwaysApply: false
+---
+
+# Works Content
+
+## Page structure
+
+Every work's `content.md` follows this layout:
+
+```
+[ABOUT](../../)  ||  [WORKS](../../works/)  ||  [WRITINGS](../../writings/)
+
+# Title of the Work
+
+Year: YYYY  
+Type: medium, duration/dimensions
+
+---
+
+[description paragraphs — see the "writing-artwork-descriptions" skill]
+
+[embeds, images, or links as needed]
+```
+
+- **Title** is the `# heading` — the source of truth for the URL slug and listings.
+- **Year** and **Type** are metadata lines immediately after the title, each ending with two trailing spaces for a line break.
+- The `---` rule separates metadata from body content.
+- Bare YouTube URLs become embedded players; `[text](url)` stays a plain link.
+
+## Listing table
+
+`works/content.md` is manually maintained. Each new work gets a row:
+
+```
+| [Title](./slug-folder/) | YYYY | medium, duration/dimensions |
+```
+
+Keep rows in **reverse chronological order** (newest first).
+
+## Adding a new work
+
+1. Generate folder ID: `openssl rand -hex 16`
+2. Create folder: `works/{title-slug}-{id}/`
+3. Add `content.md` with the structure above
+4. Add `preview.webp` for the hover preview on the listing page
+5. Run `python3 optimize-images.py --run` to generate `preview-tiny.webp`
+6. Add a row to `works/content.md`
+7. Run `python3 update-subpages.py`
+
+## Descriptions
+
+When writing or editing the description paragraphs, use the **writing-artwork-descriptions** skill for voice, structure, and length guidelines.

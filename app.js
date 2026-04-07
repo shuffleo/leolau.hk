@@ -53,7 +53,10 @@ function processYouTubeEmbeds(html) {
         if (href) {
             const videoId = getYouTubeId(href);
             if (videoId) {
-                // Replace the link with an embedded player
+                const text = link.textContent.trim();
+                const looksLikeURL = /^https?:\/\//.test(text) || /^(www\.)?youtu/.test(text);
+                if (!looksLikeURL) return;
+
                 const embedDiv = document.createElement('div');
                 embedDiv.className = 'youtube-embed';
                 embedDiv.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;

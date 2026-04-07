@@ -7,7 +7,7 @@ Type: video, 39:43 min
 
 ---
 
-This is a stop-motion video animated with a series of AI-generated images. It's accompanied with computationally generative music from Alex Bainter's generative.fm project.
+This work is a stop-motion video animated with a series of AI-generated images. It's accompanied with computationally generative music from Alex Bainter's generative.fm project.
 
 Multiple generations of plastic bags appear to float mid-air, journeying through landfills and painterly clouds before returning to where they started. They waltz as if choosing their own path, but the wind was always deciding. 
 

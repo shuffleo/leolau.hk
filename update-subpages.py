@@ -170,7 +170,7 @@ def render_listing_markdown(
     entries: list[Entry],
     empty_message: str,
 ) -> str:
-    lines = [NAV_LINE, "", "---", "", f"# {section_title}", ""]
+    lines = [NAV_LINE, "", f"### {section_title}", ""]
     if entries:
         for entry in entries:
             lines.append(

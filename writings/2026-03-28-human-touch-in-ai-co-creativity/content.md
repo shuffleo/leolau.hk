@@ -204,32 +204,33 @@ Creative works remain distinct because they communicate felt experience between 
 
 ## Afterword
 
-I'm afraid the reason I use so many fluffy words in this essay is that I struggle to find a clean, conclusive answer to the question I started this essay with. What I could confidently offer here is a list of plausible criteria of human touch. We can use this no-fluff checklist as a test for ourselves while creating or appreciating AI art, or use it as pointers for further research and discussion.
+Here is a checklist that we can use to test ourselves while creating and appreciating AI art. Or we can use it as pointers for further research and discussion.
 
 ### When you create with AI
 
 - Be present. Be intentional.
-- Keep asking yourself: Why am I making this? What in it is actually mine? What choices am I making just because they feel easy or impressive? And what choices are tied to my values and my history?
+- Keep asking yourself: Why am I making this? What in it is actually mine? What choices am I making just because they feel easy or impressive? And what choices are tied to my values and my history? And our shared values and history?
 - Build your own dataset. Fine-tune your own models.
 - Research the traditions and styles mentioned in your prompt. Understand its history, the community behind it, and your relation to them.
 - Punch up. Don't punch down.
 - Be accountable. Document and disclose your process.
 - Stop treating AI as a tool. Treat it as an artistic material, and understand its properties.
 - Be careful of AI's sycophancy and biases.
-- Playing ping pong with AI cautiously, and see where this dance brings you.
-- Design the conditions of emergence, before letting randomness play its own game
-- Trust the process to help you come into more honest contact with your inner worlds.
+- Play ping pong with AI cautiously. See where this dance brings you.
+- Design the conditions of emergence, before letting randomness play its own game.
+- Trust the effort to help you come into honest contact with your inner worlds.
+- If you want to be lazy sometimes, find somewhere else more meaningful to hone your craft.
 - Stay away from staged or performative authenticity. If you can't, deconstruct and expose it with AI in an interesting way.
 - Keep interesting flaws. Let the awkwardness become part of the work.
 
 ### When you look at AI art
 
 - Be present. Be intentional.
-- Think about how this work came into being.
+- Think about how this work came into being. Ask where human touch enters the process.
 - Don't assume there's just one "subject". Look for the layers of agency: the human creator, the statistical model, the people who contributed to the dataset, and the broader visual culture.
 - Notice the defaults, the normal distribution, and the flaws.
 - Check whether it's deepening or subverting the tradition it references, or simply exploiting their recognizability.
-- Ask what the work does to your sense and understanding of the world.
+- Ask what the work does to your sense and your understanding of the world.
 
 Finally, on a more personal note, one of my ongoing commitments is to explore how AI co-creation tools might augment human well-being, or at least how we could cope with the dystopian crisis they might create. Companies are going to build AI anyway, in good ways and bad ways. The least we can do is surface the issues, calibrate our understanding, and keep the conversation going with a little more nuance. As we shape and use tools, our tools shape and use us, and together we shape the world. This is why the topic still feels worth writing about, even after the hype fatigue.
 

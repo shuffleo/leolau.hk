@@ -12,16 +12,27 @@
         var match = path.match(/([0-9a-f]{32})$/);
         if (!match) return;
 
-        var id = match[1];
-        var base = path.substring(0, path.indexOf('/writings/'));
+        var sections = ['writings', 'works'];
+        var section = null;
+        var base = '';
+        for (var i = 0; i < sections.length; i++) {
+            var idx = path.indexOf('/' + sections[i] + '/');
+            if (idx !== -1) {
+                section = sections[i];
+                base = path.substring(0, idx);
+                break;
+            }
+        }
+        if (!section) return;
 
+        var id = match[1];
         window.__redirecting = true;
-        fetch(base + '/writings/articles.json')
+        fetch(base + '/' + section + '/articles.json')
             .then(function (r) { return r.json(); })
             .then(function (map) {
                 var folder = map[id];
                 if (folder) {
-                    window.location.replace(base + '/writings/' + folder + '/');
+                    window.location.replace(base + '/' + section + '/' + folder + '/');
                 } else {
                     window.__redirecting = false;
                     show404();

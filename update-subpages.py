@@ -221,15 +221,18 @@ def main() -> int:
         ),
         encoding="utf-8",
     )
-    (works_dir / "content.md").write_text(
-        render_listing_markdown(
-            section_title="Works",
-            section_path="/works",
-            entries=works,
-            empty_message="No case studies yet.",
-        ),
-        encoding="utf-8",
-    )
+    # works/content.md uses a custom table layout; only generate if missing
+    works_content = works_dir / "content.md"
+    if not works_content.exists():
+        works_content.write_text(
+            render_listing_markdown(
+                section_title="Works",
+                section_path="/works",
+                entries=works,
+                empty_message="No case studies yet.",
+            ),
+            encoding="utf-8",
+        )
 
     write_articles_json(writings_dir, writings)
     if works:

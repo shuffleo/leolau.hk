@@ -111,6 +111,7 @@ function renderMarkdown(content) {
     }
     contentDiv.classList.add('loaded');
     updateUrlSlug();
+    initHoverPreviews();
 }
 
 // Load markdown from file
@@ -138,6 +139,38 @@ function loadContent() {
                 </div>`;
             contentDiv.classList.add('loaded');
         });
+}
+
+function initHoverPreviews() {
+    var hasHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    if (!hasHover) return;
+
+    var links = document.querySelectorAll('a[data-preview]');
+    if (!links.length) return;
+
+    var img = document.createElement('img');
+    img.className = 'hover-preview';
+    document.body.appendChild(img);
+
+    var OFFSET = 16;
+
+    links.forEach(function (link) {
+        link.addEventListener('mouseenter', function () {
+            img.src = link.getAttribute('data-preview');
+            img.classList.add('visible');
+        });
+        link.addEventListener('mouseleave', function () {
+            img.classList.remove('visible');
+        });
+        link.addEventListener('mousemove', function (e) {
+            var x = e.clientX + OFFSET;
+            var y = e.clientY + OFFSET;
+            if (x + 216 > window.innerWidth) x = e.clientX - 216;
+            if (y + 216 > window.innerHeight) y = e.clientY - 216;
+            img.style.left = x + 'px';
+            img.style.top = y + 'px';
+        });
+    });
 }
 
 function updateUrlSlug() {

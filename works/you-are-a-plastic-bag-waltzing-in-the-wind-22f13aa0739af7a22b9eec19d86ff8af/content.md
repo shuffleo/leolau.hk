@@ -7,4 +7,10 @@ Type: video, 39:43 min
 
 ---
 
+![](bag-1.webp)
+
+![](bag-2.webp)
+
+![](bag-3.webp)
+
 https://www.youtube.com/watch?v=SaEFYVA5sR4

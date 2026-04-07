@@ -7,8 +7,6 @@ Author: Leo Lau
 
 ---
 
-## Opening
-
 Let's begin with a simple question:
 
 > When we say a work of art has a 'soul', what exactly do we mean?

@@ -255,12 +255,38 @@ body {
         z-index: -1;
         width: 44vw;
         max-width: 560px;
-        height: auto;
-        object-fit: cover;
         opacity: 0;
         transition: opacity 0.25s ease;
     }
     .hover-preview.visible {
+        opacity: 1;
+    }
+    .hover-preview-blur,
+    .hover-preview-full {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .hover-preview-full {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .hover-preview {
+        overflow: hidden;
+    }
+    .hover-preview-blur {
+        filter: blur(20px);
+        transition: opacity 0.15s ease;
+    }
+    .hover-preview-blur.hidden {
+        opacity: 0;
+    }
+    .hover-preview-full {
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
+    .hover-preview-full.loaded {
         opacity: 1;
     }
 }

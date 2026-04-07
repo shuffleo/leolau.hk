@@ -29,7 +29,7 @@ alwaysApply: true
 
 - New article: create folder, add `content.md` (with `# Title` and `Published: YYYY-MM-DD`), run `python3 update-subpages.py`
 - Title change: edit `# Title` in `content.md`, run `python3 update-subpages.py` — no folder rename needed
-- Works entries: also add a `preview.jpg` (800x800) and manually update `works/content.md` table
+- Works entries: also add a `preview.webp` and manually update `works/content.md` table
 
 ## YouTube embed behavior
 

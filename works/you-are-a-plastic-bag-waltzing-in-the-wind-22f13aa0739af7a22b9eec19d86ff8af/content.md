@@ -17,10 +17,10 @@ The video was made the day before the artist turned 30, when Hong Kong was exper
 
 The bag keeps waltzing. It doesn't get out.
 
-![bag-1](bag-1.webp)
+![bag-1](./bag-1.webp)
 
-![bag-2](bag-2.webp)
+![bag-2](./bag-2.webp)
 
-![bag-3](bag-3.webp)
+![bag-3](./bag-3.webp)
 
 https://www.youtube.com/watch?v=SaEFYVA5sR4

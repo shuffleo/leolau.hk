@@ -29,6 +29,7 @@ Type: medium, duration/dimensions
 - **Year** and **Type** are metadata lines immediately after the title, each ending with two trailing spaces for a line break.
 - The `---` rule separates metadata from body content.
 - Bare YouTube URLs become embedded players; `[text](url)` stays a plain link.
+- **Image paths must use `./` prefix:** `![alt](./filename.webp)`, not `![alt](filename.webp)`.
 
 ## Listing table
 

@@ -9,20 +9,27 @@ This script keeps:
 2) Nested entries for writings and works:
    - <section>/<entry-folder>/index.html
    - <section>/<entry-folder>/content.md
+3) Article registry:
+   - writings/articles.json  (and works/articles.json when entries exist)
 
-Accepted nested entry folder regex (for writings and works):
-    ^(?P<pub_date>\d{4}(?:-\d{2}-\d{2})?)-(?P<slug>[a-z0-9]+(?:-[a-z0-9]+)*)$
+Accepted nested entry folder format:
+    {title-slug}-{32-char-hex-id}
+    e.g. my-article-title-3199786d637a80d0bf78e442c18613df
+
+Folder regex:
+    ^(?P<slug>.+)-(?P<id>[0-9a-f]{32})$
 """
 
 from __future__ import annotations
 
 from dataclasses import dataclass
 from pathlib import Path
+import json
 import re
 
 
 ENTRY_DIR_RE = re.compile(
-    r"^(?P<pub_date>\d{4}(?:-\d{2}-\d{2})?)-(?P<slug>[a-z0-9]+(?:-[a-z0-9]+)*)$"
+    r"^(?P<slug>.+)-(?P<id>[0-9a-f]{32})$"
 )
 
 NAV_LINE = (
@@ -78,25 +85,36 @@ ENTRY_INDEX_HTML = """<!DOCTYPE html>
 """
 
 
+PUB_DATE_RE = re.compile(r"^Published:\s*(\d{4}(?:-\d{2}-\d{2})?)", re.IGNORECASE)
+
+
 @dataclass
 class Entry:
     folder: str
+    entry_id: str
     pub_date: str
     title: str
     path: Path
 
 
-def title_from_content(content_md: Path, fallback_slug: str) -> str:
+def _parse_content(content_md: Path, fallback_slug: str) -> tuple[str, str]:
+    """Return (title, pub_date) extracted from a content.md file."""
+    title = fallback_slug.replace("-", " ").title()
+    pub_date = ""
     try:
         lines = content_md.read_text(encoding="utf-8").splitlines()
     except FileNotFoundError:
-        return fallback_slug.replace("-", " ").title()
+        return title, pub_date
 
     for line in lines:
         stripped = line.strip()
-        if stripped.startswith("# "):
-            return stripped[2:].strip()
-    return fallback_slug.replace("-", " ").title()
+        if not title or title == fallback_slug.replace("-", " ").title():
+            if stripped.startswith("# "):
+                title = stripped[2:].strip()
+        date_match = PUB_DATE_RE.match(stripped)
+        if date_match:
+            pub_date = date_match.group(1)
+    return title, pub_date
 
 
 def discover_entries(section_dir: Path) -> list[Entry]:
@@ -115,12 +133,13 @@ def discover_entries(section_dir: Path) -> list[Entry]:
         if not content_md.exists():
             continue
 
-        pub_date = match.group("pub_date")
         slug = match.group("slug")
-        title = title_from_content(content_md, slug)
+        entry_id = match.group("id")
+        title, pub_date = _parse_content(content_md, slug)
         entries.append(
             Entry(
                 folder=child.name,
+                entry_id=entry_id,
                 pub_date=pub_date,
                 title=title,
                 path=child,
@@ -163,6 +182,14 @@ def render_listing_markdown(
     return "\n".join(lines)
 
 
+def write_articles_json(section_dir: Path, entries: list[Entry]) -> None:
+    registry = {e.entry_id: e.folder for e in entries}
+    (section_dir / "articles.json").write_text(
+        json.dumps(registry, indent=2) + "\n",
+        encoding="utf-8",
+    )
+
+
 def main() -> int:
     repo_root = Path(__file__).resolve().parent
 
@@ -203,6 +230,10 @@ def main() -> int:
         ),
         encoding="utf-8",
     )
+
+    write_articles_json(writings_dir, writings)
+    if works:
+        write_articles_json(works_dir, works)
 
     print(
         "Updated subpages:"

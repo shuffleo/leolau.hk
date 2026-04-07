@@ -110,6 +110,7 @@ function renderMarkdown(content) {
         contentDiv.innerHTML = '<p>Error: Marked.js library failed to load.</p>';
     }
     contentDiv.classList.add('loaded');
+    updateUrlSlug();
 }
 
 // Load markdown from file
@@ -137,6 +138,29 @@ function loadContent() {
                 </div>`;
             contentDiv.classList.add('loaded');
         });
+}
+
+function updateUrlSlug() {
+    var path = window.location.pathname.replace(/\/+$/, '');
+    var idMatch = path.match(/([0-9a-f]{32})$/);
+    if (!idMatch) return;
+
+    var contentDiv = document.getElementById('content');
+    var h1 = contentDiv && contentDiv.querySelector('h1');
+    if (!h1) return;
+
+    var slug = h1.textContent.trim()
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-|-$/g, '');
+    var id = idMatch[1];
+    var newFolder = slug + '-' + id;
+
+    var base = path.substring(0, path.lastIndexOf('/'));
+    var newPath = base + '/' + newFolder + '/';
+    if (newPath !== window.location.pathname) {
+        history.replaceState(null, '', newPath);
+    }
 }
 
 // Initialize when page loads

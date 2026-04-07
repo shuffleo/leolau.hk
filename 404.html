@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting…</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="content" class="markdown-content loaded">
+            <p>Redirecting…</p>
+        </div>
+    </div>
+    <script>
+    (function () {
+        var path = window.location.pathname.replace(/\/+$/, '');
+        var match = path.match(/([0-9a-f]{32})$/);
+        if (!match) { show404(); return; }
+
+        var id = match[1];
+        var base = path.substring(0, path.indexOf('/writings/'));
+        fetch(base + '/writings/articles.json')
+            .then(function (r) { return r.json(); })
+            .then(function (map) {
+                var folder = map[id];
+                if (folder) {
+                    window.location.replace(base + '/writings/' + folder + '/');
+                } else {
+                    show404();
+                }
+            })
+            .catch(function () { show404(); });
+
+        function show404() {
+            document.getElementById('content').innerHTML =
+                '<h1>Page not found</h1><p><a href="' + base + '/">Go home</a></p>';
+        }
+    })();
+    </script>
+</body>
+</html>

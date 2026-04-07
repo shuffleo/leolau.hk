@@ -16,8 +16,26 @@ This is a clean, Notion-style markdown reader built as a multi-page application.
 
 - The top navigation links to `ABOUT` (`/`), `WORKS` (`/works/`), and `WRITINGS` (`/writings/`).
 - `writings/` and `works/` are list-style sections with nested entry pages at `<section>/<folder>/index.html`, each paired with `<section>/<folder>/content.md`.
-- Nested entry folders for `writings/` and `works/` follow `YYYY[-MM-DD]-slug` (regex: `^(?P<pub_date>\d{4}(?:-\d{2}-\d{2})?)-(?P<slug>[a-z0-9]+(?:-[a-z0-9]+)*)$`).
-- Run `python3 update-subpages.py` to regenerate section index files and refresh `writings/content.md` and `works/content.md`.
+- Run `python3 update-subpages.py` to regenerate section index files, refresh listing pages, and update `articles.json`.
+
+## URL System
+
+Article URLs use a Notion-style scheme: `{title-slug}-{32-char-hex-id}`.
+
+- **Folder name** is `{initial-title-slug}-{id}` — created once, never renamed.
+- **Browser URL** auto-updates to `{current-title-slug}-{id}` via `history.replaceState` after the page loads.
+- **Stale URLs** (with outdated title slugs) still resolve: a root `404.html` extracts the hex ID, looks up `articles.json`, and redirects to the canonical folder.
+
+### Adding a new article
+
+1. Generate a 32-char hex ID: `openssl rand -hex 16`
+2. Create a folder: `writings/{title-slug}-{id}/`
+3. Add `content.md` inside it (include a `# Title` heading and `Published: YYYY-MM-DD`).
+4. Run `python3 update-subpages.py` — this regenerates `index.html`, the listings page, and `articles.json`.
+
+### Changing an article title
+
+Edit the `# Title` heading in `content.md`. That's it. No folder renames or link updates needed — `replaceState` handles the URL, and `update-subpages.py` picks up the new title for the listing page.
 
 ## Acknowledgments
 

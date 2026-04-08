@@ -125,12 +125,28 @@ def _parse_content(content_md: Path, fallback_slug: str) -> tuple[str, str]:
     return title, pub_date
 
 
+DESC_RE = re.compile(r"^Description:\s*(.+)", re.IGNORECASE)
+
+
 def _extract_description(content_md: Path, max_length: int = 155) -> str:
-    """Return the first body paragraph after the --- separator, stripped of markdown."""
+    """Return explicit Description: metadata if present, otherwise first body paragraph."""
     try:
         lines = content_md.read_text(encoding="utf-8").splitlines()
     except FileNotFoundError:
         return ""
+
+    past_separator = False
+    for line in lines:
+        stripped = line.strip()
+        if stripped == "---":
+            if not past_separator:
+                past_separator = True
+                continue
+            break
+        if not past_separator:
+            m = DESC_RE.match(stripped)
+            if m:
+                return m.group(1).strip()
 
     past_separator = False
     for line in lines:
@@ -291,7 +307,7 @@ def main() -> int:
     works.sort(key=lambda e: (e.pub_date, e.folder), reverse=True)
 
     write_section_index(writings_dir, "Writings", "Writings by Leo Lau")
-    write_section_index(works_dir, "Works", "Media art case studies by Leo Lau")
+    write_section_index(works_dir, "Works", "Art and projects by Leo Lau")
 
     for entry in writings:
         write_entry_index(entry)

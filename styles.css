@@ -44,7 +44,7 @@ body {
 
 /* Markdown Content Styling */
 .markdown-content {
-    font-size: 17px;
+    font-size: 18px;
     line-height: 1.8;
     color: var(--text);
     letter-spacing: 0.0025em;

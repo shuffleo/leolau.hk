@@ -179,14 +179,9 @@ body {
 .markdown-content table td {
     border: none;
     border-bottom: 1px solid var(--rule);
-    padding: 1.3em 0;
+    padding: 1.3em 0 8em;
     text-align: left;
     vertical-align: top;
-}
-
-.markdown-content table tr {
-    min-height: 8em;
-    height: clamp(8em, 20vw, 12em);
 }
 
 .markdown-content table th {

@@ -44,7 +44,7 @@ body {
 
 /* Markdown Content Styling */
 .markdown-content {
-    font-size: 19px;
+    font-size: 17px;
     line-height: 1.8;
     color: var(--text);
     letter-spacing: 0.0025em;
@@ -153,7 +153,7 @@ body {
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
-    transition: color 120ms ease-in-out;
+    transition: color 0.25s ease;
 }
 
 .markdown-content a:hover {
@@ -179,9 +179,14 @@ body {
 .markdown-content table td {
     border: none;
     border-bottom: 1px solid var(--rule);
-    padding: 1.3em 0 8em;
+    padding: 1.3em 0;
     text-align: left;
     vertical-align: top;
+}
+
+.markdown-content table tr {
+    min-height: 8em;
+    height: clamp(8em, 20vw, 12em);
 }
 
 .markdown-content table th {
@@ -213,7 +218,7 @@ body {
     width: 100%;
     height: auto;
     filter: blur(20px);
-    transition: opacity 0.15s ease;
+    transition: opacity 0.25s ease;
     margin: 0;
     border-radius: 0;
     box-shadow: none;
@@ -228,7 +233,7 @@ body {
     width: 100%;
     height: auto;
     opacity: 0;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.25s ease;
     margin: 0;
     border-radius: 0;
     box-shadow: none;
@@ -272,7 +277,7 @@ body {
 /* Content fade-in */
 .markdown-content {
     opacity: 0;
-    transition: opacity 0.35s ease-in;
+    transition: opacity 0.25s ease;
 }
 
 .markdown-content.loaded {
@@ -313,14 +318,14 @@ body {
     }
     .hover-preview-blur {
         filter: blur(20px);
-        transition: opacity 0.15s ease;
+        transition: opacity 0.25s ease;
     }
     .hover-preview-blur.hidden {
         opacity: 0;
     }
     .hover-preview-full {
         opacity: 0;
-        transition: opacity 0.4s ease;
+        transition: opacity 0.25s ease;
     }
     .hover-preview-full.loaded {
         opacity: 1;

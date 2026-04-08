@@ -17,10 +17,10 @@ The video was made the year when Hong Kong was experiencing one of its greatest 
 
 The bag still stays in the air.
 
-bag-1
+![bag-1](./bag-1)
 
-bag-2
+![bag-2](./bag-2)
 
-bag-3
+![bag-3](./bag-3)
 
 [https://www.youtube.com/watch?v=SaEFYVA5sR4](https://www.youtube.com/watch?v=SaEFYVA5sR4)

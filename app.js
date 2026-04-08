@@ -6,8 +6,7 @@ let markedTablesConfigured = false;
 function getExtendedTablesPluginFactory() {
     if (typeof window === 'undefined') return null;
 
-    // Support different UMD/global export names.
-    const direct = window.extendedTables || window.markedExtendedTables;
+    const direct = window["extended-tables"] || window.extendedTables || window.markedExtendedTables;
     if (typeof direct === 'function') return direct;
 
     if (direct && typeof direct.default === 'function') return direct.default;

@@ -38,6 +38,13 @@ alwaysApply: true
 - `optimize-images.py --run` generates missing tiny thumbnails automatically
 - Works hover previews also use blur-up (two-layer: `preview-tiny.webp` + `preview.webp`)
 
+## SEO meta tags
+
+- `update-subpages.py` generates `<meta>` description, Open Graph (`og:title`, `og:description`, `og:url`, `og:image`), and Twitter Card tags in every `index.html`
+- Description: first body paragraph after the `---` separator, stripped of markdown formatting, truncated to 155 chars
+- Image: first `.webp` image in the markdown, or `preview.webp` as fallback — used as `og:image` with absolute URL
+- Root `index.html` has hand-written OG tags
+
 ## YouTube embed behavior
 
 - Bare YouTube URLs in markdown → embedded player (iframe)

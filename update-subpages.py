@@ -23,6 +23,7 @@ Folder regex:
 from __future__ import annotations
 
 from dataclasses import dataclass
+from html import escape as _esc
 from pathlib import Path
 import json
 import re
@@ -36,6 +37,11 @@ NAV_LINE = (
     "[ABOUT](../)  ||  [WORKS](../works/)  ||  [WRITINGS](../writings/)"
 )
 
+SITE_URL = "https://leolau.hk"
+IMAGE_MD_RE = re.compile(r"!\[.*?\]\(\./([^)]+\.webp)\)")
+STRIP_MD_LINK_RE = re.compile(r"\[([^\]]+)\]\([^)]+\)")
+STRIP_MD_FMT_RE = re.compile(r"[*_`~]+")
+
 SECTION_INDEX_HTML = """<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,6 +49,7 @@ SECTION_INDEX_HTML = """<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title} - Leo Lau</title>
     <meta name="description" content="{description}">
+{og_tags}
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
     <link rel="stylesheet" href="../styles.css">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -66,7 +73,8 @@ ENTRY_INDEX_HTML = """<!DOCTYPE html>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title} - Leo Lau</title>
-    <meta name="description" content="{title}">
+    <meta name="description" content="{description}">
+{og_tags}
     <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
     <link rel="stylesheet" href="../../styles.css">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -117,6 +125,64 @@ def _parse_content(content_md: Path, fallback_slug: str) -> tuple[str, str]:
     return title, pub_date
 
 
+def _extract_description(content_md: Path, max_length: int = 155) -> str:
+    """Return the first body paragraph after the --- separator, stripped of markdown."""
+    try:
+        lines = content_md.read_text(encoding="utf-8").splitlines()
+    except FileNotFoundError:
+        return ""
+
+    past_separator = False
+    for line in lines:
+        stripped = line.strip()
+        if stripped == "---":
+            past_separator = True
+            continue
+        if not past_separator:
+            continue
+        if not stripped or stripped.startswith(("!", ">", "#", "[ABOUT]", "|")):
+            continue
+        text = STRIP_MD_LINK_RE.sub(r"\1", stripped)
+        text = STRIP_MD_FMT_RE.sub("", text)
+        if len(text) > max_length:
+            text = text[:max_length].rsplit(" ", 1)[0] + "\u2026"
+        return text
+    return ""
+
+
+def _extract_first_image(content_md: Path, entry_path: Path) -> str | None:
+    """Return the filename of the first .webp image, or preview.webp as fallback."""
+    try:
+        text = content_md.read_text(encoding="utf-8")
+    except FileNotFoundError:
+        text = ""
+
+    match = IMAGE_MD_RE.search(text)
+    if match:
+        return match.group(1)
+    if (entry_path / "preview.webp").exists():
+        return "preview.webp"
+    return None
+
+
+def _build_og_tags(
+    title: str, description: str, url: str, image_url: str | None = None,
+) -> str:
+    """Return indented OG and Twitter meta tags."""
+    e = lambda s: _esc(s, quote=True)
+    lines = [
+        f'    <meta property="og:title" content="{e(title)}">',
+        f'    <meta property="og:description" content="{e(description)}">',
+        f'    <meta property="og:url" content="{e(url)}">',
+    ]
+    if image_url:
+        lines.append(f'    <meta property="og:image" content="{e(image_url)}">')
+        lines.append('    <meta name="twitter:card" content="summary_large_image">')
+    else:
+        lines.append('    <meta name="twitter:card" content="summary">')
+    return "\n".join(lines)
+
+
 def discover_entries(section_dir: Path) -> list[Entry]:
     entries: list[Entry] = []
     if not section_dir.exists():
@@ -149,17 +215,37 @@ def discover_entries(section_dir: Path) -> list[Entry]:
 
 
 def write_section_index(section_dir: Path, title: str, description: str) -> None:
+    section = section_dir.name
+    url = f"{SITE_URL}/{section}/"
+    og_tags = _build_og_tags(title, description, url)
     index_html = section_dir / "index.html"
     index_html.write_text(
-        SECTION_INDEX_HTML.format(title=title, description=description),
+        SECTION_INDEX_HTML.format(
+            title=_esc(title),
+            description=_esc(description, quote=True),
+            og_tags=og_tags,
+        ),
         encoding="utf-8",
     )
 
 
 def write_entry_index(entry: Entry) -> None:
+    content_md = entry.path / "content.md"
+    section = entry.path.parent.name
+    desc = _extract_description(content_md) or entry.title
+    image_file = _extract_first_image(content_md, entry.path)
+
+    canonical_url = f"{SITE_URL}/{section}/{entry.folder}/"
+    image_url = f"{canonical_url}{image_file}" if image_file else None
+    og_tags = _build_og_tags(entry.title, desc, canonical_url, image_url)
+
     entry_index = entry.path / "index.html"
     entry_index.write_text(
-        ENTRY_INDEX_HTML.format(title=entry.title),
+        ENTRY_INDEX_HTML.format(
+            title=_esc(entry.title),
+            description=_esc(desc, quote=True),
+            og_tags=og_tags,
+        ),
         encoding="utf-8",
     )
 

@@ -116,7 +116,7 @@ Edit the `# Title` heading in `content.md`. That's it. No folder renames or link
 
 Regenerates the HTML scaffolding and content listings for both sections:
 
-- Creates/updates `index.html` for each section and each entry folder.
+- Creates/updates `index.html` for each section and each entry folder, with `<meta>` description, Open Graph, and Twitter Card tags extracted from each `content.md` (first body paragraph for description, first `.webp` image or `preview.webp` for `og:image`).
 - Auto-generates `writings/content.md` (entry links sorted newest-first by `Published:` date).
 - Generates `works/content.md` only if missing (the custom table is manually maintained).
 - Writes `writings/articles.json` and `works/articles.json` (hex-ID → folder-name maps used by `404.html` for stale-URL redirects).

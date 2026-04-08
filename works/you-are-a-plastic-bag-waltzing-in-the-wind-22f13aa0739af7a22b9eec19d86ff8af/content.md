@@ -13,7 +13,7 @@ Multiple generations of plastic bags appear to float mid-air, journeying through
 
 The title borrows from the YouTube mixtapes that kept people company during COVID lockdown: long, ambient, titled like a gentle slice of life when you're getting through the day.
 
-The video was made the day before the artist turned 30, the year when Hong Kong was experiencing one of its greatest political unravellings, and when the world was navigating the technical marvels of GenAI. It reflects on the sense of agency, powerlessness, and belonging, as seen through the eyes of a Hong Konger witnessing how history unwinds itself.
+The video was made the year when Hong Kong was experiencing one of its greatest political unravellings, the month when the world was navigating the technical marvels of GenAI, and the day before the artist turned 30. It reflects on the sense of agency, powerlessness, and belonging, as seen through the eyes of a Hong Konger witnessing how history unwinds itself.
 
 The bag still stays in the air.
 

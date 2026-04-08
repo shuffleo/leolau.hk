@@ -11,16 +11,16 @@ This work is a stop-motion video animated with a series of AI-generated images. 
 
 Multiple generations of plastic bags appear to float mid-air, journeying through landfills and painterly clouds before returning to where they started. They waltz as if choosing their own path, but the wind was always deciding. 
 
-The title borrows from the YouTube mixtapes that kept people company during COVID lockdown: long, ambient, titled like gentle instructions for getting through the day.
+The title borrows from the YouTube mixtapes that kept people company during COVID lockdown: long, ambient, titled like a gentle slice of life when you're getting through the day.
 
-The video was made the day before the artist turned 30, when Hong Kong was experiencing one of its greatest political unravellings, and when the world was navigating the technical marvels of GenAI. It reflects on the sense of agency, powerlessness, and belonging — seen through the eyes of a Hong Konger watching how history unwinds itself.
+The video was made the day before the artist turned 30, the year when Hong Kong was experiencing one of its greatest political unravellings, and when the world was navigating the technical marvels of GenAI. It reflects on the sense of agency, powerlessness, and belonging, as seen through the eyes of a Hong Konger witnessing how history unwinds itself.
 
-The bag keeps waltzing. It doesn't get out.
+The bag still stays in the air.
 
-![bag-1](./bag-1.webp)
+bag-1
 
-![bag-2](./bag-2.webp)
+bag-2
 
-![bag-3](./bag-3.webp)
+bag-3
 
-https://www.youtube.com/watch?v=SaEFYVA5sR4
+[https://www.youtube.com/watch?v=SaEFYVA5sR4](https://www.youtube.com/watch?v=SaEFYVA5sR4)

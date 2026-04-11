@@ -3,8 +3,7 @@
 # Problems and Opportunity of Human Touch in AI Art
 
 Published: 2026-03-28  
-Author: Leo Lau  
-Description: When we say a work of art has a 'soul', what exactly do we mean?
+Author: Leo Lau
 
 ---
 

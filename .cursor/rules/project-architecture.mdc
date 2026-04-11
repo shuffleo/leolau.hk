@@ -7,7 +7,7 @@ alwaysApply: true
 
 ## Tech stack
 
-- Static site hosted on GitHub Pages at leolau.hk (no build step)
+- Static site hosted on GitHub Pages at `shuffleo.github.io/leolau.hk` (no build step); `leolau.hk` redirects to it but does not serve content directly
 - Client-side Markdown rendering via Marked.js (loaded from jsDelivr CDN)
 - Extended table support via `marked-extended-tables`
 - Shared `app.js` and `styles.css` at repo root, referenced by all pages

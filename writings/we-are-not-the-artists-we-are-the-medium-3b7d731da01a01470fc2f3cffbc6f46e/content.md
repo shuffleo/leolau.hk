@@ -9,15 +9,15 @@ Author: Leo Lau
 
 So I've been playing with this text-to-image generator [MidJourney](https://www.midjourney.com/) for a month, in an attempt to understand what it means to co-create with an AI. (Works on [Youtube](https://www.youtube.com/channel/UCPKOU1Y7qbnMxurgfvYIwCQ) and [Instagram](https://www.instagram.com/unun.leg/)) It's one thing to watch "Two Minute Papers", but quite another to get your hands dirty.
 
-![A peaceful morning garden of Kowloon ruins](./morning-garden.webp)
-> *Image prompt: "a peaceful morning garden of Kowloon ruins, small butterflies and flower buds, kids playing, post apocalyptic oil painting, hyperdetailed"*
+A peaceful morning garden of Kowloon ruins
 
+> *Image prompt: "a peaceful morning garden of Kowloon ruins, small butterflies and flower buds, kids playing, post apocalyptic oil painting, hyperdetailed"*
 
 Shock and awe! This usually is the first reaction people have when they first see a great AI art piece (or any great art piece). I still remember such a sensation when I first saw Mario Klingemann's "Face Feedback III". [Mario Klingemann's "Face Feedback III"](https://www.youtube.com/watch?v=5h4R959O0cY) It's a process that started with being amused, then a fear that AI would replace humans someday, and finally indexing this uncanniness in my brain as a visual style among [many others on Aesthetics Wiki](https://aesthetics.fandom.com/wiki/List_of_Aesthetics).
 
 However, the more I play with it, the more I feel like it's a new paradigm of art. Just like Surrealism and Pop art from the last century, we are witnessing a new art form that is fed and trained by the collective human experience (which we call datasets), and yet capable of hallucinating a reality that doesn't exist.
 
-![Hello Kitty marble statue](./hello-kitty-statue.webp)
+Hello Kitty marble statue
 
 > *Image prompt: "hello kitty, marble statue, 8th century"*
 
@@ -30,6 +30,7 @@ In a way, the work we create with AI can never be authentic. They are often patc
 We first created the AI, and now the AI creates through us.
 
 ---
+
 **Update (2025-11-12):**
 
 Wrote the above piece 2 years ago when Midjourney was still on v2 / v3. Feeling nostalgic already for the aesthetics of imperfections and artefacts.

@@ -1,6 +1,22 @@
 // Default markdown file to load (in the same directory as this HTML file)
 const DEFAULT_MD_FILE = 'content.md';
 
+// `updateUrlSlug()` rewrites the path to a descriptive slug that does not exist on disk.
+// Snapshot the real folder URL now so markdown images like `./photo.webp` still resolve
+// after history.replaceState (otherwise the browser requests the cosmetic path and 404s).
+(function captureEntryAssetBase() {
+    if (typeof window === 'undefined') return;
+    try {
+        var path = window.location.pathname.replace(/\/index\.html$/i, '');
+        path = path.replace(/\/+$/, '');
+        if (!/\/(works|writings)\/[^/]+-[0-9a-f]{32}$/.test(path)) return;
+        window.__LEO_ENTRY_ASSET_BASE = new URL(
+            './',
+            window.location.origin + path + '/'
+        ).href;
+    } catch (e) { /* ignore */ }
+})();
+
 let markedTablesConfigured = false;
 
 function getExtendedTablesPluginFactory() {
@@ -73,8 +89,17 @@ function improveImageHandling(html) {
     temp.innerHTML = html;
     
     const images = temp.querySelectorAll('img');
+    const assetBase = typeof window !== 'undefined' ? window.__LEO_ENTRY_ASSET_BASE : null;
     images.forEach(img => {
         img.setAttribute('loading', 'lazy');
+        if (assetBase) {
+            const src = img.getAttribute('src');
+            if (src && !/^https?:\/\//i.test(src)) {
+                try {
+                    img.setAttribute('src', new URL(src, assetBase).href);
+                } catch (e) { /* keep original */ }
+            }
+        }
     });
     
     return temp.innerHTML;

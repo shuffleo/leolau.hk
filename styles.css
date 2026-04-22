@@ -195,10 +195,8 @@ body {
 .markdown-content img {
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
     margin: 1.65em auto;
     display: block;
-    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
 }
 
 /* Blur-up image loading */

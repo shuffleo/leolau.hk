@@ -110,6 +110,10 @@ Edit the `# Title` heading in `content.md`. That's it. No folder renames or link
 
 `app.js` supports loading a different markdown file via the `?file=yourfile.md` URL parameter. The default is `content.md`. A reference file `sample-content.md` demonstrates the supported markdown features.
 
+## PR Previews
+
+Opening a pull request against `main` automatically deploys a preview to an unlisted URL via GitHub Actions (`rossjrw/pr-preview-action`). The preview is cleaned up when the PR is closed or merged.
+
 ## Scripts
 
 ### `update-subpages.py`

@@ -39,7 +39,7 @@ NAV_LINE = (
     "[ABOUT](../)  ||  [WORKS](../works/)  ||  [WRITINGS](../writings/)"
 )
 
-SITE_URL = "https://shuffleo.github.io/leolau.hk"
+SITE_URL = "https://leolau.hk"
 IMAGE_MD_RE = re.compile(r"!\[.*?\]\(\./([^)]+\.webp)\)")
 STRIP_MD_LINK_RE = re.compile(r"\[([^\]]+)\]\([^)]+\)")
 STRIP_MD_FMT_RE = re.compile(r"[*_`~]+")

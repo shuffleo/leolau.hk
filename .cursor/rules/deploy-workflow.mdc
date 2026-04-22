@@ -11,6 +11,11 @@ alwaysApply: true
 - When the user asks to "publish", confirm before running `git push`.
 - After committing locally, present the commit summary and ask: "Ready to push and publish?"
 
+## PR previews
+
+- Opening a PR against `main` triggers a GitHub Actions workflow that deploys a preview to an unlisted URL.
+- The preview auto-cleans when the PR is closed or merged.
+
 ## Pre-commit checks
 
 - Run `python3 update-subpages.py` before committing whenever article folders or content.md files have changed.

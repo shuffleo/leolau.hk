@@ -7,7 +7,7 @@ alwaysApply: true
 
 ## Tech stack
 
-- Static site hosted on GitHub Pages at `shuffleo.github.io/leolau.hk` (no build step); `leolau.hk` redirects to it but does not serve content directly
+- Static site hosted on GitHub Pages at `leolau.hk` (no build step); `leolau.hk` redirects to it but does not serve content directly
 - Client-side Markdown rendering via Marked.js (loaded from jsDelivr CDN)
 - Extended table support via `marked-extended-tables`
 - Shared `app.js` and `styles.css` at repo root, referenced by all pages
@@ -33,7 +33,7 @@ The address bar path can become **longer than the real folder name** (full title
 - **Markdown images** use relative `src` (e.g. `![alt](./photo.webp)`). The browser resolves them against the **current** URL, so they would 404 under the cosmetic path unless fixed.
 - **Mitigation:** `app.js` snapshots the deployed entry path at load (`__LEO_ENTRY_ASSET_BASE`) and rewrites relative `<img src>` in `improveImageHandling()` before requests fire. Do **not** remove this without an equivalent fix (e.g. absolute asset URLs generated at build time).
 - **`fetch('content.md')`** runs before `replaceState`, so body text still loads; the pitfall is mainly **relative assets** after the URL changes.
-- **Verify** entry pages on the real Pages base path (`shuffleo.github.io/leolau.hk/.../`) when changing URL or image pipeline code, especially works with long `#` titles vs. short folder slugs.
+- **Verify** entry pages on the real Pages base path (`leolau.hk/.../`) when changing URL or image pipeline code, especially works with long `#` titles vs. short folder slugs.
 
 ## Adding content
 

@@ -120,6 +120,7 @@ Regenerates the HTML scaffolding and content listings for both sections:
 - Auto-generates `writings/content.md` (entry links sorted newest-first by `Published:` date).
 - Generates `works/content.md` only if missing (the custom table is manually maintained).
 - Writes `writings/articles.json` and `works/articles.json` (hex-ID → folder-name maps used by `404.html` for stale-URL redirects).
+- Generates `feed.xml` (RSS 2.0) at the repo root, combining all writings and works entries sorted by date.
 
 ### `optimize-images.py`
 

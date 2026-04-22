@@ -23,8 +23,10 @@ Folder regex:
 from __future__ import annotations
 
 from dataclasses import dataclass
+from datetime import datetime, timezone
 from html import escape as _esc
 from pathlib import Path
+from xml.sax.saxutils import escape as _xml_esc
 import json
 import re
 
@@ -50,6 +52,7 @@ SECTION_INDEX_HTML = """<!DOCTYPE html>
     <title>{title} - Leo Lau</title>
     <meta name="description" content="{description}">
 {og_tags}
+    <link rel="alternate" type="application/rss+xml" title="Leo Lau" href="/feed.xml">
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
     <link rel="stylesheet" href="../styles.css">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -75,6 +78,7 @@ ENTRY_INDEX_HTML = """<!DOCTYPE html>
     <title>{title} - Leo Lau</title>
     <meta name="description" content="{description}">
 {og_tags}
+    <link rel="alternate" type="application/rss+xml" title="Leo Lau" href="/feed.xml">
     <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
     <link rel="stylesheet" href="../../styles.css">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -292,6 +296,59 @@ def write_articles_json(section_dir: Path, entries: list[Entry]) -> None:
     )
 
 
+def _rfc822(date_str: str) -> str:
+    """Convert YYYY-MM-DD or YYYY to RFC 822 date string."""
+    if not date_str:
+        return ""
+    try:
+        dt = datetime.strptime(date_str, "%Y-%m-%d")
+    except ValueError:
+        try:
+            dt = datetime.strptime(date_str, "%Y")
+        except ValueError:
+            return ""
+    dt = dt.replace(tzinfo=timezone.utc)
+    return dt.strftime("%a, %d %b %Y %H:%M:%S +0000")
+
+
+def write_rss_feed(repo_root: Path, entries: list[Entry]) -> None:
+    """Write an RSS 2.0 feed.xml at the repo root."""
+    items: list[str] = []
+    for entry in entries:
+        section = entry.path.parent.name
+        link = f"{SITE_URL}/{section}/{entry.folder}/"
+        content_md = entry.path / "content.md"
+        desc = _xml_esc(_extract_description(content_md) or entry.title)
+        pub_date = _rfc822(entry.pub_date)
+        pub_line = f"\n      <pubDate>{pub_date}</pubDate>" if pub_date else ""
+        items.append(
+            f"    <item>\n"
+            f"      <title>{_xml_esc(entry.title)}</title>\n"
+            f"      <link>{_xml_esc(link)}</link>\n"
+            f"      <guid>{_xml_esc(link)}</guid>\n"
+            f"      <description>{desc}</description>{pub_line}\n"
+            f"    </item>"
+        )
+
+    now = datetime.now(timezone.utc).strftime("%a, %d %b %Y %H:%M:%S +0000")
+    feed = (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n'
+        "  <channel>\n"
+        "    <title>Leo Lau</title>\n"
+        f"    <link>{SITE_URL}/</link>\n"
+        "    <description>Art, writings, and projects by Leo Lau</description>\n"
+        "    <language>en</language>\n"
+        f"    <lastBuildDate>{now}</lastBuildDate>\n"
+        f'    <atom:link href="{SITE_URL}/feed.xml" rel="self" '
+        f'type="application/rss+xml"/>\n'
+        + "\n".join(items) + "\n"
+        "  </channel>\n"
+        "</rss>\n"
+    )
+    (repo_root / "feed.xml").write_text(feed, encoding="utf-8")
+
+
 def main() -> int:
     repo_root = Path(__file__).resolve().parent
 
@@ -340,9 +397,13 @@ def main() -> int:
     if works:
         write_articles_json(works_dir, works)
 
+    all_entries = sorted(writings + works, key=lambda e: (e.pub_date, e.folder), reverse=True)
+    write_rss_feed(repo_root, all_entries)
+
     print(
         "Updated subpages:"
         f" writings ({len(writings)}), works ({len(works)})."
+        f" RSS feed: {len(all_entries)} item(s)."
     )
     return 0
 

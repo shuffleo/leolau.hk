@@ -11,7 +11,7 @@ alwaysApply: false
 Every work's `content.md` follows this layout:
 
 ```
-[ABOUT](../../)  ||  [WORKS](../../works/)  ||  [WRITINGS](../../writings/)
+[HI](../../)  ||  [WORKS](../../works/)  ||  [BLOG](../../writings/)  ||  [TALKS](../../talks/)  ||  [PRESS](../../press/)
 
 # Title of the Work
 
@@ -40,6 +40,14 @@ Type: medium, duration/dimensions
 ```
 
 Keep rows in **reverse chronological order** (newest first).
+
+For external links (no local work subpage), use an HTML anchor with preview metadata so hover previews still work:
+
+```
+| <a href="https://example.com/work" data-preview="https://cdn.example.com/work.webp">Title</a> | YYYY | medium |
+```
+
+If needed, add `data-preview-tiny` for a dedicated blur placeholder.
 
 ## Adding a new work
 

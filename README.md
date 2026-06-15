@@ -21,16 +21,18 @@ This is a clean, Notion-style markdown reader built as a multi-page static site 
 | `/`          | Homepage (`index.html` + `content.md`)                                     |
 | `/writings/` | Listing page + individual essay subpages                                   |
 | `/works/`    | Listing page (custom table with hover previews) + individual work subpages |
+| `/talks/`    | Listing page for talks and recordings                                      |
+| `/press/`    | Listing page for press mentions                                            |
 
 
-Top navigation links — **ABOUT** (`/`), **WORKS** (`/works/`), **WRITINGS** (`/writings/`) — appear in every `content.md`. The current section is highlighted with a 🕶️ emoji by `app.js`.
+Top navigation links — **HI** (`/`), **WORKS** (`/works/`), **BLOG** (`/writings/`), **TALKS** (`/talks/`), **PRESS** (`/press/`) — appear in every `content.md`. The current section is highlighted with a 🕶️ emoji by `app.js`.
 
 ## Content Markdown Structure
 
 Every `content.md` starts with a nav line:
 
 ```
-[ABOUT](../../)  ||  [WORKS](../../works/)  ||  [WRITINGS](../../writings/)
+[HI](../../)  ||  [WORKS](../../works/)  ||  [BLOG](../../writings/)  ||  [TALKS](../../talks/)  ||  [PRESS](../../press/)
 ```
 
 ### Writings
@@ -48,6 +50,7 @@ Author: Name
 
 - `# Title` is the source of truth for the URL slug and listing.
 - `Published:` and `Author:` are metadata lines immediately after the title, each ending with two trailing spaces for a Markdown line break.
+- `Description:` is optional metadata for SEO override. It is read by `update-subpages.py` for meta/OG/RSS descriptions and hidden from the rendered page body by `app.js`.
 
 ### Works
 
@@ -68,8 +71,9 @@ Type: medium, duration/dimensions
 
 ### Listings
 
-- `writings/content.md` is **auto-generated** by `update-subpages.py` (one link per entry, newest first).
+- `writings/content.md` is **auto-generated** by `update-subpages.py` (grouped by year with title + one-line summary).
 - `works/content.md` uses a **manually maintained** table (custom layout with Title / Year / Type columns). The script only generates it if the file is missing — it never overwrites an existing `works/content.md`.
+- `talks/content.md` and `press/content.md` are manually maintained pages.
 
 ## URL System
 
@@ -105,6 +109,7 @@ Edit the `# Title` heading in `content.md`. That's it. No folder renames or link
 - All images use **WebP** format. Run `python3 optimize-images.py --run` to convert JPG/JPEG/PNG → WebP, delete originals, and generate missing blur thumbnails. Requires **Pillow** (`pip install Pillow`).
 - Every `.webp` gets a `*-tiny.webp` sibling (~32px wide) used as a blur placeholder. The full image fades in over the blur on load (Medium-style blur-up). Degrades gracefully if no tiny version exists.
 - Works entries include a `preview.webp` (with `preview-tiny.webp`). On desktop, hovering a title in the works table shows the preview large and tilted behind the text. Disabled on touch devices.
+- Works table rows can also link to external pages and still show hover previews by using `data-preview` (and optional `data-preview-tiny`) on the `<a>` element.
 
 ## Markdown File Override
 
@@ -120,8 +125,8 @@ Opening a pull request against `main` automatically deploys a preview to an unli
 
 Regenerates the HTML scaffolding and content listings for both sections:
 
-- Creates/updates `index.html` for each section and each entry folder, with `<meta>` description, Open Graph, and Twitter Card tags extracted from each `content.md` (first body paragraph for description, first `.webp` image or `preview.webp` for `og:image`).
-- Auto-generates `writings/content.md` (entry links sorted newest-first by `Published:` date).
+- Creates/updates `index.html` for each section and each entry folder, with `<meta>` description, Open Graph, and Twitter Card tags extracted from each `content.md` (`Description:` metadata override if present, otherwise first body paragraph; first `.webp` image or `preview.webp` for `og:image`).
+- Auto-generates `writings/content.md` (entries grouped by year, with listing summaries).
 - Generates `works/content.md` only if missing (the custom table is manually maintained).
 - Writes `writings/articles.json` and `works/articles.json` (hex-ID → folder-name maps used by `404.html` for stale-URL redirects).
 - Generates `feed.xml` (RSS 2.0) at the repo root, combining all writings and works entries sorted by date.

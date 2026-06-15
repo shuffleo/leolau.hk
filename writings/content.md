@@ -1,4 +1,4 @@
-[ABOUT](../)  ||  [WORKS](../works/)  ||  [BLOG](../writings/)  ||  [TALKS](../talks/)  ||  [PRESS](../press/)
+[HI](../)  ||  [WORKS](../works/)  ||  [BLOG](../writings/)  ||  [TALKS](../talks/)  ||  [PRESS](../press/)
 
 ### 2026
 

@@ -1,4 +1,4 @@
-[ABOUT](../../)  ||  [WORKS](../../works/)  ||  [BLOG](../../writings/)  ||  [TALKS](../../talks/)  ||  [PRESS](../../press/)
+[HI](../../)  ||  [WORKS](../../works/)  ||  [BLOG](../../writings/)  ||  [TALKS](../../talks/)  ||  [PRESS](../../press/)
 
 # We are not the artists. We are the medium.
 

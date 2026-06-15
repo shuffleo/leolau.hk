@@ -1,6 +1,6 @@
 # 🦁 Leo Lau 劉昆祐
 
-[ABOUT](./)  ||  [WORKS](./works/)  ||  [BLOG](./writings/)  ||  [TALKS](./talks/)  ||  [PRESS](./press/)
+[HI](./)  ||  [WORKS](./works/)  ||  [BLOG](./writings/)  ||  [TALKS](./talks/)  ||  [PRESS](./press/)
 
 
 ### People should be defined by verbs, not a noun. And mine are tinker, imagine, learn and bingewatch. A primary quest of my work revolves around authenticity, cultural identity, and cyborg psychology.
@@ -11,5 +11,5 @@
 
 ---
 
-Find me on [Instagram](https://www.instagram.com/shuffleo/) / [LinkedIn](https://www.linkedin.com/in/shuffleo/) / [GitHub](https://github.com/shuffleo) / [Email](mailto:shuffleo@gmail.com)
+Find me on [Insta](https://www.instagram.com/shuffleo/) / [LinkedIn](https://www.linkedin.com/in/shuffleo/) / [GitHub](https://github.com/shuffleo) / [Mail](mailto:shuffleo@gmail.com)
 © 2026   🇭🇰

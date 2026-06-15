@@ -275,7 +275,7 @@ function findTopNavContainer(contentDiv) {
         var labels = Array.prototype.map.call(p.querySelectorAll('a'), function (a) {
             return normalizeNavLabel(a.textContent || '');
         });
-        if (labels.indexOf('ABOUT') !== -1 && labels.indexOf('WORKS') !== -1) {
+        if ((labels.indexOf('HI') !== -1 || labels.indexOf('ABOUT') !== -1) && labels.indexOf('WORKS') !== -1) {
             return p;
         }
     }
@@ -299,6 +299,10 @@ function ensureTopNavLinks() {
         byLabel.WRITINGS.setAttribute('href', byLabel.WRITINGS.getAttribute('href') || '../writings/');
         byLabel.BLOG = byLabel.WRITINGS;
     }
+    if (byLabel.ABOUT && !byLabel.HI) {
+        byLabel.ABOUT.textContent = 'HI';
+        byLabel.HI = byLabel.ABOUT;
+    }
 
     function inferPrefix() {
         function pick(label, suffix) {
@@ -319,7 +323,7 @@ function ensureTopNavLinks() {
 
     var prefix = inferPrefix();
     var hrefs = {
-        ABOUT: byLabel.ABOUT && byLabel.ABOUT.getAttribute('href') || prefix,
+        HI: byLabel.HI && byLabel.HI.getAttribute('href') || byLabel.ABOUT && byLabel.ABOUT.getAttribute('href') || prefix,
         WORKS: byLabel.WORKS && byLabel.WORKS.getAttribute('href') || (prefix + 'works/'),
         BLOG: byLabel.BLOG && byLabel.BLOG.getAttribute('href') || (prefix + 'writings/'),
         TALKS: byLabel.TALKS && byLabel.TALKS.getAttribute('href') || (prefix + 'talks/'),
@@ -327,7 +331,7 @@ function ensureTopNavLinks() {
     };
 
     navContainer.innerHTML = '';
-    var order = ['ABOUT', 'WORKS', 'BLOG', 'TALKS', 'PRESS'];
+    var order = ['HI', 'WORKS', 'BLOG', 'TALKS', 'PRESS'];
     for (var i = 0; i < order.length; i++) {
         var label = order[i];
         if (i > 0) {
@@ -343,7 +347,7 @@ function ensureTopNavLinks() {
 
 function highlightActiveNav() {
     var path = window.location.pathname;
-    var section = 'ABOUT';
+    var section = 'HI';
     if (/\/works(\/|$)/.test(path)) section = 'WORKS';
     else if (/\/writings(\/|$)/.test(path)) section = 'BLOG';
     else if (/\/talks(\/|$)/.test(path)) section = 'TALKS';
@@ -352,8 +356,8 @@ function highlightActiveNav() {
     var links = ensureTopNavLinks();
     links.forEach(function (link) {
         var label = normalizeNavLabel(link.textContent || '');
-        var displayLabel = label === 'WRITINGS' ? 'BLOG' : label;
-        if (label === section) {
+        var displayLabel = label === 'WRITINGS' ? 'BLOG' : (label === 'ABOUT' ? 'HI' : label);
+        if (label === section || (section === 'HI' && label === 'ABOUT')) {
             link.innerHTML = '<strong>\uD83D\uDD76\uFE0F ' + displayLabel + '</strong>';
         } else {
             link.textContent = displayLabel;

@@ -37,7 +37,7 @@ ENTRY_DIR_RE = re.compile(
 )
 
 NAV_LINE = (
-    "[ABOUT](../)  ||  [WORKS](../works/)  ||  [BLOG](../writings/)  ||  [TALKS](../talks/)  ||  [PRESS](../press/)"
+    "[HI](../)  ||  [WORKS](../works/)  ||  [BLOG](../writings/)  ||  [TALKS](../talks/)  ||  [PRESS](../press/)"
 )
 WRITINGS_SUMMARY_OVERRIDES = {
     "problems-and-opportunity-of-human-touch-in-ai-art-23a33cee4ef68360002482c557cad13f":

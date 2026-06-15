@@ -8,7 +8,7 @@ Description: A reflection on co-creating with AI, where control, identity, and m
 
 ---
 
-So I've been playing with this text-to-image generator [MidJourney](https://www.midjourney.com/) for a month, in an attempt to understand what it means to co-create with an AI. (Works on [Youtube](https://www.youtube.com/channel/UCPKOU1Y7qbnMxurgfvYIwCQ) and [Instagram](https://www.instagram.com/unun.leg/)) It's one thing to watch "Two Minute Papers", but quite another to get your hands dirty.
+So I've been playing with this text-to-image generator [Midjourney](https://www.midjourney.com/) for a month, in an attempt to understand what it means to co-create with an AI. (Works on [Youtube](https://www.youtube.com/channel/UCPKOU1Y7qbnMxurgfvYIwCQ) and [Instagram](https://www.instagram.com/unun.leg/)) It's one thing to watch "Two Minute Papers", but quite another to get your hands dirty.
 
 ![A peaceful morning garden of Kowloon ruins](./morning-garden.webp)
 

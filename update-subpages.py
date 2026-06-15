@@ -30,14 +30,21 @@ from xml.sax.saxutils import escape as _xml_esc
 import json
 import re
 
+ASSET_VERSION = "20260616-1"
 
 ENTRY_DIR_RE = re.compile(
     r"^(?P<slug>.+)-(?P<id>[0-9a-f]{32})$"
 )
 
 NAV_LINE = (
-    "[ABOUT](../)  ||  [WORKS](../works/)  ||  [WRITINGS](../writings/)"
+    "[ABOUT](../)  ||  [WORKS](../works/)  ||  [BLOG](../writings/)  ||  [TALKS](../talks/)  ||  [PRESS](../press/)"
 )
+WRITINGS_SUMMARY_OVERRIDES = {
+    "problems-and-opportunity-of-human-touch-in-ai-art-23a33cee4ef68360002482c557cad13f":
+        "A deep look at what human touch means in AI art across effort, intent, authenticity, and lived experience.",
+    "we-are-not-the-artists-we-are-the-medium-3b7d731da01a01470fc2f3cffbc6f46e":
+        "An intimate meditation on co-creating with AI, where control, identity, and meaning are constantly renegotiated.",
+}
 
 SITE_URL = "https://leolau.hk"
 IMAGE_MD_RE = re.compile(r"!\[.*?\]\(\./([^)]+\.webp)\)")
@@ -65,7 +72,7 @@ SECTION_INDEX_HTML = """<!DOCTYPE html>
         </div>
     </div>
 
-    <script src="../app.js"></script>
+    <script src="../app.js?v={asset_version}"></script>
 </body>
 </html>
 """
@@ -91,7 +98,7 @@ ENTRY_INDEX_HTML = """<!DOCTYPE html>
         </div>
     </div>
 
-    <script src="../../app.js"></script>
+    <script src="../../app.js?v={asset_version}"></script>
 </body>
 </html>
 """
@@ -170,6 +177,44 @@ def _extract_description(content_md: Path, max_length: int = 155) -> str:
     return ""
 
 
+def _extract_listing_summary(content_md: Path, max_length: int = 220) -> str:
+    """Return a short listing summary from the first body lines."""
+    try:
+        lines = content_md.read_text(encoding="utf-8").splitlines()
+    except FileNotFoundError:
+        return ""
+
+    past_separator = False
+    summary_lines: list[str] = []
+
+    for line in lines:
+        stripped = line.strip()
+        if stripped == "---":
+            if not past_separator:
+                past_separator = True
+                continue
+            break
+        if not past_separator or not stripped:
+            continue
+        if stripped.startswith(("!", ">", "#", "[ABOUT]", "|")):
+            continue
+        text = STRIP_MD_LINK_RE.sub(r"\1", stripped)
+        text = STRIP_MD_FMT_RE.sub("", text).strip()
+        if not text:
+            continue
+        summary_lines.append(text)
+        if len(summary_lines) >= 2:
+            break
+
+    if not summary_lines:
+        return _extract_description(content_md, max_length=max_length)
+
+    summary = " ".join(summary_lines)
+    if len(summary) > max_length:
+        summary = summary[:max_length].rsplit(" ", 1)[0] + "\u2026"
+    return summary
+
+
 def _extract_first_image(content_md: Path, entry_path: Path) -> str | None:
     """Return the filename of the first .webp image, or preview.webp as fallback."""
     try:
@@ -244,6 +289,7 @@ def write_section_index(section_dir: Path, title: str, description: str) -> None
             title=_esc(title),
             description=_esc(description, quote=True),
             og_tags=og_tags,
+            asset_version=ASSET_VERSION,
         ),
         encoding="utf-8",
     )
@@ -265,6 +311,7 @@ def write_entry_index(entry: Entry) -> None:
             title=_esc(entry.title),
             description=_esc(desc, quote=True),
             og_tags=og_tags,
+            asset_version=ASSET_VERSION,
         ),
         encoding="utf-8",
     )
@@ -285,6 +332,30 @@ def render_listing_markdown(
     else:
         lines.append(empty_message)
     lines.append("")
+    return "\n".join(lines)
+
+
+def render_writings_markdown(entries: list[Entry]) -> str:
+    lines = [NAV_LINE, ""]
+    if not entries:
+        lines.append("No writings yet.")
+        lines.append("")
+        return "\n".join(lines)
+
+    grouped: dict[str, list[Entry]] = {}
+    for entry in entries:
+        year = entry.pub_date[:4] if entry.pub_date else "Undated"
+        grouped.setdefault(year, []).append(entry)
+
+    for year, year_entries in grouped.items():
+        lines.append(f"### {year}")
+        lines.append("")
+        for entry in year_entries:
+            lines.append(f"#### [{entry.title}](./{entry.folder}/)")
+            summary = WRITINGS_SUMMARY_OVERRIDES.get(entry.folder) or _extract_listing_summary(entry.path / "content.md")
+            if summary:
+                lines.append(summary)
+            lines.append("")
     return "\n".join(lines)
 
 
@@ -372,12 +443,7 @@ def main() -> int:
         write_entry_index(entry)
 
     (writings_dir / "content.md").write_text(
-        render_listing_markdown(
-            section_title="Writings",
-            section_path="/writings",
-            entries=writings,
-            empty_message="No writings yet.",
-        ),
+        render_writings_markdown(writings),
         encoding="utf-8",
     )
     # works/content.md uses a custom table layout; only generate if missing

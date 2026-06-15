@@ -1,9 +1,10 @@
-[ABOUT](../../)  ||  [WORKS](../../works/)  ||  [WRITINGS](../../writings/)
+[ABOUT](../../)  ||  [WORKS](../../works/)  ||  [BLOG](../../writings/)  ||  [TALKS](../../talks/)  ||  [PRESS](../../press/)
 
 # Problems and Opportunity of Human Touch in AI Art
 
 Published: 2026-03-28  
-Author: Leo Lau
+Author: Leo Lau  
+Description: A look at what human touch means in AI art across effort, intent, authenticity, and lived experience.
 
 ---
 

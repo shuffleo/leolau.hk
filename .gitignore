@@ -1,4 +1,5 @@
 .DS_Store
+.cursor/settings.json
 *.log
 node_modules/
 SETUP.md

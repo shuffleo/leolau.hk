@@ -1,9 +1,10 @@
-[ABOUT](../../)  ||  [WORKS](../../works/)  ||  [WRITINGS](../../writings/)
+[ABOUT](../../)  ||  [WORKS](../../works/)  ||  [BLOG](../../writings/)  ||  [TALKS](../../talks/)  ||  [PRESS](../../press/)
 
 # We are not the artists. We are the medium.
 
 Published: 2022-08-01  
-Author: Leo Lau
+Author: Leo Lau  
+Description: A reflection on co-creating with AI, where control, identity, and meaning are constantly renegotiated.
 
 ---
 

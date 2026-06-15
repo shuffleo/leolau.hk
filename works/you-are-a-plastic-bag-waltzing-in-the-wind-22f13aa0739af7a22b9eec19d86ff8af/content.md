@@ -1,4 +1,4 @@
-[ABOUT](../../)  ||  [WORKS](../../works/)  ||  [WRITINGS](../../writings/)
+[ABOUT](../../)  ||  [WORKS](../../works/)  ||  [BLOG](../../writings/)  ||  [TALKS](../../talks/)  ||  [PRESS](../../press/)
 
 # You are a plastic bag waltzing in the wind, contemplating your recurrent escapes from this landfill
 

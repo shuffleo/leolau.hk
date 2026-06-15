@@ -1,5 +1,20 @@
 // Default markdown file to load (in the same directory as this HTML file)
 const DEFAULT_MD_FILE = 'content.md';
+const CONTENT_CACHE_BUST = (function getContentCacheBust() {
+    if (typeof document === 'undefined') return '';
+    var scripts = document.querySelectorAll('script[src]');
+    for (var i = 0; i < scripts.length; i++) {
+        var src = scripts[i].getAttribute('src') || '';
+        if (/app\.js(?:\?|$)/.test(src)) {
+            var qIndex = src.indexOf('?');
+            if (qIndex === -1) return '';
+            var search = src.slice(qIndex + 1);
+            var params = new URLSearchParams(search);
+            return params.get('v') || '';
+        }
+    }
+    return '';
+})();
 
 // `updateUrlSlug()` rewrites the path to a descriptive slug that does not exist on disk.
 // Snapshot the real folder URL now so markdown images like `./photo.webp` still resolve
@@ -39,6 +54,33 @@ function configureMarkedExtensions() {
     }
 
     markedTablesConfigured = true;
+}
+
+function removeHiddenMetadataLines(markdown) {
+    var lines = markdown.split('\n');
+    var inMetadataBlock = true;
+    var output = [];
+
+    for (var i = 0; i < lines.length; i++) {
+        var line = lines[i];
+        var stripped = line.trim();
+
+        if (inMetadataBlock) {
+            if (/^---\s*$/.test(stripped)) {
+                inMetadataBlock = false;
+                output.push(line);
+                continue;
+            }
+            // Allow SEO override without showing this line in page content.
+            if (/^Description:\s+/i.test(stripped)) {
+                continue;
+            }
+        }
+
+        output.push(line);
+    }
+
+    return output.join('\n');
 }
 
 // Extract YouTube video ID from various URL formats
@@ -159,6 +201,7 @@ function initBlurUpImages() {
 // Render markdown
 function renderMarkdown(content) {
     const contentDiv = document.getElementById('content');
+    const processedContent = removeHiddenMetadataLines(content);
     if (typeof marked !== 'undefined') {
         configureMarkedExtensions();
         // Configure marked options
@@ -166,7 +209,7 @@ function renderMarkdown(content) {
             breaks: true,
             gfm: true
         });
-        let html = marked.parse(content);
+        let html = marked.parse(processedContent);
         
         // Process YouTube embeds
         html = processYouTubeEmbeds(html);
@@ -190,8 +233,12 @@ function loadContent() {
     const urlParams = new URLSearchParams(window.location.search);
     // Allow override via URL parameter, otherwise use default file
     const mdFile = urlParams.get('file') || DEFAULT_MD_FILE;
+    var mdUrl = mdFile;
+    if (CONTENT_CACHE_BUST) {
+        mdUrl += (mdFile.indexOf('?') === -1 ? '?' : '&') + 'v=' + encodeURIComponent(CONTENT_CACHE_BUST);
+    }
     
-    fetch(mdFile)
+    fetch(mdUrl)
         .then(response => {
             if (!response.ok) {
                 throw new Error(`Failed to load ${mdFile}. Make sure the file exists in the same directory.`);
@@ -212,20 +259,104 @@ function loadContent() {
         });
 }
 
+function normalizeNavLabel(text) {
+    return text
+        .replace(/\uD83D\uDD76\uFE0F/g, '')
+        .replace(/\s+/g, ' ')
+        .trim()
+        .toUpperCase();
+}
+
+function findTopNavContainer(contentDiv) {
+    if (!contentDiv) return null;
+    var paragraphs = contentDiv.querySelectorAll('p');
+    for (var i = 0; i < paragraphs.length; i++) {
+        var p = paragraphs[i];
+        var labels = Array.prototype.map.call(p.querySelectorAll('a'), function (a) {
+            return normalizeNavLabel(a.textContent || '');
+        });
+        if (labels.indexOf('ABOUT') !== -1 && labels.indexOf('WORKS') !== -1) {
+            return p;
+        }
+    }
+    return null;
+}
+
+function ensureTopNavLinks() {
+    var contentDiv = document.getElementById('content');
+    var navContainer = findTopNavContainer(contentDiv);
+    if (!navContainer) return [];
+
+    var links = Array.prototype.slice.call(navContainer.querySelectorAll('a'));
+    var byLabel = {};
+    links.forEach(function (link) {
+        byLabel[normalizeNavLabel(link.textContent || '')] = link;
+    });
+
+    // Normalize WRITINGS -> BLOG so old markdown still displays consistently.
+    if (byLabel.WRITINGS && !byLabel.BLOG) {
+        byLabel.WRITINGS.textContent = 'BLOG';
+        byLabel.WRITINGS.setAttribute('href', byLabel.WRITINGS.getAttribute('href') || '../writings/');
+        byLabel.BLOG = byLabel.WRITINGS;
+    }
+
+    function inferPrefix() {
+        function pick(label, suffix) {
+            if (!byLabel[label]) return null;
+            var href = byLabel[label].getAttribute('href') || '';
+            var re = new RegExp('^(.*)' + suffix + '\\/?$');
+            var match = href.match(re);
+            return match ? match[1] : null;
+        }
+        return (
+            pick('WORKS', 'works') ||
+            pick('BLOG', 'writings') ||
+            pick('PRESS', 'press') ||
+            pick('TALKS', 'talks') ||
+            './'
+        );
+    }
+
+    var prefix = inferPrefix();
+    var hrefs = {
+        ABOUT: byLabel.ABOUT && byLabel.ABOUT.getAttribute('href') || prefix,
+        WORKS: byLabel.WORKS && byLabel.WORKS.getAttribute('href') || (prefix + 'works/'),
+        BLOG: byLabel.BLOG && byLabel.BLOG.getAttribute('href') || (prefix + 'writings/'),
+        TALKS: byLabel.TALKS && byLabel.TALKS.getAttribute('href') || (prefix + 'talks/'),
+        PRESS: byLabel.PRESS && byLabel.PRESS.getAttribute('href') || (prefix + 'press/'),
+    };
+
+    navContainer.innerHTML = '';
+    var order = ['ABOUT', 'WORKS', 'BLOG', 'TALKS', 'PRESS'];
+    for (var i = 0; i < order.length; i++) {
+        var label = order[i];
+        if (i > 0) {
+            navContainer.appendChild(document.createTextNode('  ||  '));
+        }
+        var link = document.createElement('a');
+        link.textContent = label;
+        link.setAttribute('href', hrefs[label]);
+        navContainer.appendChild(link);
+    }
+    return Array.prototype.slice.call(navContainer.querySelectorAll('a'));
+}
+
 function highlightActiveNav() {
     var path = window.location.pathname;
     var section = 'ABOUT';
     if (/\/works(\/|$)/.test(path)) section = 'WORKS';
-    else if (/\/writings(\/|$)/.test(path)) section = 'WRITINGS';
+    else if (/\/writings(\/|$)/.test(path)) section = 'BLOG';
+    else if (/\/talks(\/|$)/.test(path)) section = 'TALKS';
+    else if (/\/press(\/|$)/.test(path)) section = 'PRESS';
 
-    var contentDiv = document.getElementById('content');
-    var firstP = contentDiv && contentDiv.querySelector('p');
-    if (!firstP) return;
-
-    var links = firstP.querySelectorAll('a');
+    var links = ensureTopNavLinks();
     links.forEach(function (link) {
-        if (link.textContent.trim() === section) {
-            link.innerHTML = '<strong>\uD83D\uDD76\uFE0F ' + link.textContent.trim() + '</strong>';
+        var label = normalizeNavLabel(link.textContent || '');
+        var displayLabel = label === 'WRITINGS' ? 'BLOG' : label;
+        if (label === section) {
+            link.innerHTML = '<strong>\uD83D\uDD76\uFE0F ' + displayLabel + '</strong>';
+        } else {
+            link.textContent = displayLabel;
         }
     });
 }
@@ -234,16 +365,45 @@ function initHoverPreviews() {
     var hasHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
     if (!hasHover) return;
 
-    var ID_RE = /[0-9a-f]{32}\/?$/;
+    var ID_RE = /[0-9a-f]{32}(?:\/)?(?:[?#].*)?$/;
+
+    function getInternalPreviewSources(href) {
+        var cleanHref = href.split('#')[0].split('?')[0];
+        var baseHref = cleanHref.replace(/\/?$/, '/');
+        return {
+            tinySrc: baseHref + 'preview-tiny.webp',
+            fullSrc: baseHref + 'preview.webp',
+        };
+    }
+
+    function getPreviewSources(link) {
+        var dataFull = (link.getAttribute('data-preview') || '').trim();
+        var dataTiny = (link.getAttribute('data-preview-tiny') || '').trim();
+        if (dataFull || dataTiny) {
+            return {
+                tinySrc: dataTiny || dataFull,
+                fullSrc: dataFull || dataTiny,
+            };
+        }
+
+        var href = (link.getAttribute('href') || '').trim();
+        if (!href || !ID_RE.test(href)) return null;
+        return getInternalPreviewSources(href);
+    }
+
     var links = document.querySelectorAll('table a');
-    var previewLinks = [];
+    var previewItems = [];
     links.forEach(function (link) {
-        var href = link.getAttribute('href');
-        if (href && ID_RE.test(href)) {
-            previewLinks.push(link);
+        var sources = getPreviewSources(link);
+        if (sources && sources.tinySrc && sources.fullSrc) {
+            previewItems.push({
+                link: link,
+                tinySrc: sources.tinySrc,
+                fullSrc: sources.fullSrc,
+            });
         }
     });
-    if (!previewLinks.length) return;
+    if (!previewItems.length) return;
 
     var wrapper = document.createElement('div');
     wrapper.className = 'hover-preview';
@@ -255,29 +415,27 @@ function initHoverPreviews() {
     wrapper.appendChild(fullImg);
     document.body.appendChild(wrapper);
 
-    var tinyRemaining = previewLinks.length;
+    var tinyRemaining = previewItems.length;
     function onTinyLoaded() {
         tinyRemaining--;
         if (tinyRemaining <= 0) {
-            previewLinks.forEach(function (link) {
-                var href = link.getAttribute('href').replace(/\/?$/, '/');
+            previewItems.forEach(function (item) {
                 var preload = new Image();
-                preload.src = href + 'preview.webp';
+                preload.src = item.fullSrc;
             });
         }
     }
-    previewLinks.forEach(function (link) {
-        var href = link.getAttribute('href').replace(/\/?$/, '/');
+    previewItems.forEach(function (item) {
         var preload = new Image();
         preload.onload = onTinyLoaded;
         preload.onerror = onTinyLoaded;
-        preload.src = href + 'preview-tiny.webp';
+        preload.src = item.tinySrc;
     });
 
-    previewLinks.forEach(function (link) {
-        var href = link.getAttribute('href').replace(/\/?$/, '/');
-        var tinySrc = href + 'preview-tiny.webp';
-        var fullSrc = href + 'preview.webp';
+    previewItems.forEach(function (item) {
+        var link = item.link;
+        var tinySrc = item.tinySrc;
+        var fullSrc = item.fullSrc;
         var angle = (Math.random() * 30 - 15).toFixed(1);
 
         link.addEventListener('mouseenter', function () {

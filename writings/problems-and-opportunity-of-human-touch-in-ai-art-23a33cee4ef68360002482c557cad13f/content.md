@@ -4,7 +4,7 @@
 
 Published: 2026-03-28  
 Author: Leo Lau  
-Description: A look at what human touch means in AI art across effort, intent, authenticity, and lived experience.
+Description: A look at what human touch means in AI art across imperfection, effort, intent, authenticity, and lived experience.
 
 ---
 

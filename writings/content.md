@@ -3,7 +3,7 @@
 ### 2026
 
 #### [Problems and Opportunity of Human Touch in AI Art](./problems-and-opportunity-of-human-touch-in-ai-art-23a33cee4ef68360002482c557cad13f/)
-A look at what human touch means in AI art across effort, intent, authenticity, and lived experience.
+A look at what human touch means in AI art across imperfection, effort, intent, authenticity, and lived experience.
 
 ### 2022
 

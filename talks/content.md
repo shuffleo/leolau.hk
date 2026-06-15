@@ -5,7 +5,7 @@
 
 ### 2018
 
-- 10 Sep 2025 - HYPE STUDIES CONFERENCE 2025: Echo Techno Bio Mytho Casino - New visual metaphors of AI ([Recording](https://youtu.be/U6X3x_5jMvg))
+- 10 Sep 2025 - Echo Techno Bio Mytho Casino - New visual metaphors of AI, at HYPE STUDIES CONFERENCE 2025 ([Recording](https://youtu.be/U6X3x_5jMvg))
 
 ---
 

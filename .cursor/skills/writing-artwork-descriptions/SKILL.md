@@ -45,6 +45,7 @@ Do **not** start with technical setup unless it is central to the idea.
 ## Writing Rules
 
 **Prefer:**
+
 - Clear opening sentence
 - Concrete language
 - Active verbs
@@ -53,6 +54,7 @@ Do **not** start with technical setup unless it is central to the idea.
 - Locating presence, risk, and judgment — where the artist's hand actually is
 
 **Avoid:**
+
 - Press-release tone
 - Curatorial jargon
 - Generic phrases: "explores the intersection of", "challenges perceptions", "invites viewers to reflect", "blurs boundaries"

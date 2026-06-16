@@ -3,7 +3,7 @@
 # How I cook
 
 Year: 2014  
-Type: Mixed-media installation with found and purchased objects, and directed light. Dimensions variable.
+Type: Mixed-media installation with found objects, and LED light panel. Dimensions variable.
 
 ---
 

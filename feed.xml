@@ -5,7 +5,7 @@
     <link>https://leolau.hk/</link>
     <description>Art, writings, and projects by Leo Lau</description>
     <language>en</language>
-    <lastBuildDate>Mon, 15 Jun 2026 16:19:34 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jun 2026 15:42:20 +0000</lastBuildDate>
     <atom:link href="https://leolau.hk/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Problems and Opportunity of Human Touch in AI Art</title>
@@ -32,6 +32,12 @@
       <link>https://leolau.hk/works/the-genai-startups-song-66c0e40ab887ed4f19bea10ba62efccc/</link>
       <guid>https://leolau.hk/works/the-genai-startups-song-66c0e40ab887ed4f19bea10ba62efccc/</guid>
       <description>The GenAI Startups Song rattles through Silicon Valley's favourite words over wobbly synthetic yodelling and western swing. With the looping visuals,…</description>
+    </item>
+    <item>
+      <title>How I cook</title>
+      <link>https://leolau.hk/works/how-i-cook-97090f79c5ac45862bea1ca3f569d9bc/</link>
+      <guid>https://leolau.hk/works/how-i-cook-97090f79c5ac45862bea1ca3f569d9bc/</guid>
+      <description>This is a shadow sculpture made from the everyday language of a Hong Kong family kitchen: plates, cans, sauces, condiments, and utensils gathered from my…</description>
     </item>
   </channel>
 </rss>

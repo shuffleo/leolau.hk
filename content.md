@@ -7,7 +7,7 @@
 
 ### Now exploring a voice with art. Organizing community events [@Mixed Initiative](https://mixedinitiative.com/). Designing AI-assisted papers [@Goodnotes](https://www.goodnotes.com/).
 
-### I admit myself as [an inadvertent writer](https://www.amazon.com/-/zh_TW/%E6%9B%BE%E9%8C%A6%E7%A8%8B-ebook/dp/B07KKCKDY9), bad at small talk and yoga.
+### I admit myself as [an inadvertent writer](https://www.chunghwabook.com.hk/book/detail/id/1242693444570300417), bad at small talk and yoga.
 
 ---
 

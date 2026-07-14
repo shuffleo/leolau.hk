@@ -1,43 +1,320 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Leo Lau</title>
     <link>https://leolau.hk/</link>
     <description>Art, writings, and projects by Leo Lau</description>
     <language>en</language>
-    <lastBuildDate>Tue, 16 Jun 2026 15:42:20 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2026 13:14:39 +0000</lastBuildDate>
     <atom:link href="https://leolau.hk/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Problems and Opportunity of Human Touch in AI Art</title>
       <link>https://leolau.hk/writings/problems-and-opportunity-of-human-touch-in-ai-art-23a33cee4ef68360002482c557cad13f/</link>
-      <guid>https://leolau.hk/writings/problems-and-opportunity-of-human-touch-in-ai-art-23a33cee4ef68360002482c557cad13f/</guid>
-      <description>A look at what human touch means in AI art across effort, intent, authenticity, and lived experience.</description>
+      <guid isPermaLink="true">https://leolau.hk/writings/problems-and-opportunity-of-human-touch-in-ai-art-23a33cee4ef68360002482c557cad13f/</guid>
+      <description>A look at what human touch means in AI art across imperfection, effort, intent, authenticity, and lived experience.</description>
       <pubDate>Sat, 28 Mar 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>We are not the artists. We are the medium.</title>
-      <link>https://leolau.hk/writings/we-are-not-the-artists-we-are-the-medium-3b7d731da01a01470fc2f3cffbc6f46e/</link>
-      <guid>https://leolau.hk/writings/we-are-not-the-artists-we-are-the-medium-3b7d731da01a01470fc2f3cffbc6f46e/</guid>
-      <description>A reflection on co-creating with AI, where control, identity, and meaning are constantly renegotiated.</description>
-      <pubDate>Mon, 01 Aug 2022 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>You are a plastic bag waltzing in the wind, contemplating your recurrent escapes from this landfill</title>
-      <link>https://leolau.hk/works/you-are-a-plastic-bag-waltzing-in-the-wind-22f13aa0739af7a22b9eec19d86ff8af/</link>
-      <guid>https://leolau.hk/works/you-are-a-plastic-bag-waltzing-in-the-wind-22f13aa0739af7a22b9eec19d86ff8af/</guid>
-      <description>This work is a stop-motion video animated with a series of AI-generated images. It's accompanied by computationally generative music from Alex Bainter's…</description>
+      <content:encoded><![CDATA[<h1>Problems and Opportunity of Human Touch in AI Art</h1>
+<p>Published: 2026-03-28<br>
+Author: Leo Lau  </p>
+<hr>
+<p>Let&rsquo;s begin with a simple question:</p>
+<blockquote>
+<p>When we say a work of art has a &lsquo;soul&rsquo;, what exactly do we mean?</p>
+</blockquote>
+<p>Is it the artist&rsquo;s labor: the time spent and the physical effort implied?</p>
+<p>Is it a point of view: a sense that a mind has arranged stuff and ideas in a particular way?</p>
+<p>Is it authenticity: a sense that there&rsquo;s something of real substance, something inward has been expressed outward?</p>
+<p>And if any of the above is the answer, then what happens when humans apply GenAI in the creative process? Does the &ldquo;soul&rdquo; immediately get sucked out into the vacuum? Or does the &ldquo;soul&rdquo; get into some sort of cyborg state?</p>
+<p>Today, the ability to create anything is right at our fingertips&hellip; and yet, why haven&rsquo;t we got an abundance of masterpieces already? Why does most AI creative work seem to be slop?</p>
+<p>These questions have been haunting me for the last 3 years as I&rsquo;ve been working on my own &ldquo;AI art&rdquo; projects, trying new AI tools, and attending many conferences. I even started an IRL community (<a href="https://mixedinitiative.com/">Mixed Initiative</a>) to run workshops to approach this from various empirical angles.</p>
+<p>So here&rsquo;s what I&rsquo;ll try to do with this essay. I&rsquo;ll summarise what I&rsquo;ve learned over the years on this topic, the different approaches to understanding human touch in AI co-creativity, how each is inadequate on its own, and how we could make sense of them all together.</p>
+<hr>
+<h2>The Soul Debate in AI Creativity</h2>
+<p>AI creativity is debated everywhere, mostly framed in polarities of hype v.s. skepticism. On one side, the &ldquo;Tech Bros&rdquo; are telling us that AI is democratising imagination and creative labor. This coincides with the Computer Science narrative, in which creativity is framed as a mathematical problem to be solved. Meanwhile, in academia and art circles, the conversation mostly centers on philosophy of mind, authorship, ethics, unemployment, carbon footprint, aesthetic value, ontology, etc.</p>
+<p>It feels like the whole world is still undecided on whether we should protest, compete, or collaborate with AI. But one thing everyone tends to share is this strange conviction, if not blind faith, in the idea of &ldquo;human touch&rdquo; or &ldquo;soul&rdquo;.</p>
+<p>Whenever we talk about the potential demise of human creativity, whether they&rsquo;re Pro-AI or Anti-AI, they all believe there&rsquo;s a sacred quality that differentiates good work from slop. Some would say, AI art, by its very nature, is meaningless because of the insufficiency of human touch. Or some would say that, even if something is computationally generated, as long as it has some human touch, it&rsquo;s still considered valuable and worthy of appreciation.</p>
+<p>This mystical &ldquo;humanness&rdquo; comes with many different names in my research and public conversations, often used causally interchangeably: &ldquo;soul&rdquo;, &ldquo;substance&rdquo;, &ldquo;aura&rdquo;, &ldquo;point of view&rdquo;, &ldquo;authenticity&rdquo;, &ldquo;mind and heart&rdquo;, &ldquo;feeling alive&rdquo;, etc. I wonder if these words are just poetic placeholders? Or are they getting at something?</p>
+<p>And if this &ldquo;human touch&rdquo; or &ldquo;soul&rdquo; is so important, why can&rsquo;t so many of us who use these words explain what exactly they mean? That, to me, is where things get interesting.</p>
+<ul>
+<li>For the Anti-AI folks: How do you defend human creativity if you can&rsquo;t describe the human element accurately?</li>
+<li>For the Pro-AI folks: How do you model this last piece of the puzzle if you can&rsquo;t decompose it into an optimizable function?</li>
+</ul>
+<hr>
+<h2>Is it Imperfection?</h2>
+<p>A common instinct tells us that human touch must involve imperfection. In a culture increasingly flooded with AI performing templatized creative tasks, unscripted flaws begin to look like a luxury good.</p>
+<p>The light leaks in unsteady street snaps, the slightly mistimed edits, the awkward hesitations in performance, the squeak of fingers on guitar strings&hellip; These mistakes tell us that something was at risk in the making, and that someone was there to improvise.</p>
+<p>Andy Hamilton defines this aesthetics of imperfection as an &ldquo;open, spontaneous response to contingencies.&rdquo; We often see this in dance and caligraphy. What moves us isn&rsquo;t the flaw, but the trace of a mind encountering and accepting accidents from the world. </p>
+<p>However, imperfection can also be easily simulated and commoditized into yet another template. This has been the case long before the digital era, which is why we couldn&rsquo;t regard imperfection itself as a trustworthy aesthetic trait. Today, it&rsquo;s even just one effortless prompt away:</p>
+<blockquote>
+<p>&ldquo;slightly overexposed, half-cut faces, red-eye, subject mid-motion, low dynamic range, raw unedited, poorly timed candid, spontaneous group selfie&rdquo;</p>
+</blockquote>
+<hr>
+<h2>Is it Effort?</h2>
+<p>Something about the physical act of making seems to carry meaning. That could be the reason why people often dismiss AI outputs because they assume they are zero-effort: you click a button, type a lazy prompt, and call yourself an artist. Fair enough, a lot of AI slop we see online has earned that skepticism.</p>
+<p>If Walter Benjamin or John Dewey were alive today to critique GenAI, they might feel uneasy that this AI creative process skips over the very struggle that gives art its aura. The creator may never enter the kind of sustained dialogue with their material through which a vision or inner feelings gradually emerge.</p>
+<p>One can argue that effort is not simply a means to an end. Effort is, in itself, a source of meaning. There is dignity in struggle, particularly in the pursuit of something worthy. AI, for all its fluency, can neither suffer nor understand what hard work is. And in its efficiency of removing friction, it&rsquo;s also efficiently removing the conditions that make creation feel earned, and therefore joyful.</p>
+<p>However, if we follow this argument, there still seems to be room for dignity and meaning in the AI co-creativity process. With painstakingly thorough prompt flows, intentional selection and sequencing, integration of mixed media, or even grounding the context with lived memory, one can still feel the joy that comes from failing 100 times and finally succeeding.</p>
+<p>Of course, creativity is not measured by hours of labor, and not all human-made things are soulful. A painting can be handmade yet hollow. So perhaps the &ldquo;soul&rdquo; of creativity or GenAI work does not lie in effort itself, but in the presence of a mind, someone, somewhere, has asked an interesting question about the world and has answered through form with intent.</p>
+<hr>
+<h2>Is it Intent?</h2>
+<p>In a creative process, there can be many micro-decisions a person needs to make. It involves a felt sense of why this and not that, more here, less there, cut this scene, break that convention, and bend it until it feels right&hellip; Some call this creative intent, artistic vision, or simply expressiveness. These decisions relate to one&rsquo;s personality and taste, as they are formed through lived experience, cultural embeddedness, and social life.</p>
+<p>A creator has a point of view because they are in the world, of the world, shaped by it and pushing back against it. That&rsquo;s different from statistical pattern synthesis, even when the synthesized output is dazzling. In <a href="https://www.newyorker.com/culture/the-weekend-essay/why-ai-isnt-going-to-make-art">&ldquo;Why A.I. Isn&rsquo;t Going to Make Art&rdquo;</a>, Ted Chiang argues that although LLMs can generate coherent text, they lack desire or motivation. They don&rsquo;t communicate with intent or meaning. They just mimic.</p>
+<p>However, does this inability to intend or to &ldquo;bring meaning into the world&rdquo; prevent us from using AI to create meaningful and valuable art?</p>
+<p>Artists have long collaborated with forces beyond their full control. Consider Jackson Pollock&rsquo;s drips and gravity-driven flows, or artworks influenced by wind, chemical reactions, natural decay, or even fungi. Are these works less creative because the artist did not dictate every detail?</p>
+<p>The composer John Cage famously embraced chance as a compositional tool. Using methods derived from the I Ching, he removed his own intention, tastes, and ego from the music. But this was not a total abandonment of authorship, as Cage still designed the system&rsquo;s rules. He chose the framework within which chance would operate. This suggests a useful way to think about artistic agency for GenAI: the artist may not control every outcome, but they design the conditions of emergence, sometimes with prompts, sometimes with more.</p>
+<p>Another question we could ask is whether artistic vision and intent can be meaningfully shared between human creators and AI, perhaps within a mixed-initiative process. Suppose creators use AI to capture and reinterpret their lived experiences, engaging it as a thinking partner to critique and bounce ideas. Does this still involve the depth of intention we associate with art-making? Can authenticity emerge from such a symbiotic collaboration? And would its results still feel real to the audience?</p>
+<hr>
+<h2>Is it Authenticity?</h2>
+<p>AI art is often dismissed as inauthentic and lacking whatever we mean by substance, personality, or sincerity. Yet people could say similar things about human-made work, using the same argument we previously used for effortful work. Plenty of art made by human hands can feel sloppish, derivative, or mass-manufactured. If authenticity were guaranteed by biological origin alone, the matter would have been wonderfully easy.</p>
+<p>The concept of authenticity plays an important role in how we think about creativity, creators, and their works. However, its precise definition remains somewhat elusive. And when we call something &ldquo;authentic&rdquo; or &ldquo;inauthentic&rdquo;, these words often convey too many different things at once, and sometimes are self-contradictory. Maybe that&rsquo;s why &ldquo;human touch&rdquo; from the &ldquo;authenticity&rdquo; lens remains so slippery in public conversations, as it risks explaining one elusive concept with another.</p>
+<h3>Historical authenticity</h3>
+<p>A surprising amount of what the art industry values in art has a lot to do with lineage and providence. We want to know where the thing came from and whether it is really what it says it is. That is one of the oldest meanings of authenticity. Before authenticity became a virtue or a lifestyle, it was a question of origin or its spatiotemporal link. Philosophers and aestheticians have used several names for this: historical authenticity, nominal authenticity, authenticity of origin, objective authenticity, or indexical authenticity.</p>
+<p>Imagine a forgery so perfect that no ordinary viewer could tell the difference. Seen in isolation, it might move us just as much as the original. Yet many of us would still feel cheated once the truth came out. The disappointment is not mere snobbery, though it could contain some. It is the disillusionment of the sublime contact we had with the artist and the process of making. This is why we still travel to see the real painting, even though reproductions are plentiful these days.</p>
+<p>Like many predecessor art movements and technological shifts, AI art unsettles authorship at the level of origin. What, exactly, is the source of an AI-generated image? The user who typed the prompt? The model developers? The millions of prior images whose styles and conventions were compressed into the model? The model itself, though &ldquo;itself&rdquo; is already the wrong word for such a distributed architecture? In AI art, the origin story is much harder to pin down.</p>
+<p>In the face of such obscurity, some artists would document all their prompt flows, model versions, reference images, and edits with forensic care. Sometimes this is done generously, for their community of practice. Sometimes it is done defensively, to prove innocence in response to accusations of theft. And sometimes the documentation is itself the point: a way of exposing the medium&rsquo;s politics.</p>
+<p>On the other end, the tech industry has also developed AI detection, fingerprinting, and the C2PA credentials system in response to a similar call. It&rsquo;s now super easy to check where a file came from and whether it has been altered along the way.</p>
+<p>The same anxiety also explains the appeal of blockchain and NFTs, at least in their more idealistic formulation. Much of the Web3 art rhetoric revolved around proof of ownership and traceable history. Whether the technology fulfilled those hopes is another matter.</p>
+<p>Behind all these bureaucratic ingenuity, it seems that we keep trying to smuggle scarcity back in when faced with digital abundance, through documentation. When replication becomes effortless, we begin to value not only the work but also the records of its arrival in the world, as if the metadata could restore some moral clarity. However, historical authenticity, for all its force, is a shaky guide to artistic value. It never tells us whether the work is thoughtful, banal, or emotionally true.</p>
+<h3>Type authenticity</h3>
+<p>This second authenticity is the kind of people reach for when they talk about a work &ldquo;feeling right&rdquo;. This idea has been called by philosophers as type authenticity, categorical authenticity, iconic authenticity, authenticity of kind, constructed authenticity, or approximate authenticity. They all mean that authenticity can be judged by whether something conforms to the beliefs, expectations, or essential qualities of a category.</p>
+<p>The keyword here is expectations. Type authenticity is socially volatile because it&rsquo;s more than just the object; it&rsquo;s also about the observer&rsquo;s idea of what the category should be. And the picture in their heads may itself be a fantasy built from movies, marketing, or selective memory.</p>
+<p>Punk, blues, rap, grunge, and underground electronic music: each of these musical genres has its own authenticity tests. Does the performer seem too polished? Do they belong to a particular social circle? Do they share the struggle that gives the genre its meaning? The &ldquo;right sounds&rdquo; are often not enough.</p>
+<p>We&rsquo;d also say a neighborhood cafe feels inauthentic because it has all the design cues of a local place but has been flattened into a brand guideline. Anyone who has been to a touristy restaurant knows the weirdness of &ldquo;authentic culture&rdquo; on display. They might have all the right ingredients, but the whole arrangement feels like it&rsquo;s been interpreted for an outsider. Every cultural symbol is packed too tightly, stripped out of its historical context. The food may have been cooked by local hands, sold by local families, and made in the region itself. Yet it can still feel inauthentic because it has been over-optimized to the type expectation and has become a self-conscious performance. This is how type authenticity can become performative authenticity.</p>
+<p>The problem is especially clear when an outsider appropriates a tradition as an aesthetic style to be exploited for attention and money. This is one of the common anxieties around AI slop in entertainment. GenAI is exceptionally good at categorical fluency. Every type of work becomes equally promptable, regardless of time period, region, or technical complexity.</p>
+<p>However, an AI model does not inherit a tradition in the way a person does. It does not grow up inside a genre, misunderstand it, rebel against it, and return to it years later with altered sympathy. AI models are indifferent and don&rsquo;t share a history with their training data. And yet, it can convincingly mimic most of them.</p>
+<p>So the question isn&rsquo;t whether AI outputs can look true to a type. Plainly, many already can. The question is what kind of relationship the creators or their machines have to that type. Are they simply shopping among styles as though culture were a library of prompts? Or do they have the discipline to understand and connect to the shared trauma and communal memory that bred such an art form?</p>
+<h3>Expressive authenticity</h3>
+<p>This third meaning of authenticity asks whether a work is true to the creator&rsquo;s beliefs and expresses what they actually mean. Or does it feel opportunistic, dressed up for fame and fortune? Philosophers call it expressive authenticity, value authenticity, or moral authenticity.</p>
+<p>This idea has a long history. Romanticism emphasized the expressive individual who leans into their intuition and emotion. Existentialism turns this into an ethical virtue: to live honestly with our own commitments rather than disappearing into the role-playing of people&rsquo;s expectations, which is ironically the opposite of type authenticity&rsquo;s requirement. It involves the alignment among what I feel, what I recognize myself as feeling, and what I show to others. Psychologists call this self-congruence, the idea that we feel and function better when our external self matches our internal self.</p>
+<p>It is not hard to see why this idea became attached to art. Art often appears to us as one of the few places where people are allowed, sometimes even required, to mean something beyond utility and social norms.</p>
+<p>Yet, as spectators, we cannot open an artwork and inspect authenticity. We can only infer. And human culture is full of such staged expressions. Brands and influencers speak in the language of intimacy with detailed planning. Artists, too, can learn to reproduce the signs of authenticity strategically. With the help of curators and critics, artists can reframe their upbringing, confess how their lived experience has shaped who they are, and how it has manifested in their work. Then this story can be mediated through interviews, brochures, and text on the white wall to arouse a sense of authenticity from the audience.</p>
+<p>Just as we cannot open an artwork, creators also cannot reliably open their hearts and minds to inspect the self. The subject of the self has been one of the most enigmatic problems in science, psychology, religion, and philosophy. Oftentimes, we don&rsquo;t actually understand ourselves that much. Plus, the self is not a fixed object tucked away somewhere inside, waiting to be expressed. It is in constant flux, built on top of our memories that are continually decaying and reinventing. This begs the philosophical question: if authenticity relies on the truthful expression of the inner-self, and if the inner-self has no stable truth in itself, then what exactly is the truth to be expressed?</p>
+<p>Besides questioning the source of expression, we could also look into the process of expression.</p>
+<p>Consider that someone uses AI to create art from personal memory in order to express inner feelings. The process is layered. First, there is the original experience and one&rsquo;s awareness of it. Then the remembered scene must be translated into language or visual prompts. The model processes that prompt statistically and returns multiple possibilities. The creator selects, combines, and iterates. At each stage, there is loss and reframing, either by the creator, by the medium, or now by the statistical biases in GenAI. That said, it may still be perceived by the creator and audience as a sufficiently faithful representation with some emotional truth.</p>
+<p>The Anti-AI camp often assumes that if AI mediates expression, it must automatically dilute or falsify it. This argument can easily be turned into a kind of essentialist or purity politics. It tempts us to imagine that the most authentic art is the least mediated art, as though mediation itself were corruption. But art has always been made through mediations, with or without digital technology.</p>
+<p>The challenge here is how a process can count as expressively authentic if the human creator delegated most of the generative work to the system, given that the system lacks a self with lived experience or awareness. Perhaps the answer depends on who we treat as the subject of expression. If it&rsquo;s the stochastic machine, then no, there are no feelings and thoughts to be expressed, even if it can behave as if it&rsquo;s emotionally intelligent. If it&rsquo;s the human creator, then it depends on how much emotional labor is involved.</p>
+<p>The objection we should raise is not that the machine lacks feeling, but that it may encourage artists to bypass feelings and skip to the outcome. They may short-circuit the struggle by which art connects makers to themself. If every vague mood can be quickly turned into persuasive-looking imagery, one may be tempted to confuse articulation with epiphany. And soon, before we noticed, we became overly reliant on AI to self-express, and lost the ability to do it ourselves.</p>
+<p>Of course, we should not romanticize struggle for its own sake. There are artists for whom generative systems may open access they would otherwise lack: people with limited technical training in a medium, people whose memories come in fragments, or people who think associatively and need a grounding partner. The question is whether the creator uses the ease to evade judgment or to redirect energy into other forms of judgment.</p>
+<p>Therefore, human touch in AI art, in this third sense, is the presence of someone working through all the available layers of automation and distortion while remaining answerable to what matters to them in the work they express.</p>
+<h3>Experiential authenticity</h3>
+<p>This final meaning of authenticity concerns the felt experience of realness and connection for both the creator and the audience. This is the form of authenticity people often mean when they say that something &ldquo;hit them&rdquo;. It doesn&rsquo;t care whether the object is original, or whether it belongs to a category, or whether the maker&rsquo;s motive appears sincere. It is a first-person qualitative sense or a &ldquo;qualia&rdquo; (e.g., the &ldquo;redness&rdquo; of red). In this case, the &ldquo;authenticitiness&rdquo; of authenticity.</p>
+<p>Sometimes, it can be evoked by imperfection, effortful craft, or a sad narrative behind the making. Many people experience it in different ways, with or without human artifacts. To John Ruskin, it sometimes has to do with old architecture, with a deep sense of voicefulness that seems to speak from the walls. To Jun&rsquo;ichiro Tanizaki, it could be a shadowy teacup lit by moonshine that teaches us to appreciate the impermanence of life. For blockbuster moviegoers, it could be nostalgic sequels that bring about a sense of the past and collective memories. For teamLab visitors, it could be an immersive audiovisual set that overwhelms their senses, inducing a trance state.</p>
+<p>All of these experiences may require active sensing and imagination, so that we can connect our senses to the primitivist nature, to the passage of time, to other living or deceased souls, or to the self situated within all of the above. It is this experienced authenticity that could keep people calm and restore continuity in a volatile present.</p>
+<p>However, there are two issues with this concept of authenticity. It&rsquo;s easy to confuse experiential authenticity with mere intensity or entertainment. An experience can be vivid, emotionally charged, and still shallow. The viewer&rsquo;s senses can be flattered spectacularly, as if they were connected with something larger than themselves, while leaving them no wiser about what they are feeling. Moreover, this way of thinking authenticity invites self-sealing logic. If authenticity is whatever feels authentic to someone, then criticism becomes almost impossible. People can be moved by commercial manipulation and kitsch.</p>
+<p>Experiential authenticity must therefore remain in conversation with the earlier kinds of authenticity, not replace them. A work may score highly on one and poorly on another. An AI-generated image of a fictional childhood scene may have no historical authenticity at all, and yet carry expressive and experiential force for the creator.</p>
+<p>When we apply experiential authenticity to the discussion of AI co-creativity, the dispute we&rsquo;re concerned with becomes: under what conditions can an AI-mediated process still produce experiential authenticity for the creator during creation, and for the audience, even if the audience knows it was created with AI.</p>
+<p>AI cannot feel, cannot experience. But it can make us feel and experience. What we should learn is to project our interpretations and feelings not only onto the creator, but also onto the dataset, the algorithm, and their making. What&rsquo;s even better is to get into a state that situates you in the vastness of a parameterized universe, where everything and everyone across time and space becomes connected as vectors in latent space. It might take some effort and willing suspension of disbelief. But personally, I think it&rsquo;s a new kind of qualia we could get used to as we create and appreciate AI art.</p>
+<hr>
+<h2>A Tentative Synthesis</h2>
+<p>OK, now let&rsquo;s recap.</p>
+<p>The AI art debate keeps returning to ideas like “soul” and “human touch,” but those terms are often left vague. The usual candidates for what we mean by them are imperfection, effort, intent, and authenticity. Each explains part of the issue, but each breaks down when treated as the whole answer. Of the four, authenticity is the most important and also the most elusive. It includes authenticity of origin, type, expression, and experience. All in all, human touch is the sign that a real person was present: taking risks, making judgments, and being commited to the work. It is also about whether the work carries a meaningful connection to how it was made, the medium and practice it comes from, the history and community behind that practice, the maker’s inner life, and the audience’s experience of it. This leaves us with a clearer question: how do these dimensions of human touch remain relevant in a creative process heavily mediated by AI?</p>
+<p>With that in mind, the familiar arguments about AI art can now be divided into two categories. The first says AI art is perfectly valid because AI is simply another tool, no more philosophically troubling than a camera, a paintbrush, or Photoshop. We can still create effortful, intentional, and authentic art with this cool new tool. The second argument says AI art is invalid because AI lacks the lived experience necessary for authentic expression, it biases its output towards generic slop, and it strips away meaningful introspection and emotional labor.</p>
+<p>AI art is confusingly interesting precisely because it can fit either argument, or neither, depending on the artist and the process of making. What makes AI co-creativity distinctive is this sense of partial and distributed creative control. We are not entirely in command of the medium but are negotiating with it. It is part of the medium&rsquo;s message, and we would be wise to treat it as such, even if it causes some unfamiliar discomfort.</p>
+<p>One way to describe that discomfort is to say that AI visuals possess a kind of &ldquo;semi-aura&rdquo;, as suggested by David Salas Espasa and Mar Camacho. AI art feel neither fully original nor merely copied. They are not auratic in the old sense, because they lack the reassuring dignity of a singular original. Yet they carry some uncanny human traces that reveal the negotiation process.</p>
+<p>When an AI model generates, it parrots the sediment of many lives at once. One could think of generative AI as a lossy compression of all the lived experiences captured by the internet corpus. When you mention a personal memory in the prompt, your recollection passes through a latent space abstracted from a population of past expressions. As the model begins making confident assumptions, certain faces may drift toward whiteness unless otherwise specified. And certain scenes may arrive bathed in a generic warm golden-hour glow. The result is a statistical visualization of your prompt&rsquo;s connection to the biased collective visual culture, mediated by you and the AI.</p>
+<p>Once you notice this, it becomes difficult to unsee. The model is always trying to imagine for you, using the dominant patterns it has learned about what dumbbells, pelicans, and tokyo streetscapes are supposed to look like. Sometimes a mismatch produces frustration. Sometimes it produces surprise, or even comedy. And sometimes the stereotype itself becomes the work&rsquo;s point. But in every case, this friction reveals that AI comes loaded with default probabilities about what the world ought to be.</p>
+<p>There is also something dreamlike in watching one&rsquo;s own life return slightly wrong and slightly alien. A family kitchen cleaner than it ever was. A face resembles your mother and a magazine&rsquo;s idea of your mother at the same time. This is why AI aesthetics can feel haunted and uncanny, as they are closer to a statistical afterlife of public expression.</p>
+<p>These biases in the models are not bugs; they are features that could become artistic material. We can play with them, subvert them, and force them into the open. Instead of treating them as noise to be edited away, we should expose them to start a dialogue: here is what the machine thinks my childhood looks like; here is what it assumes how many fingers your hand has; here is the mean shape of our world. Looking at those AI artifacts and biases is like learning to appreciate visualizations of the imperfections and contingencies in our digital doppelgänger world, and to listen to what this distorted mirror tells us about ourselves.</p>
+<p>Under this approach, the question of human touch in AI art becomes how we work with this compressed social residue and streamlined process, to expose the scripted categories of our realities, and to deconstruct the conventions of authenticity. And yet, after all this deconstruction, something true can still remain. Something essential, even sincere. Like piecing together shattered porcelain with kintsugi, we use AI to break apart and recombine reality’s inherited forms. Human touch lies in the golden seams and in the repairing. It is there in what we choose to keep, in how we join the broken pieces, and in the final form. That is where the older ideas of human touch need revision. This, perhaps, is the beginning of a new humanist language of authenticity in AI art.</p>
+<p>In AI co-creativity, the human artist usually remains the primary subject of expression, while the system acts as a mediator that channels the dataset’s average thoughts. Or in a more nuanced lens, expression is distributed across a strange assemblage: the human artist, the dataset and its contributors, the model, and the people who built it. There is, however, a harder case that this essay has mostly left aside: the fully autonomous creative system. </p>
+<p>As Simon Colton, Alison Pease, and Rob Saunders suggest in <a href="https://computationalcreativity.net/iccc2018/sites/default/files/papers/ICCC_2018_paper_64.pdf">&ldquo;Issues of Authenticity in Autonomously Creative Systems&rdquo;</a>, such a system may still make valid art not by pretending to human authenticity, but by openly inhabiting a non-authentic position of its own. It would move closer to something like human authenticity only if it could create from its own history, purposes, and situated relation to a world. That possibility may be nearer than it sounds. Embodied robots, AI capable of building social bonds, extended memory logs, and self-revising its own system prompts are all technically within reach. What remains underexplored is how these capacities would reshape our understanding of art and authenticity. That larger question lies beyond the scope of this essay, and deserves another piece.</p>
+<p>Creative works remain distinct because they communicate felt experience between beings who share a world. Part of the value of literature, music, and art has always been the sense that one consciousness is saying to another: <em>this is what it felt like.</em> In AI art, the claim becomes: <em>this could have been what it felt like for me, for it, for them, and for us all</em> (Perhaps with some unease and irony, but still sincerely).</p>
+<hr>
+<h2>Afterword</h2>
+<p>Here is a checklist that we can use to test ourselves while creating and appreciating AI art. Or we can use it as pointers for further research and discussion.</p>
+<h3>When you create with AI</h3>
+<ul>
+<li>Be present. Be intentional.</li>
+<li>Keep asking yourself: Why am I making this? What in it is actually mine? What choices am I making just because they feel easy or impressive? And what choices are tied to my values and my history? And our shared values and history?</li>
+<li>Build your own dataset. Fine-tune your own models.</li>
+<li>Research the traditions and styles mentioned in your prompt. Understand its history, the community behind it, and your relation to them.</li>
+<li>Punch up. Don&rsquo;t punch down.</li>
+<li>Be accountable. Document and disclose your process.</li>
+<li>Stop treating AI as a tool. Treat it as an artistic material, and understand its properties.</li>
+<li>Be careful of AI&rsquo;s sycophancy and biases.</li>
+<li>Play ping pong with AI cautiously. See where this dance brings you.</li>
+<li>Design the conditions of emergence, before letting randomness play its own game.</li>
+<li>Trust the effort to help you come into honest contact with your inner worlds.</li>
+<li>If you want to be lazy sometimes, find somewhere else more meaningful to hone your craft.</li>
+<li>Stay away from staged or performative authenticity. If you can&rsquo;t, deconstruct and expose it with AI in an interesting way.</li>
+<li>Keep interesting flaws. Let the awkwardness become part of the work.</li>
+</ul>
+<h3>When you look at AI art</h3>
+<ul>
+<li>Be present. Be intentional.</li>
+<li>Think about how this work came into being. Ask where human touch enters the process.</li>
+<li>Don&rsquo;t assume there&rsquo;s just one &ldquo;subject&rdquo;. Look for the layers of agency: the human creator, the statistical model, the people who contributed to the dataset, and the broader visual culture.</li>
+<li>Notice the defaults, the normal distribution, and the flaws.</li>
+<li>Check whether it&rsquo;s deepening or subverting the tradition it references, or simply exploiting their recognizability.</li>
+<li>Ask what the work does to your sense and your understanding of the world.</li>
+</ul>
+<p>Finally, on a more personal note, one of my ongoing commitments is to explore how AI co-creation tools might augment human well-being, or at least how we could cope with the dystopian crisis they might create. Companies are going to build AI anyway, in good ways and bad ways. The least we can do is surface the issues, calibrate our understanding, and keep the conversation going with a little more nuance. As we shape and use tools, our tools shape and use us, and together we shape the world. This is why the topic still feels worth writing about, even after the hype fatigue.</p>
+<p>Get in touch if this is a corner of the internet you want to think through together. I intend to keep exploring it, in community events, in art-making, and in research writing like this.</p>
+<hr>
+<h2>Bibliography &amp; References</h2>
+<p>This essay draws on a mix of philosophy, aesthetics, media theory, and contemporary discourse on AI, as well as some of my own past writings and recordings of community events. The references below are not exhaustive, but reflect the ideas, texts, and conversations that shaped this piece.</p>
+<h3>Authenticity, aesthetics, and art</h3>
+<p><a href="https://www.taylorfrancis.com/books/mono/10.4324/9780203646793/being-authentic-charles-guignon">Charles Guignon. &ldquo;<em>On Being Authentic&rdquo;</em>. 2004.</a></p>
+<p><a href="https://philpapers.org/rec/NEWKOA">George E. Newman, and Rosanna K. Smith. &ldquo;<em>Kinds of Authenticity</em>&rdquo;. 2016.</a></p>
+<p><a href="https://archive.org/details/illuminations0000benj_p3m7">Walter Benjamin. &ldquo;<em>The Work of Art in the Age of Mechanical Reproduction</em>&rdquo;. 1968.</a></p>
+<p>Denis Dutton. &ldquo;<em>Authenticity in Art</em>&rdquo;. 2003.</p>
+<p><a href="https://ia902908.us.archive.org/28/items/deweyjohnartasanexperience/DEWEY%20John,%20Art%20as%20an%20Experience%22.pdf">John Dewey. &ldquo;<em>Art as Experience&rdquo;.</em> 1934.</a></p>
+<p><a href="https://academic.oup.com/jaac/article/78/3/289/6049408?login=false">Andy Hamilton. &ldquo;<em>The Aesthetics of Imperfection Reconceived: Improvisations, Compositions, and Mistakes</em>&rdquo;. 2020.</a></p>
+<p><a href="https://www.cambridge.org/core/journals/international-journal-of-cultural-property/article/abs/perceiving-the-past-from-age-value-to-pastness/F3A99D23A2DE1A7DF9C25E77112DFCE5">Cornelius Holtorf. &ldquo;<em>Perceiving the Past: From Age Value to Pastness</em>&rdquo;. 2017.</a></p>
+<p>Jun&rsquo;ichiro Tanizaki. &ldquo;<em>In Praise of Shadows&rdquo;</em>. 1977.</p>
+<p><a href="https://www.stuckism.com/stuckistmanifesto.html">Billy Childish, and Charles Thomson. &ldquo;<em>The Stuckists Manifesto</em>&rdquo;. 1999.</a></p>
+<h3>AI, creativity, and agency</h3>
+<p><a href="https://computationalcreativity.net/iccc2018/sites/default/files/papers/ICCC_2018_paper_64.pdf">Simon Colton, Alison Pease, and Rob Saunders. &ldquo;<em>Issues of Authenticity in Autonomously Creative Systems</em>&rdquo;. 2018.</a></p>
+<p><a href="https://www.tandfonline.com/doi/abs/10.1080/0020174X.2023.2261503">Lindsay Brainard. &ldquo;<em>The Curious Case of Uncurious Creation</em>&rdquo;. 2025.</a></p>
+<p><a href="https://link.springer.com/article/10.1007/s00146-025-02361-3">David Salas Espasa, and Mar Camacho. &ldquo;<em>From Aura to Semi-Aura: Reframing Authenticity in AI-Generated Art—A Systematic Literature Review</em>&rdquo;. 2025.</a></p>
+<p><a href="https://www.cyberneticforests.com/ai-images">Eryk Salvaggio. &ldquo;<em>Critical Topics: AI Images</em>&rdquo;. 2024.</a></p>
+<p><a href="https://newleftreview.org/issues/ii140/articles/hito-steyerl-mean-images">Hito Steyerl. &ldquo;<em>Mean Images</em>&rdquo;. 2023.</a></p>
+<p><a href="https://onlinelibrary.wiley.com/doi/10.1002/9781118367377.ch25">Mihaly Csikszentmihalyi. &ldquo;<em>The Systems Model of Creativity and Its Applications</em>&rdquo;. 2014.</a></p>
+<p><a href="https://erichorvitz.com/chi99horvitz.pdf">Eric Horvitz. &ldquo;<em>Principles of Mixed-Initiative User Interfaces</em>&rdquo;. 1999.</a></p>
+<p><a href="https://dl.acm.org/doi/10.1145/3442188.3445922">Emily M. Bender, Timnit Gebru, Angelina McMillan-Major, and Shmargaret Shmitchell. &ldquo;<em>On the Dangers of Stochastic Parrots: Can Language Models Be Too Big</em>?&rdquo;. 2021.</a></p>
+<p><a href="https://www.newyorker.com/culture/the-weekend-essay/why-ai-isnt-going-to-make-art">Ted Chiang. &ldquo;<em>Why A.I. Isn&rsquo;t Going to Make Art</em>&rdquo;. 2024.</a></p>
+<p><a href="https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web">Ted Chiang. &ldquo;<em>ChatGPT Is a Blurry JPEG of the Web</em>&rdquo;. 2023.</a></p>
+<p><a href="https://c2pa.org/">Coalition for Content Provenance and Authenticity. &ldquo;C2PA&rdquo;</a></p>
+<h3>Personal reflections, and community events</h3>
+<p>Youtube videos of my reflections after SXSW 2024 and &ldquo;AI, Music, and Creativity: International Symposium &amp; 2023/24 Rayson Huang Lectures&rdquo;:
+<a href="https://www.youtube.com/playlist?list=PLQvdqBqON2nFtL3J1p6W9YHDMIlnrb-_u">Mixed Initiative. &ldquo;<em>Ethnographic Research of A.I. Creativity Rituals</em>&rdquo;. 2024.</a> </p>
+<p>Youtube videos of my community events using AI, memory recollection, and heat-transfer printing as artistic material:
+<a href="https://youtu.be/60zHfWOosC8?si=zvMY1PZPv2VElTTb">Mixed Initiative. &ldquo;<em>Thermal Cinema - Receipts for What Never Was</em>&rdquo;. 2025.</a>
+<a href="https://www.youtube.com/watch?v=JJiweyaLpC4">Mixed Initiative. &ldquo;<em>By You, for You, of You: An AI Storytelling Experiment</em>&rdquo;. 2025.</a></p>]]></content:encoded>
     </item>
     <item>
       <title>The GenAI Startups Song</title>
       <link>https://leolau.hk/works/the-genai-startups-song-66c0e40ab887ed4f19bea10ba62efccc/</link>
-      <guid>https://leolau.hk/works/the-genai-startups-song-66c0e40ab887ed4f19bea10ba62efccc/</guid>
+      <guid isPermaLink="true">https://leolau.hk/works/the-genai-startups-song-66c0e40ab887ed4f19bea10ba62efccc/</guid>
       <description>The GenAI Startups Song rattles through Silicon Valley's favourite words over wobbly synthetic yodelling and western swing. With the looping visuals,…</description>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <content:encoded><![CDATA[<h1>The GenAI Startups Song</h1>
+<p>Year: 2024<br>
+Type: audio, 3:24 min</p>
+<hr>
+<p>The GenAI Startups Song rattles through Silicon Valley&rsquo;s favourite words over wobbly synthetic yodelling and western swing. With the looping visuals, space cowboys ride past burning server farms toward fully automated luxury communism. Everyone looks confident.</p>
+<p>The lyrics are inspired by Draft Punk&rsquo;s &ldquo;Harder, Better, Faster, Stronger&rdquo; and &ldquo;Weird Al&rdquo; Yankovic&rsquo;s &ldquo;Mission Statement&rdquo;. The video was shared on LinkedIn with the artist&rsquo;s tech circles, and it got five likes at the time of writing. Impressive.</p>
+<p>Music generated by: SUNO AI</p>
+<blockquote>
+<p>prompt: {Cute southern female vocals, wild western, 90s avant-garde, jazzy swing, musique concrete}</p>
+</blockquote>
+<p>Image &amp; Video generated by: Artbreeder + Luma AI</p>
+<blockquote>
+<p>prompt: {Painting of a team of silicon-valley startup founders, space cowboys, female AI companions, flying drones, stock charts, Ted Kaczynski unabomber in a dystopian AI gold rush. Background of burning forests fires and overheated server farms. Fully automated luxury communism.}</p>
+</blockquote>
+<p><a href="https://www.youtube.com/watch?v=4IzeqEZUriE">https://www.youtube.com/watch?v=4IzeqEZUriE</a></p>
+<h3>Lyrics</h3>
+<p>Mission. Vision.
+Action. Passion. </p>
+<p>Ambition. Magician. 
+Partition. Coalition. </p>
+<p>Politician. Competition.
+Proposition. Acquisition.</p>
+<p>Zero shot. Few shot.
+Big shot. Hotshot.</p>
+<p>Sweatshop. Photoshop.
+Pawnshop. Bishop.</p>
+<p>Moonshot. Bloodshot.
+Snapshot. Headshot.</p>
+<p>(Chorus: Move fast. Break things. Long live the kings.)</p>
+<p>User first. Data thirst.
+Garbage in. Garbage out.</p>
+<p>Tech debt, design debt.
+You get, what you get.</p>
+<p>Scale up. Scale down.
+Pivot left. Pivot right.</p>
+<p>Carbon neutral. Counter factual.
+Reddit upvote. Vision upsold.</p>
+<p>Time tested. Options vested.
+Profit doubled. Headcount shuffled.</p>
+<p>Access gated. Risk mitigated.
+Legal compliant. Ethical defiant.</p>
+<p>Bias minimised. Buzz maximised. 
+Capital intensive. Power expensive.</p>
+<p>Click automated. Image generated.
+Subscription renewed. Performance reviewed.</p>
+<p>(Chorus: Move fast. Break things. Long live the kings.)</p>
+<p>Git. Commit.
+Product market fit.</p>
+<p>Eric Schmidt.
+Spit and take the hit.</p>
+<p>Build measure learn.
+Let the world burn.</p>
+<p>That’s not my concern.
+Meeting adjourned.</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>We are not the artists. We are the medium.</title>
+      <link>https://leolau.hk/writings/we-are-not-the-artists-we-are-the-medium-3b7d731da01a01470fc2f3cffbc6f46e/</link>
+      <guid isPermaLink="true">https://leolau.hk/writings/we-are-not-the-artists-we-are-the-medium-3b7d731da01a01470fc2f3cffbc6f46e/</guid>
+      <description>A reflection on co-creating with AI, where control, identity, and meaning are constantly renegotiated.</description>
+      <pubDate>Mon, 01 Aug 2022 00:00:00 +0000</pubDate>
+      <content:encoded><![CDATA[<h1>We are not the artists. We are the medium.</h1>
+<p>Published: 2022-08-01<br>
+Author: Leo Lau  </p>
+<hr>
+<p>So I&rsquo;ve been playing with this text-to-image generator <a href="https://www.midjourney.com/">Midjourney</a> for a month, in an attempt to understand what it means to co-create with an AI. (Works on <a href="https://www.youtube.com/channel/UCPKOU1Y7qbnMxurgfvYIwCQ">Youtube</a> and <a href="https://www.instagram.com/unun.leg/">Instagram</a>) It&rsquo;s one thing to watch &ldquo;Two Minute Papers&rdquo;, but quite another to get your hands dirty.</p>
+<p><img alt="A peaceful morning garden of Kowloon ruins" src="https://leolau.hk/writings/we-are-not-the-artists-we-are-the-medium-3b7d731da01a01470fc2f3cffbc6f46e/morning-garden.webp"></p>
+<blockquote>
+<p><em>Image prompt: &ldquo;a peaceful morning garden of Kowloon ruins, small butterflies and flower buds, kids playing, post apocalyptic oil painting, hyperdetailed&rdquo;</em></p>
+</blockquote>
+<p>Shock and awe! This usually is the first reaction people have when they first see a great AI art piece (or any great art piece). I still remember such a sensation when I first saw Mario Klingemann&rsquo;s &ldquo;Face Feedback III&rdquo;. <a href="https://www.youtube.com/watch?v=5h4R959O0cY">Mario Klingemann&rsquo;s &ldquo;Face Feedback III&rdquo;</a> It&rsquo;s a process that started with being amused, then a fear that AI would replace humans someday, and finally indexing this uncanniness in my brain as a visual style among <a href="https://aesthetics.fandom.com/wiki/List_of_Aesthetics">many others on Aesthetics Wiki</a>.</p>
+<p>However, the more I play with it, the more I feel like it&rsquo;s a new paradigm of art. Just like Surrealism and Pop art from the last century, we are witnessing a new art form that is fed and trained by the collective human experience (which we call datasets), and yet capable of hallucinating a reality that doesn&rsquo;t exist.</p>
+<p><img alt="Hello Kitty marble statue" src="https://leolau.hk/writings/we-are-not-the-artists-we-are-the-medium-3b7d731da01a01470fc2f3cffbc6f46e/hello-kitty-statue.webp"></p>
+<blockquote>
+<p><em>Image prompt: &ldquo;hello kitty, marble statue, 8th century&rdquo;</em></p>
+</blockquote>
+<p>AI art is neither a new style, nor a tool to create old art. AI art is a new medium for us to confront our existentialist fears. (A fear that machines are becoming more like us, and we are becoming more like them. A fear that our faces, our voices, and our unique identity can be compressed as a set of parameters, that we can tweak and export. A fear that authenticity is dead.)</p>
+<p>In a way, the work we create with AI can never be authentic. They are often patchworks of social stereotypes and the remains dug up from artists&rsquo; graves. However, this very &ldquo;inauthenticity&rdquo; or the lack of &ldquo;full creative control&rdquo; makes this art form unique. We upload prompts to summon the zeitgeist&rsquo;s ghost, almost like incantations. The ghost is forged by our data, past and present. Its eyes are our cameras. Its voice is our whispers and tweets. Like fingers on an Ouija board, we iteratively pull it back for creative control, while pushing it to speak what it wants to say. As a reward for their response, we give them our preferences and our tastes.</p>
+<p><strong>We are not the artists. We are the medium.</strong></p>
+<p>We first created the AI, and now the AI creates through us.</p>
+<hr>
+<p><strong>Update (2025-11-12):</strong></p>
+<p>Wrote the above piece 2 years ago when Midjourney was still on v2 / v3. Feeling nostalgic already for the aesthetics of imperfections and artefacts.</p>
+<p>The existential dread and uncanny valley of GenAI have a different vibe now. Probably because my echo chamber/filter bubble is increasingly better at distinguishing the spammy “AI style” with a growing distaste. Plus, the interesting conversations have turned from shock and awe of AGI, to more nuanced topics like <a href="https://en.m.wikipedia.org/wiki/Neo-Luddism">Neo-luddism</a>+<a href="https://en.m.wikipedia.org/wiki/Anarcho-primitivism">Primitivism</a>+<a href="https://en.m.wikipedia.org/wiki/Essentialism">Essentialism</a>+<a href="https://en.m.wikipedia.org/wiki/Degrowth">Degrowth</a> v.s. <a href="https://en.m.wikipedia.org/wiki/TESCREAL">TESCREAL</a>+<a href="https://en.m.wikipedia.org/wiki/Fully_Automated_Luxury_Communism">FALC</a>+<a href="https://en.m.wikipedia.org/wiki/Solarpunk">Solarpunk</a>+<a href="https://en.m.wikipedia.org/wiki/Effective_accelerationism">E/ACC</a></p>
+<p>Amidst of this dialectical dialogue in the background, I have been experimenting with different AI tools to turn a childhood poem into an animated film. And this obscure feeling of “mixed-initiative-authenticity” has boggled my heart from time to time. </p>
+<p>It’s kind of weird and stimulating to use AI to deconstruct symbolism intimate to my past consciousness, and re-imagine them into words and visuals powered by the training dataset’s collective consciousness. It’s like playing soulful ping-pong with a janky prosthetic mind or with a parasitic alien genie.</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>You are a plastic bag waltzing in the wind, contemplating your recurrent escapes from this landfill</title>
+      <link>https://leolau.hk/works/you-are-a-plastic-bag-waltzing-in-the-wind-22f13aa0739af7a22b9eec19d86ff8af/</link>
+      <guid isPermaLink="true">https://leolau.hk/works/you-are-a-plastic-bag-waltzing-in-the-wind-22f13aa0739af7a22b9eec19d86ff8af/</guid>
+      <description>This work is a stop-motion video animated with a series of AI-generated images. It's accompanied by computationally generative music from Alex Bainter's…</description>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
+      <content:encoded><![CDATA[<h1>You are a plastic bag waltzing in the wind, contemplating your recurrent escapes from this landfill</h1>
+<p>Year: 2022<br>
+Type: video, 39:43 min</p>
+<hr>
+<p>This work is a stop-motion video animated with a series of AI-generated images. It&rsquo;s accompanied by computationally generative music from Alex Bainter&rsquo;s generative.fm project.</p>
+<p>Multiple generations of plastic bags appear to float mid-air, journeying through landfills and painterly clouds before returning to where they started. They waltz as if choosing their own path, but the wind was always deciding. </p>
+<p>The title borrows from the YouTube mixtapes that kept people company during COVID lockdown: long, ambient, titled like a gentle slice of life when you&rsquo;re getting through the day.</p>
+<p>The video was made the year when Hong Kong was experiencing one of its greatest political unravellings, the month when the world was navigating the technical marvels of GenAI, and the day before the artist turned 30. It reflects on the sense of agency, powerlessness, and belonging, as seen through the eyes of a Hong Konger witnessing how history unwinds itself.</p>
+<p>The bag still stays in the air.</p>
+<p><img alt="bag-1" src="https://leolau.hk/works/you-are-a-plastic-bag-waltzing-in-the-wind-22f13aa0739af7a22b9eec19d86ff8af/bag-1.webp"></p>
+<p><img alt="bag-2" src="https://leolau.hk/works/you-are-a-plastic-bag-waltzing-in-the-wind-22f13aa0739af7a22b9eec19d86ff8af/bag-2.webp"></p>
+<p><img alt="bag-3" src="https://leolau.hk/works/you-are-a-plastic-bag-waltzing-in-the-wind-22f13aa0739af7a22b9eec19d86ff8af/bag-3.webp"></p>
+<p><a href="https://www.youtube.com/watch?v=SaEFYVA5sR4">https://www.youtube.com/watch?v=SaEFYVA5sR4</a></p>]]></content:encoded>
     </item>
     <item>
       <title>How I cook</title>
       <link>https://leolau.hk/works/how-i-cook-97090f79c5ac45862bea1ca3f569d9bc/</link>
-      <guid>https://leolau.hk/works/how-i-cook-97090f79c5ac45862bea1ca3f569d9bc/</guid>
+      <guid isPermaLink="true">https://leolau.hk/works/how-i-cook-97090f79c5ac45862bea1ca3f569d9bc/</guid>
       <description>This is a shadow sculpture made from the everyday language of a Hong Kong family kitchen: plates, cans, sauces, condiments, and utensils gathered from my…</description>
+      <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
+      <content:encoded><![CDATA[<h1>How I cook</h1>
+<p>Year: 2014<br>
+Type: mixed-media installation with found objects, and LED light panel. Dimensions variable.</p>
+<hr>
+<p>This is a shadow sculpture made from the everyday language of a Hong Kong family kitchen: plates, cans, sauces, condiments, and utensils gathered from my home or bought because they resembled the things my mother would use.</p>
+<p>At first glance, it appears as a chaotic pile of cooking objects. Under light, it casts the silhouette of my mother.</p>
+<p>I made this work in my bachelor&rsquo;s graduation year, when cooking had become a personal ritual of independence. At the time, I wanted to prove that I could take care of myself, grow beyond family dependency, and form a life that was my own.</p>
+<p>The project began inside an advertising-design brief, but somewhere in the process it escaped the brief and became something more explorative and expressive. Looking back now, doing this piece was an early attempt to inspect and embrace my inheritance.</p>
+<p>The objects carried both affection and resistance. My mother&rsquo;s presence is cast through the materials that shaped how I understand care, habit, authority, and identity.</p>
+<p>After the graduation show ended, I dismantled the sculpture and used some of its ingredients to cook dinner for my mother: an ordinary home meal, with fried vegetables and steamed fish.</p>
+<p>She responded with a slight nod of appreciation.</p>
+<p><img alt="How I cook objects 1" src="https://leolau.hk/works/how-i-cook-97090f79c5ac45862bea1ca3f569d9bc/preview.webp"></p>
+<p><img alt="How I cook shadow" src="https://leolau.hk/works/how-i-cook-97090f79c5ac45862bea1ca3f569d9bc/shadow.webp"></p>
+<p><img alt="How I cook objects 2" src="https://leolau.hk/works/how-i-cook-97090f79c5ac45862bea1ca3f569d9bc/objects-2.webp"></p>]]></content:encoded>
     </item>
   </channel>
 </rss>

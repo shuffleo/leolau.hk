@@ -26,9 +26,12 @@ from dataclasses import dataclass
 from datetime import datetime, timezone
 from html import escape as _esc
 from pathlib import Path
+from urllib.parse import urljoin
 from xml.sax.saxutils import escape as _xml_esc
 import json
 import re
+
+import markdown
 
 ASSET_VERSION = "20260616-1"
 
@@ -47,6 +50,7 @@ WRITINGS_SUMMARY_OVERRIDES = {
 }
 
 SITE_URL = "https://leolau.hk"
+RSS_FEED_LIMIT = 20
 IMAGE_MD_RE = re.compile(r"!\[.*?\]\(\./([^)]+\.webp)\)")
 STRIP_MD_LINK_RE = re.compile(r"\[([^\]]+)\]\([^)]+\)")
 STRIP_MD_FMT_RE = re.compile(r"[*_`~]+")
@@ -105,6 +109,13 @@ ENTRY_INDEX_HTML = """<!DOCTYPE html>
 
 
 PUB_DATE_RE = re.compile(r"^Published:\s*(\d{4}(?:-\d{2}-\d{2})?)", re.IGNORECASE)
+YEAR_RE = re.compile(r"^Year:\s*(\d{4})", re.IGNORECASE)
+DESC_RE = re.compile(r"^Description:\s*(.+)", re.IGNORECASE)
+NAV_LINE_RE = re.compile(r"^\[HI\].*\|\|")
+HTML_ATTR_URL_RE = re.compile(
+    r'(?P<prefix>\b(?:src|href)=")(?P<url>[^"]+)(?P<suffix>")',
+    re.IGNORECASE,
+)
 
 
 @dataclass
@@ -117,9 +128,13 @@ class Entry:
 
 
 def _parse_content(content_md: Path, fallback_slug: str) -> tuple[str, str]:
-    """Return (title, pub_date) extracted from a content.md file."""
+    """Return (title, pub_date) extracted from a content.md file.
+
+    Prefers Published: YYYY-MM-DD (or YYYY); falls back to Year: YYYY for works.
+    """
     title = fallback_slug.replace("-", " ").title()
     pub_date = ""
+    year_fallback = ""
     try:
         lines = content_md.read_text(encoding="utf-8").splitlines()
     except FileNotFoundError:
@@ -133,10 +148,11 @@ def _parse_content(content_md: Path, fallback_slug: str) -> tuple[str, str]:
         date_match = PUB_DATE_RE.match(stripped)
         if date_match:
             pub_date = date_match.group(1)
-    return title, pub_date
-
-
-DESC_RE = re.compile(r"^Description:\s*(.+)", re.IGNORECASE)
+            continue
+        year_match = YEAR_RE.match(stripped)
+        if year_match and not year_fallback:
+            year_fallback = year_match.group(1)
+    return title, pub_date or year_fallback
 
 
 def _extract_description(content_md: Path, max_length: int = 155) -> str:
@@ -382,29 +398,97 @@ def _rfc822(date_str: str) -> str:
     return dt.strftime("%a, %d %b %Y %H:%M:%S +0000")
 
 
+def _extract_feed_markdown(content_md: Path) -> str:
+    """Return page markdown for RSS: drop nav + Description:, keep title/body."""
+    try:
+        lines = content_md.read_text(encoding="utf-8").splitlines()
+    except FileNotFoundError:
+        return ""
+
+    kept: list[str] = []
+    for line in lines:
+        stripped = line.strip()
+        if NAV_LINE_RE.match(stripped):
+            continue
+        if DESC_RE.match(stripped):
+            continue
+        kept.append(line)
+
+    while kept and not kept[0].strip():
+        kept.pop(0)
+    while kept and not kept[-1].strip():
+        kept.pop()
+    return "\n".join(kept)
+
+
+def _absolutize_html(html: str, base_url: str) -> str:
+    """Rewrite relative src/href values to absolute URLs for feed readers."""
+    if not base_url.endswith("/"):
+        base_url = base_url + "/"
+
+    def repl(match: re.Match[str]) -> str:
+        url = match.group("url")
+        if url.startswith(("http://", "https://", "mailto:", "data:", "#")):
+            return match.group(0)
+        return f'{match.group("prefix")}{urljoin(base_url, url)}{match.group("suffix")}'
+
+    return HTML_ATTR_URL_RE.sub(repl, html)
+
+
+def _md_to_feed_html(md: str, base_url: str) -> str:
+    """Convert entry markdown to HTML suitable for content:encoded."""
+    if not md.strip():
+        return ""
+    html = markdown.markdown(
+        md,
+        extensions=["extra", "sane_lists", "smarty"],
+        output_format="html",
+    )
+    return _absolutize_html(html, base_url)
+
+
+def _cdata(text: str) -> str:
+    """Escape text for inclusion inside an XML CDATA section."""
+    return text.replace("]]>", "]]]]><![CDATA[>")
+
+
 def write_rss_feed(repo_root: Path, entries: list[Entry]) -> None:
-    """Write an RSS 2.0 feed.xml at the repo root."""
+    """Write an RSS 2.0 feed.xml at the repo root.
+
+    Each item keeps a short plain-text <description> (SEO blurb / first
+    paragraph) and includes the full article HTML in <content:encoded>.
+    """
     items: list[str] = []
     for entry in entries:
         section = entry.path.parent.name
         link = f"{SITE_URL}/{section}/{entry.folder}/"
         content_md = entry.path / "content.md"
         desc = _xml_esc(_extract_description(content_md) or entry.title)
+        content_html = _md_to_feed_html(_extract_feed_markdown(content_md), link)
         pub_date = _rfc822(entry.pub_date)
         pub_line = f"\n      <pubDate>{pub_date}</pubDate>" if pub_date else ""
+        content_line = ""
+        if content_html:
+            content_line = (
+                "\n      <content:encoded>"
+                f"<![CDATA[{_cdata(content_html)}]]>"
+                "</content:encoded>"
+            )
         items.append(
             f"    <item>\n"
             f"      <title>{_xml_esc(entry.title)}</title>\n"
             f"      <link>{_xml_esc(link)}</link>\n"
-            f"      <guid>{_xml_esc(link)}</guid>\n"
-            f"      <description>{desc}</description>{pub_line}\n"
+            f'      <guid isPermaLink="true">{_xml_esc(link)}</guid>\n'
+            f"      <description>{desc}</description>{pub_line}"
+            f"{content_line}\n"
             f"    </item>"
         )
 
     now = datetime.now(timezone.utc).strftime("%a, %d %b %Y %H:%M:%S +0000")
     feed = (
         '<?xml version="1.0" encoding="UTF-8"?>\n'
-        '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n'
+        '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" '
+        'xmlns:content="http://purl.org/rss/1.0/modules/content/">\n'
         "  <channel>\n"
         "    <title>Leo Lau</title>\n"
         f"    <link>{SITE_URL}/</link>\n"
@@ -464,12 +548,19 @@ def main() -> int:
         write_articles_json(works_dir, works)
 
     all_entries = sorted(writings + works, key=lambda e: (e.pub_date, e.folder), reverse=True)
-    write_rss_feed(repo_root, all_entries)
+    feed_entries = all_entries[:RSS_FEED_LIMIT]
+    write_rss_feed(repo_root, feed_entries)
 
     print(
         "Updated subpages:"
         f" writings ({len(writings)}), works ({len(works)})."
-        f" RSS feed: {len(all_entries)} item(s)."
+        f" RSS feed: {len(feed_entries)} item(s)"
+        + (
+            f" (capped from {len(all_entries)})"
+            if len(all_entries) > RSS_FEED_LIMIT
+            else ""
+        )
+        + "."
     )
     return 0
 

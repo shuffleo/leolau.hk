@@ -24,7 +24,7 @@ jobs:
 
       - name: Install dependencies
         if: github.event.action != 'closed'
-        run: pip install Pillow
+        run: pip install -r requirements.txt
 
       - name: Generate subpages and optimize images
         if: github.event.action != 'closed'

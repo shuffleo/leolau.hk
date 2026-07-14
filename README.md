@@ -50,7 +50,7 @@ Author: Name
 
 - `# Title` is the source of truth for the URL slug and listing.
 - `Published:` and `Author:` are metadata lines immediately after the title, each ending with two trailing spaces for a Markdown line break.
-- `Description:` is optional metadata for SEO override. It is read by `update-subpages.py` for meta/OG/RSS descriptions and hidden from the rendered page body by `app.js`.
+- `Description:` is optional metadata for SEO override. It is read by `update-subpages.py` for meta/OG tags and the short RSS `<description>` teaser, and hidden from the rendered page body by `app.js`.
 
 ### Works
 
@@ -129,7 +129,8 @@ Regenerates the HTML scaffolding and content listings for both sections:
 - Auto-generates `writings/content.md` (entries grouped by year, with listing summaries).
 - Generates `works/content.md` only if missing (the custom table is manually maintained).
 - Writes `writings/articles.json` and `works/articles.json` (hex-ID → folder-name maps used by `404.html` for stale-URL redirects).
-- Generates `feed.xml` (RSS 2.0) at the repo root, combining all writings and works entries sorted by date.
+- Generates `feed.xml` (RSS 2.0) at the repo root from writings and works, newest first, capped at the latest 20 items. Each item includes a short plain-text `<description>` (from `Description:` or the first body paragraph) plus full article HTML in `<content:encoded>` (nav and SEO `Description:` stripped; relative image/link URLs rewritten to absolute `https://leolau.hk/...` paths). Works without `Published:` use `Year:` for `<pubDate>`.
+- Requires **Markdown** (`pip install -r requirements.txt`) for RSS HTML conversion.
 
 ### `optimize-images.py`
 
@@ -161,7 +162,8 @@ python3 yt-scenes.py <youtube-url> [--threshold N] [--max-scenes N] [--output-di
 | --------------------------------------------------------------------------------- | -------------------- | ------------------------------------------ |
 | [Marked.js](https://github.com/markedjs/marked)                                   | `app.js` (via CDN)   | loaded from jsDelivr                       |
 | [marked-extended-tables](https://github.com/calculuschild/marked-extended-tables) | `app.js` (via CDN)   | `npm install` (declared in `package.json`) |
-| [Pillow](https://python-pillow.org/)                                              | `optimize-images.py` | `pip install Pillow`                       |
+| [Pillow](https://python-pillow.org/)                                              | `optimize-images.py` | `pip install -r requirements.txt`          |
+| [Markdown](https://python-markdown.github.io/)                                    | `update-subpages.py` | `pip install -r requirements.txt`          |
 | [yt-dlp](https://github.com/yt-dlp/yt-dlp)                                        | `yt-scenes.py`       | `pip install yt-dlp`                       |
 | [scenedetect](https://github.com/Breakthrough/PySceneDetect)                      | `yt-scenes.py`       | `pip install scenedetect[opencv]`          |
 | [requests](https://docs.python-requests.org/)                                     | `yt-scenes.py`       | `pip install requests`                     |

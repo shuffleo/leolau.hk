@@ -49,6 +49,8 @@ For external links (no local work subpage), use an HTML anchor with preview meta
 
 If needed, add `data-preview-tiny` for a dedicated blur placeholder.
 
+**Do not “fix” this mix.** HTML anchors inside the Markdown table are intentional. Never rewrite them into plain Markdown links (or strip `data-preview`) without asking first — that silently breaks hover previews.
+
 ## Adding a new work
 
 1. Generate folder ID: `openssl rand -hex 16`

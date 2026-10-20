@@ -12,6 +12,9 @@
 ## Public workshops
 
 ### 2026
+- 19 Sep 2026 - [偏鋒研讀 2: 萬字夾資本主義](https://luma.com/i0ckj4sm)
+- 5 Sep 2026 - [Unaligned Reading 2: Paperclip-maxxing Capitalism](https://luma.com/10d30z36)
+- 8 & 29 Aug 2026 - [偏鋒研讀 1: 姜峯楠的《72 個字母》與 TESCREAL 思想體系](https://luma.com/o1kq89uc)
 - 19 May 2026 - Pondering the Future of the Agentic Web ([Recording](https://www.youtube.com/watch?v=61PFhA9LNV4&start=740&end=1780))
 
 ### 2025

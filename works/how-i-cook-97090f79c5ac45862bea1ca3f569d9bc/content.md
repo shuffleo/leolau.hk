@@ -4,6 +4,7 @@
 
 Year: 2014  
 Type: mixed-media installation with found objects, and LED light panel. Dimensions variable.
+<!-- Published: 2014-06-03 -->
 
 ---
 

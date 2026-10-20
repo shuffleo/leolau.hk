@@ -109,7 +109,12 @@ ENTRY_INDEX_HTML = """<!DOCTYPE html>
 """
 
 
-PUB_DATE_RE = re.compile(r"^Published:\s*(\d{4}(?:-\d{2}-\d{2})?)", re.IGNORECASE)
+# Matches a visible "Published: YYYY-MM-DD" line (writings) or the hidden
+# one-line comment form "<!-- Published: YYYY-MM-DD -->" (works).
+PUB_DATE_RE = re.compile(
+    r"^(?:<!--\s*)?Published:\s*(\d{4}(?:-\d{2}-\d{2})?)(?:\s*-->)?",
+    re.IGNORECASE,
+)
 YEAR_RE = re.compile(r"^Year:\s*(\d{4})", re.IGNORECASE)
 DESC_RE = re.compile(r"^Description:\s*(.+)", re.IGNORECASE)
 NAV_LINE_RE = re.compile(r"^\[HI\].*\|\|")
@@ -131,7 +136,9 @@ class Entry:
 def _parse_content(content_md: Path, fallback_slug: str) -> tuple[str, str]:
     """Return (title, pub_date) extracted from a content.md file.
 
-    Prefers Published: YYYY-MM-DD (or YYYY); falls back to Year: YYYY for works.
+    Prefers Published: YYYY-MM-DD (or YYYY), either as a visible line or as
+    a hidden "<!-- Published: YYYY-MM-DD -->" comment; falls back to
+    Year: YYYY for works without an exact date.
     """
     title = fallback_slug.replace("-", " ").title()
     pub_date = ""

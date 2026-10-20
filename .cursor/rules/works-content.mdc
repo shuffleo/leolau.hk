@@ -16,7 +16,8 @@ Every work's `content.md` follows this layout:
 # Title of the Work
 
 Year: YYYY  
-Type: medium, duration/dimensions
+Type: medium, duration/dimensions  
+<!-- Published: YYYY-MM-DD -->
 
 ---
 
@@ -27,6 +28,7 @@ Type: medium, duration/dimensions
 
 - **Title** is the `# heading` — the source of truth for the URL slug and listings.
 - **Year** and **Type** are metadata lines immediately after the title, each ending with two trailing spaces for a line break.
+- **Publish date is hidden metadata.** Work pages never show an exact date. Record it as the one-line comment `<!-- Published: YYYY-MM-DD -->` in the metadata block (after `Type:`). `update-subpages.py` reads it for ordering and the RSS `pubDate`; without it, the feed falls back to Jan 1 of `Year:`. Never write it as a visible `Published:` line on a work page (that form is for writings only). Ask the user for the exact date; do not guess.
 - The `---` rule separates metadata from body content.
 - Bare YouTube URLs become embedded players; `[text](url)` stays a plain link.
 - **Image paths must use `./` prefix:** `![alt](./filename.webp)`, not `![alt](filename.webp)`.

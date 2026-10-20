@@ -39,6 +39,7 @@ On this site's Work pages these are `# Title`, `Year:`, and `Type:`. `Type:` hol
 
 **Medium line rules:**
 
+0. **Start lowercase.** The `Type:` text begins with a lowercase letter (`acrylic-painted PLA plastic…`, `audio, 3:24 min`). Capitalise only proper nouns and acronyms (PLA, LED, HDMI). Applies to the `works/content.md` row too.
 1. **Noun phrases only.** Materials and, where defining, technique. No verbs, no sentences, no commentary, no trailing full stop.
 2. **Descending prominence.** Name what the object mostly is first, like an ingredient list. Secondary components follow. Where the logic is process, use order of application.
 3. **"on" for applied medium and support** (*oil on canvas*). **"with"** for a secondary or found component (*cast resin, with salvaged steel frame*). A sculpture without a support is a plain list of media.

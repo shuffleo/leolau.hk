@@ -54,6 +54,7 @@ RSS_FEED_LIMIT = 20
 IMAGE_MD_RE = re.compile(r"!\[.*?\]\(\./([^)]+\.webp)\)")
 STRIP_MD_LINK_RE = re.compile(r"\[([^\]]+)\]\([^)]+\)")
 STRIP_MD_FMT_RE = re.compile(r"[*_`~]+")
+HTML_COMMENT_RE = re.compile(r"<!--.*?-->", re.DOTALL)
 
 SECTION_INDEX_HTML = """<!DOCTYPE html>
 <html lang="en">
@@ -232,7 +233,13 @@ def _extract_listing_summary(content_md: Path, max_length: int = 220) -> str:
 
 
 def _extract_first_image(content_md: Path, entry_path: Path) -> str | None:
-    """Return the filename of the first .webp image, or preview.webp as fallback."""
+    """Return the share-image filename for og:image.
+
+    Priority: og.webp in the entry folder (e.g. a square crop made for
+    sharing), then the first .webp image in the markdown, then preview.webp.
+    """
+    if (entry_path / "og.webp").exists():
+        return "og.webp"
     try:
         text = content_md.read_text(encoding="utf-8")
     except FileNotFoundError:
@@ -436,7 +443,12 @@ def _absolutize_html(html: str, base_url: str) -> str:
 
 
 def _md_to_feed_html(md: str, base_url: str) -> str:
-    """Convert entry markdown to HTML suitable for content:encoded."""
+    """Convert entry markdown to HTML suitable for content:encoded.
+
+    HTML comments (e.g. unpublished draft options) are stripped so they
+    never reach the feed source.
+    """
+    md = HTML_COMMENT_RE.sub("", md)
     if not md.strip():
         return ""
     html = markdown.markdown(

@@ -56,7 +56,7 @@ The address bar path can become **longer than the real folder name** (full title
 
 - `update-subpages.py` generates `<meta>` description, Open Graph (`og:title`, `og:description`, `og:url`, `og:image`), and Twitter Card tags in every `index.html`
 - Description: explicit `Description:` metadata if present; otherwise first body paragraph after the `---` separator, stripped of markdown formatting, truncated to 155 chars
-- Image: first `.webp` image in the markdown, or `preview.webp` as fallback — used as `og:image` with absolute URL
+- Image: `og.webp` in the entry folder if present (e.g. a square crop made for sharing), otherwise the first `.webp` image in the markdown, otherwise `preview.webp` — used as `og:image` with absolute URL
 - Root `index.html` has hand-written OG tags
 
 ## YouTube embed behavior

@@ -4,6 +4,7 @@
 
 Year: 2026  
 Type: Acrylic-painted PLA plastic and mechanical scale. Dimensions variable.
+<!-- Published: 2026-10-20 -->
 
 ---
 

@@ -41,7 +41,7 @@ The address bar path can become **longer than the real folder name** (full title
 
 - New article: create folder, add `content.md` (with `# Title` and `Published: YYYY-MM-DD`), run `python3 update-subpages.py`
 - Title change: edit `# Title` in `content.md`, run `python3 update-subpages.py` — no folder rename needed
-- Works entries: also add a `preview.webp` and manually update `works/content.md` table
+- Works entries: also add a `preview.webp`, a hidden `<!-- Published: YYYY-MM-DD -->` comment (never a visible date), and manually update `works/content.md` table
 - Talks and press entries are manually maintained in `talks/content.md` and `press/content.md`
 
 ## Image loading

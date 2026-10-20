@@ -1,0 +1,8 @@
+.DS_Store
+.cursor/settings.json
+*.log
+node_modules/
+.venv/
+__pycache__/
+SETUP.md
+push-to-github.sh

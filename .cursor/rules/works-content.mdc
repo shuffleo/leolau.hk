@@ -57,9 +57,10 @@ If needed, add `data-preview-tiny` for a dedicated blur placeholder.
 2. Create folder: `works/{title-slug}-{id}/`
 3. Add `content.md` with the structure above
 4. Add `preview.webp` for the hover preview on the listing page
-5. Run `python3 optimize-images.py --run` to generate `preview-tiny.webp`
-6. Add a row to `works/content.md`
-7. Run `python3 update-subpages.py`
+5. Optional: add `og.webp` to control the link-preview (Open Graph) image, e.g. a square crop. Without it, the first `.webp` in the markdown is used. `preview.webp` stays the hover-preview image and may be a different shot from either.
+6. Run `python3 optimize-images.py --run` to generate `preview-tiny.webp` (and `og-tiny.webp`)
+7. Add a row to `works/content.md`
+8. Run `python3 update-subpages.py`
 
 ## Descriptions
 
